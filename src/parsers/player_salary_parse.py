@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 MAIN_URL = 'https://www.basketball-reference.com'
 YEARS = ['2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']
-OUTPUT_FILE = 'parsed.json'
+OUTPUT_FILE = 'course_proj_hse/parsed/'+'player_salary_parsed.json'
 
 def request(url: str):
     try:
@@ -21,14 +21,15 @@ def request(url: str):
 
 def parser(soup: BeautifulSoup):
     data = dict()
-    table = soup.find('table', class_='suppress_glossary sortable stats_table')
+    table = soup.find('table', class_='sortable stats_table')
     soup = table.find('tbody')
-    rows = soup.find_all('tr', attrs={})    # finds all tr without attributes
+    rows = soup.find_all('tr')
     for row in rows:
-        team = row.find('td', class_='left').find('a')
-        team_name = team.text
-        team_url = MAIN_URL+team['href']
-        data.update({team_name: {'url_payroll': team_url, 'salary': [None for i in YEARS]}})
+        if (row.attrs): continue
+        player = row.find('td', class_='left').find('a')
+        player_name = player.text
+        player_url = MAIN_URL+player['href']
+        data.update({player_name: {'url_payroll': player_url, 'salary': [None for i in YEARS], 'guaranteed': 0}})
 
         salary_yes = row.find_all('td', class_='right')
         salary_no = row.find_all('td', class_='right iz')
@@ -36,17 +37,24 @@ def parser(soup: BeautifulSoup):
         for i in range(len(YEARS)):
             try:
                 amount = salaries[i]['csk']
-                data[team_name]['salary'][i] = amount
+                data[player_name]['salary'][i] = amount
             except KeyError as e:
                 pass
+
+        try:
+                amount = salaries[i+1]['csk']
+                data[player_name]['guaranteed'] = amount
+        except KeyError as e:
+            pass
+
     
 
 
     return data
 
 
-def parse():
-    url: str = 'https://www.basketball-reference.com/contracts/'
+def player_salary_parse():
+    url: str = 'https://www.basketball-reference.com/contracts/players.html'
     soup: BeautifulSoup = request(url)
 
     if soup:
@@ -57,4 +65,4 @@ def parse():
 
 
 if __name__ == '__main__':
-    parse()
+    player_salary_parse()

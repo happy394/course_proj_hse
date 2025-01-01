@@ -11,7 +11,7 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
+Then comment in /src/parsers/main.py functions that are not needed to be parsed
 Then run /src/parsers/main.py
-(Note: at this moment only one parser is working - <https://www.basketball-reference.com/contracts/>)
 
-At the end you should get .json file in the project directory
+At the end you should get .json file(s) in the '/parsed' directory
