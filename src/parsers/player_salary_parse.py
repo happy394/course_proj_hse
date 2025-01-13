@@ -47,9 +47,6 @@ def parser(soup: BeautifulSoup):
         except KeyError as e:
             pass
 
-    
-
-
     return data
 
 

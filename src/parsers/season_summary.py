@@ -42,8 +42,6 @@ def parser(soup: BeautifulSoup):
     global data
     data = dict()
     conference_standings = soup.find('div', attrs={'id': 'all_standings'}).find_all('div', class_='section_wrapper')
-    print(soup.find('div', attrs={'id': 'all_7237200254'}))
-    quit()
 
     conference1, conference2 = conference_standings.find_all('tbody')
     data.update({
