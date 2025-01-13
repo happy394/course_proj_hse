@@ -1,0 +1,5510 @@
+{
+    "Stephen Curry": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/curryst01.html",
+        "salary": [
+            "55761216",
+            "59606817",
+            "62587158",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "177955191"
+    },
+    "Joel Embiid": {
+        "url_payroll": "https://www.basketball-reference.com/players/e/embiijo01.html",
+        "salary": [
+            "51415938",
+            "55224526",
+            "57985752",
+            "62624612",
+            "67263472",
+            null
+        ],
+        "guaranteed": "227250828"
+    },
+    "Nikola JokiÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jokicni01.html",
+        "salary": [
+            "51415938",
+            "55224526",
+            "59033114",
+            "62841702",
+            null,
+            null
+        ],
+        "guaranteed": "165673578"
+    },
+    "Kevin Durant": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/duranke01.html",
+        "salary": [
+            "51179021",
+            "54708609",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "105887630"
+    },
+    "Bradley Beal": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bealbr01.html",
+        "salary": [
+            "50203930",
+            "53666270",
+            "57128610",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "103870200"
+    },
+    "Jaylen Brown": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/brownja02.html",
+        "salary": [
+            "49700000",
+            "53676000",
+            "57652000",
+            "61628000",
+            "65604000",
+            null
+        ],
+        "guaranteed": "288260000"
+    },
+    "Devin Booker": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bookede01.html",
+        "salary": [
+            "49205800",
+            "53142264",
+            "57078728",
+            "61015192",
+            null,
+            null
+        ],
+        "guaranteed": "220441984"
+    },
+    "Karl-Anthony Towns": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/townska01.html",
+        "salary": [
+            "49205800",
+            "53142264",
+            "57078728",
+            "61015192",
+            null,
+            null
+        ],
+        "guaranteed": "159426792"
+    },
+    "Paul George": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/georgpa01.html",
+        "salary": [
+            "49205800",
+            "51666090",
+            "54126380",
+            "56586670",
+            null,
+            null
+        ],
+        "guaranteed": "154998270"
+    },
+    "Kawhi Leonard": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/leonaka01.html",
+        "salary": [
+            "49205800",
+            "50000000",
+            "50300000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "149505800"
+    },
+    "Jimmy Butler": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/butleji01.html",
+        "salary": [
+            "48798677",
+            "52413394",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "48798677"
+    },
+    "Giannis Antetokounmpo": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/antetgi01.html",
+        "salary": [
+            "48787676",
+            "54126450",
+            "58456566",
+            "62786682",
+            null,
+            null
+        ],
+        "guaranteed": "161370692"
+    },
+    "Damian Lillard": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/lillada01.html",
+        "salary": [
+            "48787676",
+            "54126450",
+            "58456566",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "102914126"
+    },
+    "LeBron James": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jamesle01.html",
+        "salary": [
+            "48728845",
+            "52627153",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "48728845"
+    },
+    "Rudy Gobert": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/goberru01.html",
+        "salary": [
+            "43827586",
+            "35000000",
+            "36500000",
+            "38000000",
+            null,
+            null
+        ],
+        "guaranteed": "115327586"
+    },
+    "Anthony Davis": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/davisan02.html",
+        "salary": [
+            "43219440",
+            "54126450",
+            "58456566",
+            "62786682",
+            null,
+            null
+        ],
+        "guaranteed": "155802456"
+    },
+    "Luka DonÄiÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/doncilu01.html",
+        "salary": [
+            "43031940",
+            "45999660",
+            "48967380",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "89031600"
+    },
+    "Zach LaVine": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/lavinza01.html",
+        "salary": [
+            "43031940",
+            "45999660",
+            "48967380",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "89031600"
+    },
+    "Trae Young": {
+        "url_payroll": "https://www.basketball-reference.com/players/y/youngtr01.html",
+        "salary": [
+            "43031940",
+            "45999660",
+            "48967380",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "89031600"
+    },
+    "Fred VanVleet": {
+        "url_payroll": "https://www.basketball-reference.com/players/v/vanvlfr01.html",
+        "salary": [
+            "42846615",
+            "44886930",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "42846615"
+    },
+    "Anthony Edwards": {
+        "url_payroll": "https://www.basketball-reference.com/players/e/edwaran01.html",
+        "salary": [
+            "42176400",
+            "45550512",
+            "48924624",
+            "52298736",
+            "55672848",
+            null
+        ],
+        "guaranteed": "244623120"
+    },
+    "Tyrese Haliburton": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/halibty01.html",
+        "salary": [
+            "42176400",
+            "45550512",
+            "48924624",
+            "52298736",
+            "55672848",
+            null
+        ],
+        "guaranteed": "244623120"
+    },
+    "Lauri Markkanen": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/markkla01.html",
+        "salary": [
+            "42176400",
+            "46394100",
+            "46113154",
+            "49824681",
+            "53536209",
+            null
+        ],
+        "guaranteed": "238044544"
+    },
+    "Pascal Siakam": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/siakapa01.html",
+        "salary": [
+            "42176400",
+            "45550512",
+            "48924624",
+            "52298736",
+            null,
+            null
+        ],
+        "guaranteed": "188950272"
+    },
+    "Kyrie Irving": {
+        "url_payroll": "https://www.basketball-reference.com/players/i/irvinky01.html",
+        "salary": [
+            "41000000",
+            "43962963",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "41000000"
+    },
+    "Domantas Sabonis": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sabondo01.html",
+        "salary": [
+            "40500000",
+            "43636000",
+            "46772000",
+            "49908000",
+            null,
+            null
+        ],
+        "guaranteed": "180816000"
+    },
+    "Ben Simmons": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/simmobe01.html",
+        "salary": [
+            "40338144",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "40338144"
+    },
+    "Zion Williamson": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willizi01.html",
+        "salary": [
+            "36725670",
+            "39446090",
+            "42166510",
+            "44886930",
+            null,
+            null
+        ],
+        "guaranteed": "163225200"
+    },
+    "Ja Morant": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/moranja01.html",
+        "salary": [
+            "36725670",
+            "39446090",
+            "42166510",
+            "44886930",
+            null,
+            null
+        ],
+        "guaranteed": "163225200"
+    },
+    "Darius Garland": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/garlada01.html",
+        "salary": [
+            "36725670",
+            "39446090",
+            "42166510",
+            "44886930",
+            null,
+            null
+        ],
+        "guaranteed": "163225200"
+    },
+    "OG Anunoby": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/anunoog01.html",
+        "salary": [
+            "36637932",
+            "39568966",
+            "42500000",
+            "45431034",
+            "48362068",
+            null
+        ],
+        "guaranteed": "164137932"
+    },
+    "Jamal Murray": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/murraja01.html",
+        "salary": [
+            "36016200",
+            "46394100",
+            "50105628",
+            "53817156",
+            "57528684",
+            null
+        ],
+        "guaranteed": "243861768"
+    },
+    "Brandon Ingram": {
+        "url_payroll": "https://www.basketball-reference.com/players/i/ingrabr01.html",
+        "salary": [
+            "36016200",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "36016200"
+    },
+    "Shai Gilgeous-Alexander": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/gilgesh01.html",
+        "salary": [
+            "35859950",
+            "38333050",
+            "40806150",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "114999150"
+    },
+    "Michael Porter Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/portemi01.html",
+        "salary": [
+            "35859950",
+            "38333050",
+            "40806150",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "86193000"
+    },
+    "Donovan Mitchell": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mitchdo01.html",
+        "salary": [
+            "35410310",
+            "46394100",
+            "50105628",
+            "53817156",
+            null,
+            null
+        ],
+        "guaranteed": "131910038"
+    },
+    "Tyrese Maxey": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/maxeyty01.html",
+        "salary": [
+            "35147000",
+            "37958760",
+            "40770520",
+            "43582280",
+            "46394040",
+            null
+        ],
+        "guaranteed": "203852600"
+    },
+    "LaMelo Ball": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/ballla01.html",
+        "salary": [
+            "35147000",
+            "37958760",
+            "40770520",
+            "43582280",
+            "46394040",
+            null
+        ],
+        "guaranteed": "203852600"
+    },
+    "Jayson Tatum": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/tatumja01.html",
+        "salary": [
+            "34848340",
+            "54126450",
+            "58456566",
+            "62786682",
+            "67116798",
+            "71446914"
+        ],
+        "guaranteed": "277334836"
+    },
+    "Bam Adebayo": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/adebaba01.html",
+        "salary": [
+            "34848340",
+            "37096620",
+            "48713700",
+            "52610796",
+            "56507892",
+            null
+        ],
+        "guaranteed": "173269456"
+    },
+    "De'Aaron Fox": {
+        "url_payroll": "https://www.basketball-reference.com/players/f/foxde01.html",
+        "salary": [
+            "34848340",
+            "37096620",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "71944960"
+    },
+    "Desmond Bane": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/banede01.html",
+        "salary": [
+            "34005250",
+            "36725670",
+            "39446090",
+            "42166510",
+            "44886930",
+            null
+        ],
+        "guaranteed": "197230450"
+    },
+    "Deandre Ayton": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/aytonde01.html",
+        "salary": [
+            "34005126",
+            "35550814",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "69555940"
+    },
+    "James Harden": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hardeja01.html",
+        "salary": [
+            "33653846",
+            "36346154",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "33653846"
+    },
+    "CJ McCollum": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mccolcj01.html",
+        "salary": [
+            "33333333",
+            "30666666",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "63999999"
+    },
+    "Julius Randle": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/randlju01.html",
+        "salary": [
+            "33073920",
+            "30935520",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "33073920"
+    },
+    "Immanuel Quickley": {
+        "url_payroll": "https://www.basketball-reference.com/players/q/quickim01.html",
+        "salary": [
+            "32500000",
+            "32500000",
+            "32500000",
+            "32500000",
+            "32500000",
+            null
+        ],
+        "guaranteed": "162500000"
+    },
+    "Khris Middleton": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/middlkh01.html",
+        "salary": [
+            "31666667",
+            "34012345",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "31666667"
+    },
+    "Jrue Holiday": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/holidjr01.html",
+        "salary": [
+            "30000000",
+            "32400000",
+            "34800000",
+            "37200000",
+            null,
+            null
+        ],
+        "guaranteed": "97200000"
+    },
+    "Isaiah Hartenstein": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/harteis01.html",
+        "salary": [
+            "30000000",
+            "28500000",
+            "28500000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "58500000"
+    },
+    "Jerami Grant": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/grantje01.html",
+        "salary": [
+            "29793104",
+            "32000001",
+            "34206898",
+            "36413790",
+            null,
+            null
+        ],
+        "guaranteed": "96000003"
+    },
+    "Jordan Poole": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/poolejo01.html",
+        "salary": [
+            "29651786",
+            "31848215",
+            "34044642",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "95544643"
+    },
+    "Dejounte Murray": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/murrade01.html",
+        "salary": [
+            "29517135",
+            "31557103",
+            "33597072",
+            "31619506",
+            null,
+            null
+        ],
+        "guaranteed": "94671310"
+    },
+    "Devin Vassell": {
+        "url_payroll": "https://www.basketball-reference.com/players/v/vassede01.html",
+        "salary": [
+            "29347826",
+            "27000000",
+            "27000000",
+            "24652174",
+            "27000000",
+            null
+        ],
+        "guaranteed": "135000000"
+    },
+    "Kristaps PorziÅÄ£is": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/porzikr01.html",
+        "salary": [
+            "29268293",
+            "30731707",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "60000000"
+    },
+    "Tyler Herro": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/herroty01.html",
+        "salary": [
+            "29000000",
+            "31000000",
+            "33000000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "93000000"
+    },
+    "Nic Claxton": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/claxtni01.html",
+        "salary": [
+            "27556817",
+            "25352272",
+            "23147727",
+            "20943184",
+            null,
+            null
+        ],
+        "guaranteed": "97000000"
+    },
+    "Miles Bridges": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bridgmi02.html",
+        "salary": [
+            "27173913",
+            "25000000",
+            "22826087",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "75000000"
+    },
+    "John Collins": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/collijo01.html",
+        "salary": [
+            "26580000",
+            "26580000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "26580000"
+    },
+    "Andrew Wiggins": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wiggian01.html",
+        "salary": [
+            "26276786",
+            "28223215",
+            "30169644",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "54500001"
+    },
+    "Anfernee Simons": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/simonan01.html",
+        "salary": [
+            "25892857",
+            "27678571",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "53571428"
+    },
+    "RJ Barrett": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/barrerj01.html",
+        "salary": [
+            "25794643",
+            "27705357",
+            "29616071",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "83116071"
+    },
+    "Tobias Harris": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/harrito02.html",
+        "salary": [
+            "25365854",
+            "26634146",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "52000000"
+    },
+    "Jaren Jackson Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jacksja02.html",
+        "salary": [
+            "25257798",
+            "23413395",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "48671193"
+    },
+    "Jonathan Isaac": {
+        "url_payroll": "https://www.basketball-reference.com/players/i/isaacjo01.html",
+        "salary": [
+            "25000000",
+            "15000000",
+            "14500000",
+            "14500000",
+            "15000000",
+            null
+        ],
+        "guaranteed": "69000000"
+    },
+    "Jalen Brunson": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/brunsja01.html",
+        "salary": [
+            "24960001",
+            "34944001",
+            "37739521",
+            "40535041",
+            "43330561",
+            null
+        ],
+        "guaranteed": "138178564"
+    },
+    "Terry Rozier": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/roziete01.html",
+        "salary": [
+            "24924126",
+            "26643031",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "51567157"
+    },
+    "Draymond Green": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/greendr01.html",
+        "salary": [
+            "24107143",
+            "25892857",
+            "27678571",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "77678571"
+    },
+    "Kyle Kuzma": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/kuzmaky01.html",
+        "salary": [
+            "23522727",
+            "21477272",
+            "19431819",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "64431818"
+    },
+    "DeMar DeRozan": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/derozde01.html",
+        "salary": [
+            "23400000",
+            "24570000",
+            "25740000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "47970000"
+    },
+    "Mikal Bridges": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bridgmi01.html",
+        "salary": [
+            "23300000",
+            "24900000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "48200000"
+    },
+    "Jaden McDaniels": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mcdanja02.html",
+        "salary": [
+            "23017242",
+            "24858622",
+            "26700001",
+            "28541380",
+            "30382755",
+            null
+        ],
+        "guaranteed": "133500000"
+    },
+    "Bruce Brown": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/brownbr01.html",
+        "salary": [
+            "23000000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "23000000"
+    },
+    "Brook Lopez": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/lopezbr01.html",
+        "salary": [
+            "23000000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "23000000"
+    },
+    "Aaron Gordon": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/gordoaa01.html",
+        "salary": [
+            "22841455",
+            "22841455",
+            "31978037",
+            "34536280",
+            "37094523",
+            null
+        ],
+        "guaranteed": "112197227"
+    },
+    "Kentavious Caldwell-Pope": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/caldwke01.html",
+        "salary": [
+            "22757000",
+            "21621500",
+            "21621500",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "44378500"
+    },
+    "Cameron Johnson": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/johnsca02.html",
+        "salary": [
+            "22500000",
+            "20543478",
+            "22500000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "65543478"
+    },
+    "Malcolm Brogdon": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/brogdma01.html",
+        "salary": [
+            "22500000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "22500000"
+    },
+    "Clint Capela": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/capelca01.html",
+        "salary": [
+            "22265280",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "22265280"
+    },
+    "Dillon Brooks": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/brookdi01.html",
+        "salary": [
+            "22255493",
+            "21124110",
+            "19992727",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "63372330"
+    },
+    "De'Andre Hunter": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/huntede01.html",
+        "salary": [
+            "21696429",
+            "23303571",
+            "24910714",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "69910714"
+    },
+    "Lonzo Ball": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/balllo01.html",
+        "salary": [
+            "21395348",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "21395348"
+    },
+    "Marcus Smart": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/smartma01.html",
+        "salary": [
+            "20210284",
+            "21586855",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "41797139"
+    },
+    "Derrick White": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/whitede01.html",
+        "salary": [
+            "20071429",
+            "28100000",
+            "30348000",
+            "32596000",
+            "34844000",
+            null
+        ],
+        "guaranteed": "111115429"
+    },
+    "Jarrett Allen": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/allenja01.html",
+        "salary": [
+            "20000000",
+            "20000000",
+            "28000000",
+            "30240000",
+            "32480000",
+            null
+        ],
+        "guaranteed": "130720000"
+    },
+    "Nikola VuÄeviÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/v/vucevni01.html",
+        "salary": [
+            "20000000",
+            "21481481",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "41481481"
+    },
+    "Myles Turner": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/turnemy01.html",
+        "salary": [
+            "19928500",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "19928500"
+    },
+    "Jakob Poeltl": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/poeltja01.html",
+        "salary": [
+            "19500000",
+            "19500000",
+            "19500000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "39000000"
+    },
+    "Duncan Robinson": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/robindu01.html",
+        "salary": [
+            "19406000",
+            "19888000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "29294000"
+    },
+    "Norman Powell": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/powelno01.html",
+        "salary": [
+            "19241379",
+            "20482758",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "39724137"
+    },
+    "Bojan BogdanoviÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bogdabo02.html",
+        "salary": [
+            "19032850",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Keldon Johnson": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/johnske04.html",
+        "salary": [
+            "19000000",
+            "17500000",
+            "17500000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "54000000"
+    },
+    "D'Angelo Russell": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/russeda01.html",
+        "salary": [
+            "18692307",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "18692307"
+    },
+    "Collin Sexton": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sextoco01.html",
+        "salary": [
+            "18350000",
+            "19175000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "37525000"
+    },
+    "Josh Hart": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hartjo01.html",
+        "salary": [
+            "18144000",
+            "19472240",
+            "20923760",
+            "22375280",
+            null,
+            null
+        ],
+        "guaranteed": "58540000"
+    },
+    "Jusuf NurkiÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/n/nurkiju01.html",
+        "salary": [
+            "18125000",
+            "19375000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "37500000"
+    },
+    "Patrick Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willipa01.html",
+        "salary": [
+            "18000000",
+            "18000000",
+            "18000000",
+            "18000000",
+            "18000000",
+            null
+        ],
+        "guaranteed": "72000000"
+    },
+    "Harrison Barnes": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/barneha02.html",
+        "salary": [
+            "18000000",
+            "19000000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "37000000"
+    },
+    "Malik Monk": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/monkma01.html",
+        "salary": [
+            "17405203",
+            "18797619",
+            "20190035",
+            "21582451",
+            null,
+            null
+        ],
+        "guaranteed": "56392857"
+    },
+    "Bogdan BogdanoviÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bogdabo01.html",
+        "salary": [
+            "17260000",
+            "16020000",
+            "16020000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "33280000"
+    },
+    "Rui Hachimura": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hachiru01.html",
+        "salary": [
+            "17000000",
+            "18259259",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "35259259"
+    },
+    "Kevin Huerter": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/huertke01.html",
+        "salary": [
+            "16830357",
+            "17991071",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "34821428"
+    },
+    "Zach Collins": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/colliza01.html",
+        "salary": [
+            "16741200",
+            "18080496",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "34821696"
+    },
+    "Caris LeVert": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/leverca01.html",
+        "salary": [
+            "16615384",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "16615384"
+    },
+    "Luguentz Dort": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dortlu01.html",
+        "salary": [
+            "16500000",
+            "17722222",
+            "17722222",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "34222222"
+    },
+    "Tim Hardaway Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hardati02.html",
+        "salary": [
+            "16193183",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "16193183"
+    },
+    "Klay Thompson": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/thompkl01.html",
+        "salary": [
+            "15873016",
+            "16666667",
+            "17460317",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "50000000"
+    },
+    "Deni Avdija": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/avdijde01.html",
+        "salary": [
+            "15625000",
+            "14375000",
+            "13125000",
+            "11875000",
+            null,
+            null
+        ],
+        "guaranteed": "55000000"
+    },
+    "Grayson Allen": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/allengr01.html",
+        "salary": [
+            "15625000",
+            "16875000",
+            "18125000",
+            "19375000",
+            null,
+            null
+        ],
+        "guaranteed": "50625000"
+    },
+    "P.J. Washington": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/washipj01.html",
+        "salary": [
+            "15500000",
+            "14152174",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "29652174"
+    },
+    "Max Strus": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/strusma01.html",
+        "salary": [
+            "15212068",
+            "15936452",
+            "16660836",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "47809356"
+    },
+    "Isaiah Stewart": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/stewais01.html",
+        "salary": [
+            "15000000",
+            "15000000",
+            "15000000",
+            "15000000",
+            null,
+            null
+        ],
+        "guaranteed": "45000000"
+    },
+    "Dorian Finney-Smith": {
+        "url_payroll": "https://www.basketball-reference.com/players/f/finnedo01.html",
+        "salary": [
+            "14924167",
+            "15378480",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "14924167"
+    },
+    "Mitchell Robinson": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/robinmi01.html",
+        "salary": [
+            "14318182",
+            "12954546",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "27272728"
+    },
+    "Jordan Clarkson": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/clarkjo01.html",
+        "salary": [
+            "14092577",
+            "14285714",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "28378291"
+    },
+    "Onyeka Okongwu": {
+        "url_payroll": "https://www.basketball-reference.com/players/o/okongon01.html",
+        "salary": [
+            "14000000",
+            "15000000",
+            "16120000",
+            "16880000",
+            null,
+            null
+        ],
+        "guaranteed": "62000000"
+    },
+    "Naz Reid": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/reidna01.html",
+        "salary": [
+            "13986432",
+            "15022464",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "13986432"
+    },
+    "Cade Cunningham": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/cunnica01.html",
+        "salary": [
+            "13940809",
+            "38661750",
+            "41754690",
+            "44847630",
+            "47940570",
+            "51033510"
+        ],
+        "guaranteed": "238178959"
+    },
+    "Daniel Gafford": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/gaffoda01.html",
+        "salary": [
+            "13394160",
+            "14386320",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "27780480"
+    },
+    "Grant Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willigr01.html",
+        "salary": [
+            "13025250",
+            "13645500",
+            "14265750",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "40936500"
+    },
+    "Dennis SchrÃ¶der": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/schrode01.html",
+        "salary": [
+            "13025250",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "13025250"
+    },
+    "Isaiah Joe": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/joeis01.html",
+        "salary": [
+            "12991650",
+            "12362338",
+            "11323006",
+            "11323006",
+            null,
+            null
+        ],
+        "guaranteed": "36676994"
+    },
+    "Herbert Jones": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/joneshe01.html",
+        "salary": [
+            "12976362",
+            "13937574",
+            "14898786",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "41812722"
+    },
+    "Austin Reaves": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/reaveau01.html",
+        "salary": [
+            "12976362",
+            "13937574",
+            "14898786",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "26913936"
+    },
+    "Obi Toppin": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/toppiob01.html",
+        "salary": [
+            "12975000",
+            "14000000",
+            "15000000",
+            "16025000",
+            null,
+            null
+        ],
+        "guaranteed": "58000000"
+    },
+    "Cole Anthony": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/anthoco01.html",
+        "salary": [
+            "12900000",
+            "13100000",
+            "13100000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "26000000"
+    },
+    "De'Anthony Melton": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/meltode01.html",
+        "salary": [
+            "12822000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "12822000"
+    },
+    "Kelly Olynyk": {
+        "url_payroll": "https://www.basketball-reference.com/players/o/olynyke01.html",
+        "salary": [
+            "12804878",
+            "13445122",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "26250000"
+    },
+    "Victor Wembanyama": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wembavi01.html",
+        "salary": [
+            "12768960",
+            "13376880",
+            "16868246",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "26145840"
+    },
+    "Josh Green": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/greenjo02.html",
+        "salary": [
+            "12654321",
+            "13666667",
+            "14679012",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "41000000"
+    },
+    "Richaun Holmes": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/holmeri01.html",
+        "salary": [
+            "12648321",
+            "13280737",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "12648321"
+    },
+    "Steven Adams": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/adamsst01.html",
+        "salary": [
+            "12600000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "12600000"
+    },
+    "Bobby Portis": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/portibo01.html",
+        "salary": [
+            "12578286",
+            "13445754",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "12578286"
+    },
+    "Zaccharie Risacher": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/risacza01.html",
+        "salary": [
+            "12569040",
+            "13197720",
+            "13826040",
+            "17434637",
+            null,
+            null
+        ],
+        "guaranteed": "25766760"
+    },
+    "Brandon Clarke": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/clarkbr01.html",
+        "salary": [
+            "12500000",
+            "12500000",
+            "12500000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "37500000"
+    },
+    "Marvin Bagley III": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/baglema01.html",
+        "salary": [
+            "12500000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "12500000"
+    },
+    "Jalen Green": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/greenja05.html",
+        "salary": [
+            "12483048",
+            "33333333",
+            "36000000",
+            "36000000",
+            null,
+            null
+        ],
+        "guaranteed": "81816381"
+    },
+    "Robert Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/williro04.html",
+        "salary": [
+            "12428571",
+            "13285713",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "25714284"
+    },
+    "Paolo Banchero": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/banchpa01.html",
+        "salary": [
+            "12160800",
+            "15334769",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "27495569"
+    },
+    "Coby White": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/whiteco01.html",
+        "salary": [
+            "12000000",
+            "12888889",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "24888889"
+    },
+    "Wendell Carter Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/cartewe01.html",
+        "salary": [
+            "11950000",
+            "10850000",
+            "18102000",
+            "19550160",
+            "20998320",
+            null
+        ],
+        "guaranteed": "60452160"
+    },
+    "Ivica Zubac": {
+        "url_payroll": "https://www.basketball-reference.com/players/z/zubaciv01.html",
+        "salary": [
+            "11743210",
+            "18102000",
+            "19550160",
+            "20998320",
+            null,
+            null
+        ],
+        "guaranteed": "70393690"
+    },
+    "P.J. Tucker": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/tuckepj01.html",
+        "salary": [
+            "11539000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11539000"
+    },
+    "Donte DiVincenzo": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/divindo01.html",
+        "salary": [
+            "11445000",
+            "11990000",
+            "12535000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "35970000"
+    },
+    "Brandon Miller": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/millebr02.html",
+        "salary": [
+            "11424600",
+            "11968800",
+            "15104626",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "23393400"
+    },
+    "Terance Mann": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mannte01.html",
+        "salary": [
+            "11423077",
+            "15500000",
+            "15500000",
+            "16000000",
+            null,
+            null
+        ],
+        "guaranteed": "58423077"
+    },
+    "Alex Sarr": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sarral01.html",
+        "salary": [
+            "11245680",
+            "11808240",
+            "12370680",
+            "15611798",
+            null,
+            null
+        ],
+        "guaranteed": "23053920"
+    },
+    "Evan Mobley": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mobleev01.html",
+        "salary": [
+            "11227657",
+            "38661750",
+            "41754690",
+            "44847630",
+            "47940570",
+            "51033510"
+        ],
+        "guaranteed": "235465807"
+    },
+    "Larry Nance Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/n/nancela02.html",
+        "salary": [
+            "11205000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11205000"
+    },
+    "Matisse Thybulle": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/thybuma01.html",
+        "salary": [
+            "11025000",
+            "11550000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11025000"
+    },
+    "Aaron Nesmith": {
+        "url_payroll": "https://www.basketball-reference.com/players/n/nesmiaa01.html",
+        "salary": [
+            "11000000",
+            "11000000",
+            "11000000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "33000000"
+    },
+    "Gabe Vincent": {
+        "url_payroll": "https://www.basketball-reference.com/players/v/vincega01.html",
+        "salary": [
+            "11000000",
+            "11500000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "22500000"
+    },
+    "Maxi Kleber": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/klebima01.html",
+        "salary": [
+            "11000000",
+            "11000000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "22000000"
+    },
+    "Moritz Wagner": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wagnemo01.html",
+        "salary": [
+            "11000000",
+            "11000000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11000000"
+    },
+    "Chet Holmgren": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/holmgch01.html",
+        "salary": [
+            "10880640",
+            "13731368",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "24612008"
+    },
+    "Chris Boucher": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bouchch01.html",
+        "salary": [
+            "10810000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "10810000"
+    },
+    "Jarred Vanderbilt": {
+        "url_payroll": "https://www.basketball-reference.com/players/v/vandeja01.html",
+        "salary": [
+            "10714286",
+            "11571429",
+            "12428571",
+            "13285714",
+            null,
+            null
+        ],
+        "guaranteed": "34714286"
+    },
+    "Aaron Wiggins": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wiggiaa01.html",
+        "salary": [
+            "10514017",
+            "9672897",
+            "8831776",
+            "7990655",
+            "7990655",
+            null
+        ],
+        "guaranteed": "45000000"
+    },
+    "Chris Paul": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/paulch01.html",
+        "salary": [
+            "10460000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "10460000"
+    },
+    "Scoot Henderson": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hendesc01.html",
+        "salary": [
+            "10259160",
+            "10748040",
+            "13585523",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "21007200"
+    },
+    "Isaac Okoro": {
+        "url_payroll": "https://www.basketball-reference.com/players/o/okorois01.html",
+        "salary": [
+            "10185186",
+            "11000000",
+            "11814814",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "33000000"
+    },
+    "Scottie Barnes": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/barnesc01.html",
+        "salary": [
+            "10130980",
+            "38661750",
+            "41754690",
+            "44847630",
+            "47940570",
+            "51033510"
+        ],
+        "guaranteed": "234369130"
+    },
+    "Reed Sheppard": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sheppre01.html",
+        "salary": [
+            "10098960",
+            "10603560",
+            "11108880",
+            "14041625",
+            null,
+            null
+        ],
+        "guaranteed": "20702520"
+    },
+    "Mike Conley": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/conlemi01.html",
+        "salary": [
+            "9975962",
+            "10774038",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "20750000"
+    },
+    "Jonas ValanÄiÅ«nas": {
+        "url_payroll": "https://www.basketball-reference.com/players/v/valanjo01.html",
+        "salary": [
+            "9900000",
+            "10395000",
+            "10000000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "20295000"
+    },
+    "Alex Caruso": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/carusal01.html",
+        "salary": [
+            "9890000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9890000"
+    },
+    "Jabari Smith Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/smithja05.html",
+        "salary": [
+            "9770880",
+            "12350392",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "22121272"
+    },
+    "Derrick Jones Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jonesde02.html",
+        "salary": [
+            "9523810",
+            "10000000",
+            "10476190",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "30000000"
+    },
+    "Al Horford": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/horfoal01.html",
+        "salary": [
+            "9500000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9500000"
+    },
+    "Pat Connaughton": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/connapa01.html",
+        "salary": [
+            "9423869",
+            "9423869",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9423869"
+    },
+    "Royce O'Neale": {
+        "url_payroll": "https://www.basketball-reference.com/players/o/onealro01.html",
+        "salary": [
+            "9375000",
+            "10125000",
+            "10875000",
+            "11625000",
+            null,
+            null
+        ],
+        "guaranteed": "42000000"
+    },
+    "T.J. McConnell": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mccontj01.html",
+        "salary": [
+            "9300000",
+            "10200000",
+            "11000000",
+            "11800000",
+            "11800000",
+            null
+        ],
+        "guaranteed": "42300000"
+    },
+    "Luke Kennard": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/kennalu01.html",
+        "salary": [
+            "9250000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9250000"
+    },
+    "Amen Thompson": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/thompam01.html",
+        "salary": [
+            "9249960",
+            "9690600",
+            "12258609",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "18940560"
+    },
+    "Jalen Suggs": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/suggsja01.html",
+        "salary": [
+            "9188385",
+            "35000000",
+            "32400000",
+            "29600000",
+            "26800000",
+            "26700000"
+        ],
+        "guaranteed": "132988385"
+    },
+    "Gary Payton II": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/paytoga02.html",
+        "salary": [
+            "9130000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9130000"
+    },
+    "Stephon Castle": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/castlst01.html",
+        "salary": [
+            "9105120",
+            "9560520",
+            "10015920",
+            "12670139",
+            null,
+            null
+        ],
+        "guaranteed": "18665640"
+    },
+    "Tre Jones": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jonestr01.html",
+        "salary": [
+            "9104167",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9104167"
+    },
+    "Goga Bitadze": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bitadgo01.html",
+        "salary": [
+            "9057971",
+            "8333333",
+            "7608696",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "25000000"
+    },
+    "Zeke Nnaji": {
+        "url_payroll": "https://www.basketball-reference.com/players/n/nnajize01.html",
+        "salary": [
+            "8888889",
+            "8177778",
+            "7466667",
+            "7466667",
+            null,
+            null
+        ],
+        "guaranteed": "24533334"
+    },
+    "Keegan Murray": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/murrake02.html",
+        "salary": [
+            "8809560",
+            "11144093",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "19953653"
+    },
+    "Buddy Hield": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hieldbu01.html",
+        "salary": [
+            "8780488",
+            "9219512",
+            "9658536",
+            "10097560",
+            null,
+            null
+        ],
+        "guaranteed": "27658536"
+    },
+    "Kyle Anderson": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/anderky01.html",
+        "salary": [
+            "8780488",
+            "9219512",
+            "9658536",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "18000000"
+    },
+    "Naji Marshall": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/marshna01.html",
+        "salary": [
+            "8571429",
+            "9000000",
+            "9428571",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "27000000"
+    },
+    "Jalen Smith": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/smithja04.html",
+        "salary": [
+            "8571429",
+            "9000000",
+            "9428571",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "27000000"
+    },
+    "Georges Niang": {
+        "url_payroll": "https://www.basketball-reference.com/players/n/niangge01.html",
+        "salary": [
+            "8500000",
+            "8200000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "16700000"
+    },
+    "Ausar Thompson": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/thompau01.html",
+        "salary": [
+            "8376000",
+            "8775000",
+            "11117925",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "17151000"
+    },
+    "Josh Giddey": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/giddejo01.html",
+        "salary": [
+            "8352367",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8352367"
+    },
+    "Josh Okogie": {
+        "url_payroll": "https://www.basketball-reference.com/players/o/okogijo01.html",
+        "salary": [
+            "8250000",
+            "7750000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8250000"
+    },
+    "Ron Holland": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hollaro01.html",
+        "salary": [
+            "8245320",
+            "8657280",
+            "9069600",
+            "11491183",
+            null,
+            null
+        ],
+        "guaranteed": "16902600"
+    },
+    "Caleb Martin": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/martica02.html",
+        "salary": [
+            "8149001",
+            "8556451",
+            "8963901",
+            "9371351",
+            null,
+            null
+        ],
+        "guaranteed": "25669353"
+    },
+    "Cody Martin": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/martico01.html",
+        "salary": [
+            "8120000",
+            "8680000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8120000"
+    },
+    "Jock Landale": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/landajo01.html",
+        "salary": [
+            "8000000",
+            "8000000",
+            "8000000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "16000000"
+    },
+    "Trey Lyles": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/lylestr01.html",
+        "salary": [
+            "8000000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8000000"
+    },
+    "Jeff Green": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/greenje02.html",
+        "salary": [
+            "8000000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8000000"
+    },
+    "Kevon Looney": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/looneke01.html",
+        "salary": [
+            "8000000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8000000"
+    },
+    "Kelly Oubre Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/o/oubreke01.html",
+        "salary": [
+            "7983000",
+            "8382150",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7983000"
+    },
+    "Jaden Ivey": {
+        "url_payroll": "https://www.basketball-reference.com/players/i/iveyja01.html",
+        "salary": [
+            "7977240",
+            "10107163",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "18084403"
+    },
+    "KJ Martin": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/martike04.html",
+        "salary": [
+            "7975000",
+            "8025000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7975000"
+    },
+    "Vasilije MiciÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/micicva01.html",
+        "salary": [
+            "7723000",
+            "8109150",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7723000"
+    },
+    "Simone Fontecchio": {
+        "url_payroll": "https://www.basketball-reference.com/players/f/fontesi01.html",
+        "salary": [
+            "7692308",
+            "8307692",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "16000000"
+    },
+    "Jonathan Kuminga": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/kuminjo01.html",
+        "salary": [
+            "7636307",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7636307"
+    },
+    "Anthony Black": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/blackan01.html",
+        "salary": [
+            "7607760",
+            "7970280",
+            "10106316",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "15578040"
+    },
+    "Jae'Sean Tate": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/tateja01.html",
+        "salary": [
+            "7565217",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7565217"
+    },
+    "Gary Harris": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/harriga01.html",
+        "salary": [
+            "7500000",
+            "7500000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7500000"
+    },
+    "Tidjane SalaÃ¼n": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/salauti01.html",
+        "salary": [
+            "7488720",
+            "7863240",
+            "8237880",
+            "10445633",
+            null,
+            null
+        ],
+        "guaranteed": "15351960"
+    },
+    "Bennedict Mathurin": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mathube01.html",
+        "salary": [
+            "7245720",
+            "9187573",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "16433293"
+    },
+    "Max Christie": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/chrisma02.html",
+        "salary": [
+            "7142857",
+            "7714286",
+            "8285714",
+            "8857143",
+            null,
+            null
+        ],
+        "guaranteed": "23142857"
+    },
+    "Franz Wagner": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wagnefr01.html",
+        "salary": [
+            "7007092",
+            "38661750",
+            "41754690",
+            "44847630",
+            "47940570",
+            "51033510"
+        ],
+        "guaranteed": "231245242"
+    },
+    "Ayo Dosunmu": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dosunay01.html",
+        "salary": [
+            "7000000",
+            "7518518",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "14518518"
+    },
+    "Bilal Coulibaly": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/coulibi01.html",
+        "salary": [
+            "6945240",
+            "7275600",
+            "9240012",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "14220840"
+    },
+    "Donovan Clingan": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/clingdo01.html",
+        "salary": [
+            "6836400",
+            "7178400",
+            "7519920",
+            "9550298",
+            null,
+            null
+        ],
+        "guaranteed": "14014800"
+    },
+    "Payton Pritchard": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/pritcpa01.html",
+        "salary": [
+            "6696429",
+            "7232143",
+            "7767857",
+            "8303571",
+            null,
+            null
+        ],
+        "guaranteed": "30000000"
+    },
+    "Kenrich Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willike04.html",
+        "salary": [
+            "6669000",
+            "7163000",
+            "7163000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "13832000"
+    },
+    "Shaedon Sharpe": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sharpsh01.html",
+        "salary": [
+            "6614160",
+            "8399983",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "15014143"
+    },
+    "Jevon Carter": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/carteje01.html",
+        "salary": [
+            "6500000",
+            "6809524",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6500000"
+    },
+    "Davion Mitchell": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mitchda01.html",
+        "salary": [
+            "6451077",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6451077"
+    },
+    "Saddiq Bey": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/beysa01.html",
+        "salary": [
+            "6440678",
+            "6118644",
+            "6440678",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "19000000"
+    },
+    "Jarace Walker": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/walkeja02.html",
+        "salary": [
+            "6362520",
+            "6665520",
+            "8478542",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "13028040"
+    },
+    "Rob Dillingham": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dilliro01.html",
+        "salary": [
+            "6262920",
+            "6576120",
+            "6889320",
+            "8763216",
+            null,
+            null
+        ],
+        "guaranteed": "12839040"
+    },
+    "Dean Wade": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wadede01.html",
+        "salary": [
+            "6166667",
+            "6623456",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6166667"
+    },
+    "John Konchar": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/konchjo01.html",
+        "salary": [
+            "6165000",
+            "6165000",
+            "6165000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "18495000"
+    },
+    "Ziaire Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willizi02.html",
+        "salary": [
+            "6133005",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6133005"
+    },
+    "Dyson Daniels": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/daniedy01.html",
+        "salary": [
+            "6059520",
+            "7707709",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "13767229"
+    },
+    "Precious Achiuwa": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/achiupr01.html",
+        "salary": [
+            "6000000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6000000"
+    },
+    "Malik Beasley": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/beaslma01.html",
+        "salary": [
+            "6000000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6000000"
+    },
+    "Chris Duarte": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/duartch01.html",
+        "salary": [
+            "5893768",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5893768"
+    },
+    "Taylor Hendricks": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hendrta01.html",
+        "salary": [
+            "5848680",
+            "6127080",
+            "7805900",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11975760"
+    },
+    "Moses Moody": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/moodymo01.html",
+        "salary": [
+            "5803269",
+            "11574075",
+            "12500000",
+            "13425925",
+            null,
+            null
+        ],
+        "guaranteed": "43303269"
+    },
+    "Zach Edey": {
+        "url_payroll": "https://www.basketball-reference.com/players/e/edeyza01.html",
+        "salary": [
+            "5756880",
+            "6045000",
+            "6332760",
+            "8067937",
+            null,
+            null
+        ],
+        "guaranteed": "11801880"
+    },
+    "Corey Kispert": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/kispeco01.html",
+        "salary": [
+            "5705887",
+            "13975000",
+            "13975000",
+            "13050000",
+            "13050000",
+            null
+        ],
+        "guaranteed": "46705887"
+    },
+    "Jeremy Sochan": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sochaje01.html",
+        "salary": [
+            "5570040",
+            "7096231",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "12666271"
+    },
+    "Cason Wallace": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wallaca01.html",
+        "salary": [
+            "5555880",
+            "5820240",
+            "7420806",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11376120"
+    },
+    "Cody Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willico04.html",
+        "salary": [
+            "5469120",
+            "5742480",
+            "6015600",
+            "7669890",
+            null,
+            null
+        ],
+        "guaranteed": "11211600"
+    },
+    "Alperen ÅengÃ¼n": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sengual01.html",
+        "salary": [
+            "5424654",
+            "33944954",
+            "35642202",
+            "37339450",
+            "39036697",
+            null
+        ],
+        "guaranteed": "151387957"
+    },
+    "Johnny Davis": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/davisjo06.html",
+        "salary": [
+            "5291160",
+            "6746229",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5291160"
+    },
+    "Jett Howard": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/howarje01.html",
+        "salary": [
+            "5278320",
+            "5529720",
+            "7337939",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "10808040"
+    },
+    "DÄvis BertÄns": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bertada01.html",
+        "salary": [
+            "5250000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5250000"
+    },
+    "Haywood Highsmith": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/highsha01.html",
+        "salary": [
+            "5200000",
+            "5616000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "10816000"
+    },
+    "Matas Buzelis": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/buzelma01.html",
+        "salary": [
+            "5195520",
+            "5455560",
+            "5715360",
+            "7584283",
+            null,
+            null
+        ],
+        "guaranteed": "10651080"
+    },
+    "Kris Dunn": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dunnkr01.html",
+        "salary": [
+            "5168000",
+            "5426400",
+            "5684800",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "10594400"
+    },
+    "Dario Å ariÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/saricda01.html",
+        "salary": [
+            "5168000",
+            "5426400",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5168000"
+    },
+    "Trey Murphy III": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/murphtr02.html",
+        "salary": [
+            "5159854",
+            "25000000",
+            "27000000",
+            "29000000",
+            "31000000",
+            null
+        ],
+        "guaranteed": "117159854"
+    },
+    "Ousmane Dieng": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/diengou01.html",
+        "salary": [
+            "5027040",
+            "6670882",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11697922"
+    },
+    "Dereck Lively II": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/livelde01.html",
+        "salary": [
+            "5014560",
+            "5253360",
+            "7239131",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "10267920"
+    },
+    "Drew Eubanks": {
+        "url_payroll": "https://www.basketball-reference.com/players/e/eubandr01.html",
+        "salary": [
+            "5000000",
+            "4750000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5000000"
+    },
+    "Andre Drummond": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/drumman01.html",
+        "salary": [
+            "5000000",
+            "5000000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5000000"
+    },
+    "Nick Richards": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/richani01.html",
+        "salary": [
+            "5000000",
+            "5000000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5000000"
+    },
+    "Nikola TopiÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/topicni01.html",
+        "salary": [
+            "4935960",
+            "5182920",
+            "5429760",
+            "7482210",
+            null,
+            null
+        ],
+        "guaranteed": "10118880"
+    },
+    "Tre Mann": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/manntr01.html",
+        "salary": [
+            "4908373",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4908373"
+    },
+    "Jalen Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willija06.html",
+        "salary": [
+            "4775760",
+            "6580997",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11356757"
+    },
+    "Gradey Dick": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dickgr01.html",
+        "salary": [
+            "4763760",
+            "4990560",
+            "7131511",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9754320"
+    },
+    "Jalen McDaniels": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mcdanja01.html",
+        "salary": [
+            "4741800",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4741800"
+    },
+    "Miles McBride": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mcbrimi01.html",
+        "salary": [
+            "4710144",
+            "4333333",
+            "3956523",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "13000000"
+    },
+    "Devin Carter": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/cartede02.html",
+        "salary": [
+            "4689000",
+            "4923720",
+            "5158080",
+            "7370897",
+            null,
+            null
+        ],
+        "guaranteed": "9612720"
+    },
+    "Nicolas Batum": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/batumni01.html",
+        "salary": [
+            "4668000",
+            "4901400",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4668000"
+    },
+    "Aaron Holiday": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/holidaa01.html",
+        "salary": [
+            "4668000",
+            "4901400",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4668000"
+    },
+    "Jalen Duren": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/durenja01.html",
+        "salary": [
+            "4536840",
+            "6483144",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "11019984"
+    },
+    "Jordan Hawkins": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hawkijo01.html",
+        "salary": [
+            "4525680",
+            "4741320",
+            "7021895",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9267000"
+    },
+    "Jalen Johnson": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/johnsja05.html",
+        "salary": [
+            "4510905",
+            "30000000",
+            "30000000",
+            "30000000",
+            "30000000",
+            "30000000"
+        ],
+        "guaranteed": "154510905"
+    },
+    "Carlton Carrington": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/carrica01.html",
+        "salary": [
+            "4454880",
+            "4677600",
+            "4900560",
+            "7257730",
+            null,
+            null
+        ],
+        "guaranteed": "9132480"
+    },
+    "Isaiah Jackson": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jacksis01.html",
+        "salary": [
+            "4435381",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4435381"
+    },
+    "Nickeil Alexander-Walker": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/alexani01.html",
+        "salary": [
+            "4312500",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4312500"
+    },
+    "Ochai Agbaji": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/agbajoc01.html",
+        "salary": [
+            "4310280",
+            "6383525",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "10693805"
+    },
+    "Kobe Bufkin": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bufkiko01.html",
+        "salary": [
+            "4299000",
+            "4503720",
+            "6904203",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8802720"
+    },
+    "Quentin Grimes": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/grimequ01.html",
+        "salary": [
+            "4296682",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4296682"
+    },
+    "Kel'el Ware": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wareke01.html",
+        "salary": [
+            "4231800",
+            "4443360",
+            "4654920",
+            "7135992",
+            null,
+            null
+        ],
+        "guaranteed": "8675160"
+    },
+    "Bones Hyland": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hylanbo01.html",
+        "salary": [
+            "4158439",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4158439"
+    },
+    "Mark Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willima07.html",
+        "salary": [
+            "4094280",
+            "6276531",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "10370811"
+    },
+    "Keyonte George": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/georgke01.html",
+        "salary": [
+            "4084200",
+            "4278960",
+            "6563925",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8363160"
+    },
+    "Cam Thomas": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/thomaca02.html",
+        "salary": [
+            "4041249",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Jared McCain": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mccaija01.html",
+        "salary": [
+            "4020360",
+            "4221360",
+            "4422600",
+            "6784268",
+            null,
+            null
+        ],
+        "guaranteed": "8241720"
+    },
+    "Jaden Springer": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sprinja01.html",
+        "salary": [
+            "4018363",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4018363"
+    },
+    "Dwight Powell": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/poweldw01.html",
+        "salary": [
+            "4000000",
+            "4000000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4000000"
+    },
+    "Day'Ron Sharpe": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sharpda01.html",
+        "salary": [
+            "3989122",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Santi Aldama": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/aldamsa01.html",
+        "salary": [
+            "3960531",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3960531"
+    },
+    "Amir Coffey": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/coffeam01.html",
+        "salary": [
+            "3938271",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3938271"
+    },
+    "Jalen Hood-Schifino": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hoodsja01.html",
+        "salary": [
+            "3879840",
+            "4064640",
+            "6243288",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3879840"
+    },
+    "Kevin Love": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/loveke01.html",
+        "salary": [
+            "3850000",
+            "4150000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8000000"
+    },
+    "Dalton Knecht": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/knechda01.html",
+        "salary": [
+            "3819120",
+            "4010160",
+            "4201080",
+            "6452860",
+            null,
+            null
+        ],
+        "guaranteed": "7829280"
+    },
+    "Tari Eason": {
+        "url_payroll": "https://www.basketball-reference.com/players/e/easonta01.html",
+        "salary": [
+            "3695160",
+            "5675766",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9370926"
+    },
+    "Jaime Jaquez Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jaqueja01.html",
+        "salary": [
+            "3685800",
+            "3861600",
+            "5939141",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7547400"
+    },
+    "Tristan Da Silva": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dasiltr01.html",
+        "salary": [
+            "3628440",
+            "3809520",
+            "3991200",
+            "6138466",
+            null,
+            null
+        ],
+        "guaranteed": "7437960"
+    },
+    "Brandin Podziemski": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/podzibr01.html",
+        "salary": [
+            "3519960",
+            "3687960",
+            "5679459",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7207920"
+    },
+    "Dalen Terry": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/terryda01.html",
+        "salary": [
+            "3510480",
+            "5399118",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8909598"
+    },
+    "Svi Mykhailiuk": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mykhasv01.html",
+        "salary": [
+            "3500000",
+            "3675000",
+            "3850000",
+            "4025000",
+            null,
+            null
+        ],
+        "guaranteed": "3500000"
+    },
+    "Cody Zeller": {
+        "url_payroll": "https://www.basketball-reference.com/players/z/zelleco01.html",
+        "salary": [
+            "3500000",
+            "3675000",
+            "3850000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3500000"
+    },
+    "Ja'Kobe Walter": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/walteja01.html",
+        "salary": [
+            "3465000",
+            "3638160",
+            "3811800",
+            "5870172",
+            null,
+            null
+        ],
+        "guaranteed": "7103160"
+    },
+    "Cam Whitmore": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/whitmca01.html",
+        "salary": [
+            "3379080",
+            "3539760",
+            "5458310",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6918840"
+    },
+    "Jake LaRavia": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/laravja01.html",
+        "salary": [
+            "3352680",
+            "5163127",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3352680"
+    },
+    "Jaylon Tyson": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/tysonja01.html",
+        "salary": [
+            "3326160",
+            "3492480",
+            "3658560",
+            "5641500",
+            null,
+            null
+        ],
+        "guaranteed": "6818640"
+    },
+    "Eric Gordon": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/gordoer01.html",
+        "salary": [
+            "3303771",
+            "3468960",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3303771"
+    },
+    "Cory Joseph": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/josepco01.html",
+        "salary": [
+            "3303771",
+            "3468960",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3303771"
+    },
+    "Russell Westbrook": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/westbru01.html",
+        "salary": [
+            "5631296",
+            "3468960",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2327525"
+    },
+    "Noah Clowney": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/clownno01.html",
+        "salary": [
+            "3244080",
+            "3398640",
+            "5414034",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6642720"
+    },
+    "Malaki Branham": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/branhma01.html",
+        "salary": [
+            "3217920",
+            "4962033",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8179953"
+    },
+    "Yves Missi": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/missiyv01.html",
+        "salary": [
+            "3193200",
+            "3353040",
+            "3512760",
+            "5595827",
+            null,
+            null
+        ],
+        "guaranteed": "6546240"
+    },
+    "Dante Exum": {
+        "url_payroll": "https://www.basketball-reference.com/players/e/exumda01.html",
+        "salary": [
+            "3150000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3150000"
+    },
+    "Dariq Whitehead": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/whiteda01.html",
+        "salary": [
+            "3114240",
+            "3262560",
+            "5366912",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6376800"
+    },
+    "Nassir Little": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/littlna01.html",
+        "salary": [
+            "3107143",
+            "3107143",
+            "3107143",
+            "3107143",
+            "3107143",
+            null
+        ],
+        "guaranteed": "15535715"
+    },
+    "Christian Braun": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/braunch01.html",
+        "salary": [
+            "3089640",
+            "4921797",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "8011437"
+    },
+    "Johnny Juzang": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/juzanjo01.html",
+        "salary": [
+            "3087519",
+            "2840518",
+            "2708000",
+            "2789215",
+            null,
+            null
+        ],
+        "guaranteed": "3087519"
+    },
+    "DaQuan Jeffries": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jeffrda01.html",
+        "salary": [
+            "3080918",
+            "2743776",
+            "2425404",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2425404"
+    },
+    "DaRon Holmes": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/holmeda01.html",
+        "salary": [
+            "3065640",
+            "3218760",
+            "3372120",
+            "5547138",
+            null,
+            null
+        ],
+        "guaranteed": "6284400"
+    },
+    "Josh Richardson": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/richajo01.html",
+        "salary": [
+            "3051153",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3051153"
+    },
+    "Christian Wood": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/woodch01.html",
+        "salary": [
+            "3036040",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3036040"
+    },
+    "Kyle Filipowski": {
+        "url_payroll": "https://www.basketball-reference.com/players/f/filipky01.html",
+        "salary": [
+            "3000000",
+            "3000000",
+            "3000000",
+            "3000000",
+            null,
+            null
+        ],
+        "guaranteed": "6000000"
+    },
+    "Julian Champagnie": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/champju02.html",
+        "salary": [
+            "3000000",
+            "3000000",
+            "3000000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Kris Murray": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/murrakr01.html",
+        "salary": [
+            "2990040",
+            "3132000",
+            "5315004",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6122040"
+    },
+    "Walker Kessler": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/kesslwa01.html",
+        "salary": [
+            "2965920",
+            "4878938",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7844858"
+    },
+    "Shake Milton": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/miltosh01.html",
+        "salary": [
+            "2875000",
+            "3000000",
+            "3287406",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "9162406"
+    },
+    "Olivier-Maxence Prosper": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/prospol01.html",
+        "salary": [
+            "2870400",
+            "3007080",
+            "5259383",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5877480"
+    },
+    "David Roddy": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/roddyda01.html",
+        "salary": [
+            "2847240",
+            "4831766",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2847240"
+    },
+    "Torrey Craig": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/craigto01.html",
+        "salary": [
+            "2845342",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2845342"
+    },
+    "Kyshawn George": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/georgky01.html",
+        "salary": [
+            "2825520",
+            "2966760",
+            "3108000",
+            "5435892",
+            null,
+            null
+        ],
+        "guaranteed": "5792280"
+    },
+    "AJ Johnson": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/johnsaj01.html",
+        "salary": [
+            "2795294",
+            "3090480",
+            "3237120",
+            "5493394",
+            null,
+            null
+        ],
+        "guaranteed": "5885774"
+    },
+    "Marcus Sasser": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sassema01.html",
+        "salary": [
+            "2755080",
+            "2886720",
+            "5198983",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5641800"
+    },
+    "Dewayne Dedmon": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dedmode01.html",
+        "salary": [
+            "2748674",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2748674"
+    },
+    "MarJon Beauchamp": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/beaucma01.html",
+        "salary": [
+            "2733720",
+            "4781276",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2733720"
+    },
+    "Trendon Watford": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/watfotr01.html",
+        "salary": [
+            "2726603",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2726603"
+    },
+    "Ben Sheppard": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sheppbe01.html",
+        "salary": [
+            "2663880",
+            "2790720",
+            "5031669",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5454600"
+    },
+    "Keita Bates-Diop": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bateske01.html",
+        "salary": [
+            "2654644",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2654644"
+    },
+    "Blake Wesley": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/weslebl01.html",
+        "salary": [
+            "2624280",
+            "4726328",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "7350608"
+    },
+    "Dillon Jones": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jonesdi01.html",
+        "salary": [
+            "2622360",
+            "2753280",
+            "2884440",
+            "5200646",
+            null,
+            null
+        ],
+        "guaranteed": "5375640"
+    },
+    "Nick Smith Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/smithni01.html",
+        "salary": [
+            "2587200",
+            "2710680",
+            "4890067",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5297880"
+    },
+    "Brice Sensabaugh": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sensabr01.html",
+        "salary": [
+            "2571480",
+            "2693760",
+            "4862237",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5265240"
+    },
+    "Ty Jerome": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jeromty01.html",
+        "salary": [
+            "2560975",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2560975"
+    },
+    "Julian Strawther": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/strawju01.html",
+        "salary": [
+            "2552520",
+            "2674200",
+            "4826931",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5226720"
+    },
+    "Terrence Shannon Jr. ": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/shannte01.html",
+        "salary": [
+            "2546640",
+            "2674080",
+            "2801640",
+            "5054159",
+            null,
+            null
+        ],
+        "guaranteed": "5220720"
+    },
+    "Wendell Moore Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/moorewe01.html",
+        "salary": [
+            "2537040",
+            "4574283",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2537040"
+    },
+    "Kobe Brown": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/brownko01.html",
+        "salary": [
+            "2533920",
+            "2654880",
+            "4792059",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "5188800"
+    },
+    "Ryan Dunn": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dunnry01.html",
+        "salary": [
+            "2530800",
+            "2657760",
+            "2784240",
+            "5025553",
+            null,
+            null
+        ],
+        "guaranteed": "5188560"
+    },
+    "Isaiah Collier": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/colliis01.html",
+        "salary": [
+            "2512680",
+            "2638200",
+            "2763960",
+            "4988948",
+            null,
+            null
+        ],
+        "guaranteed": "5150880"
+    },
+    "Baylor Scheierman": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/scheiba01.html",
+        "salary": [
+            "2494320",
+            "2619000",
+            "2744040",
+            "4952993",
+            null,
+            null
+        ],
+        "guaranteed": "10191353"
+    },
+    "Paul Reed": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/reedpa01.html",
+        "salary": [
+            "2485563",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2485563"
+    },
+    "Nikola JoviÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jovicni01.html",
+        "salary": [
+            "2464200",
+            "4445417",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6909617"
+    },
+    "Jaxson Hayes": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hayesja02.html",
+        "salary": [
+            "2463946",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2463946"
+    },
+    "Cam Reddish": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/reddica01.html",
+        "salary": [
+            "2463946",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2463946"
+    },
+    "Patrick Baldwin Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/baldwpa01.html",
+        "salary": [
+            "2448840",
+            "4420156",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2448840"
+    },
+    "Peyton Watson": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/watsope01.html",
+        "salary": [
+            "2413560",
+            "4356476",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6770036"
+    },
+    "Charlie Brown Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/brownch02.html",
+        "salary": [
+            "2237692",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2237692"
+    },
+    "Xavier Tillman Sr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/tillmxa01.html",
+        "salary": [
+            "2237691",
+            "2546675",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4784366"
+    },
+    "Anthony Gill": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/gillan01.html",
+        "salary": [
+            "2237691",
+            "2546675",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2237691"
+    },
+    "Kevin Porter Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/porteke02.html",
+        "salary": [
+            "3237691",
+            "2546675",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1000000"
+    },
+    "James Wiseman": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wisemja01.html",
+        "salary": [
+            "2237691",
+            "2546675",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2237691"
+    },
+    "Garrison Mathews": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mathega01.html",
+        "salary": [
+            "2230253",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2230253"
+    },
+    "JaVale McGee": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mcgeeja01.html",
+        "salary": [
+            "2208856",
+            "2208856",
+            "2208856",
+            "2208856",
+            null,
+            null
+        ],
+        "guaranteed": "8835424"
+    },
+    "Jeremiah Robinson-Earl": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/robinje02.html",
+        "salary": [
+            "2196970",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2196970"
+    },
+    "Lindy Waters III": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/waterli01.html",
+        "salary": [
+            "2196970",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2196970"
+    },
+    "Dalano Banton": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bantoda01.html",
+        "salary": [
+            "2196970",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2019706"
+    },
+    "Sam Merrill": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/merrisa01.html",
+        "salary": [
+            "2164993",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2164993"
+    },
+    "Duane Washington Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/washidu02.html",
+        "salary": [
+            "2162607",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2162607"
+    },
+    "Luka Garza": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/garzalu01.html",
+        "salary": [
+            "2162606",
+            "2349578",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2162606"
+    },
+    "Neemias Queta": {
+        "url_payroll": "https://www.basketball-reference.com/players/q/quetane01.html",
+        "salary": [
+            "2162606",
+            "2349578",
+            "2667944",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2162606"
+    },
+    "Vit Krejci": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/krejcvi01.html",
+        "salary": [
+            "2162606",
+            "2349578",
+            "2667944",
+            "3005085",
+            null,
+            null
+        ],
+        "guaranteed": "2162606"
+    },
+    "Keon Johnson": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/johnske07.html",
+        "salary": [
+            "2162606",
+            "2349578",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Vince Williams Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willivi01.html",
+        "salary": [
+            "2120693",
+            "2301587",
+            "2489752",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4422280"
+    },
+    "Colby Jones": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jonesco02.html",
+        "salary": [
+            "2120693",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2120693"
+    },
+    "Keon Ellis": {
+        "url_payroll": "https://www.basketball-reference.com/players/e/elliske01.html",
+        "salary": [
+            "2120693",
+            "2301587",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "A.J. Green": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/greenaj01.html",
+        "salary": [
+            "2120693",
+            "2301587",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Sam Hauser": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hausesa01.html",
+        "salary": [
+            "2092344",
+            "10044644",
+            "10848215",
+            "11651785",
+            "12455356",
+            null
+        ],
+        "guaranteed": "47092344"
+    },
+    "Jericho Sims": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/simsje01.html",
+        "salary": [
+            "2092344",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2092344"
+    },
+    "Jay Huff": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/huffja01.html",
+        "salary": [
+            "2088033",
+            "2349578",
+            "2667944",
+            "3005085",
+            null,
+            null
+        ],
+        "guaranteed": "4437611"
+    },
+    "Tyler Kolek": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/kolekty01.html",
+        "salary": [
+            "2087519",
+            "2191897",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "6575687"
+    },
+    "Scotty Pippen Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/pippesc02.html",
+        "salary": [
+            "2087519",
+            "2270735",
+            "2461462",
+            "2789215",
+            null,
+            null
+        ],
+        "guaranteed": "4358254"
+    },
+    "Patty Mills": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/millspa02.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Garrett Temple": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/templga01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Sandro Mamukelashvili": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mamuksa01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Charles Bassey": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bassech01.html",
+        "salary": [
+            "2087519",
+            "2500000",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Alex Len": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/lenal01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Jordan McLaughlin": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mclaujo01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Tyus Jones": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jonesty01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Monte Morris": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/morrimo01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Mason Plumlee": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/plumlma01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Damion Lee": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/leeda03.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Guerschon Yabusele": {
+        "url_payroll": "https://www.basketball-reference.com/players/y/yabusgu01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Reggie Jackson": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jacksre01.html",
+        "salary": [
+            "4033748",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1946229"
+    },
+    "Kyle Lowry": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/lowryky01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Cameron Payne": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/payneca01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Javonte Green": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/greenja02.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Daniel Theis": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/theisda01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Joe Ingles": {
+        "url_payroll": "https://www.basketball-reference.com/players/i/inglejo01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Gary Trent Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/trentga02.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Taurean Prince": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/princta02.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Delon Wright": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wrighde01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Alec Burks": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/burksal01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Mo Bamba": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bambamo01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Thomas Bryant": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bryanth01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "DeAndre Jordan": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jordade01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Vlatko ÄanÄar": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/cancavl01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Markieff Morris": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/morrima02.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Spencer Dinwiddie": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dinwisp01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Tristan Thompson": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/thomptr01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Seth Curry": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/curryse01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Talen Horton-Tucker": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hortota01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Luke Kornet": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/kornelu01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2087519"
+    },
+    "Doug McDermott": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mcderdo01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Orlando Robinson": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/robinor01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "James Johnson": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/johnsja01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Taj Gibson": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/gibsota01.html",
+        "salary": [
+            "2087519",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Duop Reath": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/reathdu01.html",
+        "salary": [
+            "2048780",
+            "2221677",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2048780"
+    },
+    "Andrew Nembhard": {
+        "url_payroll": "https://www.basketball-reference.com/players/n/nembhan01.html",
+        "salary": [
+            "2019699",
+            "18102000",
+            "19550160",
+            "20998320",
+            null,
+            null
+        ],
+        "guaranteed": "60670179"
+    },
+    "Jaden Hardy": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/hardyja02.html",
+        "salary": [
+            "2019699",
+            "6000000",
+            "6000000",
+            "6000000",
+            null,
+            null
+        ],
+        "guaranteed": "14019699"
+    },
+    "Kennedy Chandler": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/chandke01.html",
+        "salary": [
+            "2019699",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2019699"
+    },
+    "Jabari Walker": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/walkeja01.html",
+        "salary": [
+            "2019699",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Caleb Houstan": {
+        "url_payroll": "https://www.basketball-reference.com/players/h/houstca01.html",
+        "salary": [
+            "2019699",
+            "2187699",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Jaylin Williams": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/willija07.html",
+        "salary": [
+            "2019699",
+            "2187451",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Josh Minott": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/minotjo01.html",
+        "salary": [
+            "2019699",
+            "2187451",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Jose Alvarado": {
+        "url_payroll": "https://www.basketball-reference.com/players/a/alvarjo01.html",
+        "salary": [
+            "1988598",
+            "4500000",
+            "4500000",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "6488598"
+    },
+    "Sidy Cissoko": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/cissosi01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4113534"
+    },
+    "Ricky Council IV": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/councri01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4113534"
+    },
+    "GG Jackson II": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jacksgg01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4113534"
+    },
+    "Jalen Pickett": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/pickeja02.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4113534"
+    },
+    "Hunter Tyson": {
+        "url_payroll": "https://www.basketball-reference.com/players/t/tysonhu01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4113534"
+    },
+    "Julian Phillips": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/phillju01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "4113534"
+    },
+    "Jordan Walsh": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/walshjo01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2091857"
+    },
+    "Rayan Rupert": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/ruperra01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1891857"
+    },
+    "Leonard Miller": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/millele01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1891857"
+    },
+    "Chris Livingston": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/livinch01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1891857"
+    },
+    "Trayce Jackson-Davis": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jackstr02.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1891857"
+    },
+    "Maxwell Lewis": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/lewisma05.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1891857"
+    },
+    "Mouhamed Gueye": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/gueyemo02.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1891857"
+    },
+    "Toumani Camara": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/camarto01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Andre Jackson Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jacksan01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Gui Santos": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/santogu01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Craig Porter Jr.": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/portecr01.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            "2406205",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Jalen Wilson": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wilsoja03.html",
+        "salary": [
+            "1891857",
+            "2221677",
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": 0
+    },
+    "Jonathan Mogbo": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mogbojo01.html",
+        "salary": [
+            "1862265",
+            "1955377",
+            "2296271",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3817642"
+    },
+    "Jamal Shead": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/sheadja01.html",
+        "salary": [
+            "1862265",
+            "1955377",
+            "2296271",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3817642"
+    },
+    "Johnny Furphy": {
+        "url_payroll": "https://www.basketball-reference.com/players/f/furphjo01.html",
+        "salary": [
+            "1850842",
+            "1955377",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "6102490"
+    },
+    "Pacome Dadiet": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/dadiepa01.html",
+        "salary": [
+            "1808080",
+            "2847600",
+            "2983680",
+            "5373608",
+            null,
+            null
+        ],
+        "guaranteed": "4655680"
+    },
+    "Karlo MatkoviÄ": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/matkoka01.html",
+        "salary": [
+            "1407153",
+            "1955377",
+            "2296271",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "3362530"
+    },
+    "Ricky Rubio": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/rubiori01.html",
+        "salary": [
+            "1301031",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1301031"
+    },
+    "Eric Bledsoe": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bledser01.html",
+        "salary": [
+            "1300000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1300000"
+    },
+    "Bobi Klintman": {
+        "url_payroll": "https://www.basketball-reference.com/players/k/klintbo01.html",
+        "salary": [
+            "1257153",
+            "1955377",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "3212530"
+    },
+    "Tyler Smith": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/smithty02.html",
+        "salary": [
+            "1157153",
+            "1955377",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "5408801"
+    },
+    "Oso Ighodaro": {
+        "url_payroll": "https://www.basketball-reference.com/players/i/ighodos01.html",
+        "salary": [
+            "1157153",
+            "1955377",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "3112530"
+    },
+    "Jaylen Wells": {
+        "url_payroll": "https://www.basketball-reference.com/players/w/wellsja01.html",
+        "salary": [
+            "1157153",
+            "1955377",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "3112530"
+    },
+    "Bronny James": {
+        "url_payroll": "https://www.basketball-reference.com/players/j/jamesbr02.html",
+        "salary": [
+            "1157153",
+            "1955377",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "3112530"
+    },
+    "Cam Christie": {
+        "url_payroll": "https://www.basketball-reference.com/players/c/chrisca02.html",
+        "salary": [
+            "1157153",
+            "1955377",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "3112530"
+    },
+    "Adem Bona": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/bonaad01.html",
+        "salary": [
+            "1157153",
+            "1955377",
+            "2296271",
+            "2486995",
+            null,
+            null
+        ],
+        "guaranteed": "1157153"
+    },
+    "Antonio Reeves": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/reevean01.html",
+        "salary": [
+            "1157153",
+            "1955377",
+            "2296271",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1157153"
+    },
+    "Pelle Larsson": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/larsspe01.html",
+        "salary": [
+            "1157153",
+            "1955377",
+            "2296271",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1157153"
+    },
+    "Malevy Leons": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/leonsma01.html",
+        "salary": [
+            "1097300",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1097300"
+    },
+    "PJ Dozier": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/doziepj01.html",
+        "salary": [
+            "1051255",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1051255"
+    },
+    "Joshua Primo": {
+        "url_payroll": "https://www.basketball-reference.com/players/p/primojo01.html",
+        "salary": [
+            "1000000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1000000"
+    },
+    "E.J. Liddell": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/liddeej01.html",
+        "salary": [
+            "706898",
+            "706898",
+            "706898",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "2120694"
+    },
+    "Nik Stauskas": {
+        "url_payroll": "https://www.basketball-reference.com/players/s/stausni01.html",
+        "salary": [
+            "702310",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "702310"
+    },
+    "Matt Ryan": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/ryanma01.html",
+        "salary": [
+            "621439",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "621439"
+    },
+    "Ryan Rollins": {
+        "url_payroll": "https://www.basketball-reference.com/players/r/rolliry01.html",
+        "salary": [
+            "600000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "600000"
+    },
+    "Juwan Morgan": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/morgaju01.html",
+        "salary": [
+            "576229",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "576229"
+    },
+    "Malik Fitts": {
+        "url_payroll": "https://www.basketball-reference.com/players/f/fittsma01.html",
+        "salary": [
+            "555216",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "555216"
+    },
+    "Mamadi Diakite": {
+        "url_payroll": "https://www.basketball-reference.com/players/d/diakima01.html",
+        "salary": [
+            "464050",
+            "464050",
+            "464050",
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "1392150"
+    },
+    "Moses Brown": {
+        "url_payroll": "https://www.basketball-reference.com/players/b/brownmo01.html",
+        "salary": [
+            "306660",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "306660"
+    },
+    "Jaylen Nowell": {
+        "url_payroll": "https://www.basketball-reference.com/players/n/nowelja01.html",
+        "salary": [
+            "278782",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "278782"
+    },
+    "Didi Louzada": {
+        "url_payroll": "https://www.basketball-reference.com/players/l/louzama01.html",
+        "salary": [
+            "268032",
+            "268032",
+            "268032",
+            "268032",
+            "268032",
+            null
+        ],
+        "guaranteed": "1340160"
+    },
+    "AJ Griffin": {
+        "url_payroll": "https://www.basketball-reference.com/players/g/griffaj01.html",
+        "salary": [
+            "250000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "250000"
+    },
+    "Javon Freeman-Liberty": {
+        "url_payroll": "https://www.basketball-reference.com/players/f/freemja01.html",
+        "salary": [
+            "100000",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "100000"
+    },
+    "Javante McCoy": {
+        "url_payroll": "https://www.basketball-reference.com/players/m/mccoyja01.html",
+        "salary": [
+            "32596",
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "guaranteed": "32596"
+    }
+}

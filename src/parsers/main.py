@@ -8,7 +8,7 @@ from player_advanced import player_advanced
 def main():
     club_salary_parse()
     player_salary_parse()
-    # season_summary() ## doesn't work for now(
+    season_summary()
     player_advanced()
 
 if __name__ == '__main__':

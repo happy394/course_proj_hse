@@ -20,26 +20,26 @@ def request(url: str):
 
 
 def parser(soup: BeautifulSoup):
-    data = list()
+    data = dict()
     table = soup.find('table', class_=['stats_table', 'sortable', 'soc'])
     soup = table.find('tbody')
     rows = soup.find_all('tr')
     for row in rows:
-        buff = {'player': None, 'url': None, 'rank': None, 'stats': {'Age': None, 'Team': None, 'Pos': None, 'G': None, 'GS': None, 'MP': None, 'PER': None, 'TS%': None, '3PAr': None, 'FTr': None, 'ORB%': None, 'DRB%': None, 'TRB%': None, 'AST%': None, 'STL%': None, 'BLK%': None, 'TOV%': None, 'USG%': None, 'OWS': None, 'DWS': None, 'WS': None, 'WS/48': None, 'OBPM': None, 'DBPM': None, 'BPM': None, 'VORP': None, 'Awards': None}}
         row.find_all('td')
         for i, column in enumerate(row):
             if i % 2 == 0:
                 continue
             else:
                 if i > 3:
-                    buff['stats'][HEADS[i//2]] = column.text
+                    buff[player_name]['stats'][HEADS[i//2]] = column.text
                 elif i == 1:
-                    buff['rank'] = column.text
+                    rank = column.text
                 elif i == 3:
-                    buff['player'] = column.text
-                    buff['url'] = MAIN_URL+column.find('a')['href'] if column.find('a') else None
+                    player_name = column.text
+                    buff = {player_name: {'url': None, 'rank': rank, 'stats': {i: None for i in HEADS[2:]}}}
+                    buff[player_name]['url'] = MAIN_URL+column.find('a')['href'] if column.find('a') else None
 
-        data.append(buff)
+        data.update(buff)
 
     return data
 
