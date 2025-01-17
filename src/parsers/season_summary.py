@@ -13,7 +13,7 @@ def request(url: str):
     try:
         response = requests.get(url=url)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+        soup = BeautifulSoup(response.content.decode('utf-8'), "html.parser")
     except requests.RequestException as e:
         print(f"Error while requesting {url}: {e}")
         return None
@@ -48,10 +48,11 @@ def per_game_table_parse(rows: list):
                     buff_rank = column.text
                 elif i == 1:
                     team_name = column.text
-                    buff = {team_name: {'url': None, 'rank': buff_rank, 'stats': {i: None for i in HEADS_PER_GAME[2:]}}}
+                    buff = {team_name: {'url': None, 'rank': buff_rank}}
+                    buff[team_name].update({i: None for i in HEADS_PER_GAME[2:]})
                     buff[team_name]['url'] = MAIN_URL+column.find('a')['href'] if column.find('a') else None
             else:
-                buff[team_name]['stats'][HEADS_PER_GAME[i]] = column.text
+                buff[team_name][HEADS_PER_GAME[i]] = column.text
 
         data['per_game'].update(buff)
 
@@ -65,14 +66,14 @@ def advanced_table_parse(rows: list):
                 elif i == 1:
                     team_name = column.text
                     url = MAIN_URL+column.find('a')['href'] if column.find('a')['href'] else None
-                    buff = {team_name: {'url': url, 'rank': rank, 'stats': {'Age': None, 'W': None, 'L': None, 'PW': None, 'PL': None, 'MOV': None, 'SOS': None, 'SRS': None, 'ORtg': None, 'DRtg': None, 'NRtg': None, 'Pace': None, 'FTr': None, '3PAr': None, 'TS%': None, 'eFG%': None, 'TOV%': None, 'ORB%': None, 'FT/FGA': None, 'eFG%': None, 'TOV%': None, 'DRB%': None, 'FT/FGA': None, 'Arena': None, 'Attend.': None, 'Attend./G': None}}}
+                    buff = {team_name: {'url': url, 'rank': rank, 'Age': None, 'W': None, 'L': None, 'PW': None, 'PL': None, 'MOV': None, 'SOS': None, 'SRS': None, 'ORtg': None, 'DRtg': None, 'NRtg': None, 'Pace': None, 'FTr': None, '3PAr': None, 'TS%': None, 'eFG%': None, 'TOV%': None, 'ORB%': None, 'FT/FGA': None, 'eFG%': None, 'TOV%': None, 'DRB%': None, 'FT/FGA': None, 'Arena': None, 'Attend.': None, 'Attend./G': None}}
             else:
                 if column.attrs['data-stat'] == 'DUMMY':
                     continue
                 else:
-                    buff[team_name]['stats'][HEADS_ADVANCED[i]] = column.text
+                    buff[team_name][HEADS_ADVANCED[i]] = column.text
 
-        data['advansed'].update(buff)
+        data['advanced'].update(buff)
 
 
 def parser(soup: BeautifulSoup):
@@ -81,7 +82,7 @@ def parser(soup: BeautifulSoup):
     data.update({
                 'all_standings': {'eastern_standings': dict(), 'western_standings': dict()},
                 'per_game': dict(),
-                'advansed': dict(),
+                'advanced': dict(),
                 })
 
     # all_standings
@@ -92,11 +93,20 @@ def parser(soup: BeautifulSoup):
     rows = conference_west.find_all('tr')
     conference_table_parse(rows, 'western_standings')
 
+    with open('parsed/eastern_standings.json', 'w', encoding='utf-8') as f:
+        json.dump(data['all_standings']['eastern_standings'], f, ensure_ascii=False, indent=4)
+    with open('parsed/western_standings.json', 'w', encoding='utf-8') as f:
+        json.dump(data['all_standings']['western_standings'], f, ensure_ascii=False, indent=4)
+
+
     # per_game
     per_game = soup.find('div', attrs={'id': 'all_per_game_team-opponent'})
     per_game_table = per_game.find('tbody')
     rows = per_game_table.find_all('tr')
     per_game_table_parse(rows)
+
+    with open('parsed/per_game.json', 'w', encoding='utf-8') as f:
+        json.dump(data['per_game'], f, ensure_ascii=False, indent=4)
 
     # advanced
     advanced = soup.find('div', attrs={'id': 'all_advanced_team'})
@@ -104,7 +114,10 @@ def parser(soup: BeautifulSoup):
     rows = advanced_table.find_all('tr')
     advanced_table_parse(rows)
 
-    return data
+    with open('parsed/advanced.json', 'w', encoding='utf-8') as f:
+        json.dump(data['advanced'], f, ensure_ascii=False, indent=4)
+
+    return
 
 
 def season_summary():
@@ -113,10 +126,7 @@ def season_summary():
     soup: BeautifulSoup = request(url)
 
     if soup:
-        result = parser(soup)
-        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-            json.dump(result, f, ensure_ascii=False, indent=4)
-
+        parser(soup)
 
 
 if __name__ == '__main__':

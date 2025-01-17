@@ -5,13 +5,13 @@ from bs4 import BeautifulSoup
 
 MAIN_URL = 'https://www.basketball-reference.com'
 YEARS = ['2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']
-OUTPUT_FILE = 'course_proj_hse/parsed/'+'club_salary_parsed.json'
+OUTPUT_FILE = 'parsed/'+'club_salary_parsed.json'
 
 def request(url: str):
     try:
         response = requests.get(url=url)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+        soup = BeautifulSoup(response.content.decode('utf-8'), "html.parser")
     except requests.RequestException as e:
         print(f"Error while requesting {url}: {e}")
         return None
@@ -28,7 +28,8 @@ def parser(soup: BeautifulSoup):
         team = row.find('td', class_='left').find('a')
         team_name = team.text
         team_url = MAIN_URL+team['href']
-        data.update({team_name: {'url_payroll': team_url, 'salary': [None for i in YEARS]}})
+        data.update({team_name: {'url_payroll': team_url}})
+        data[team_name].update({i: None for i in YEARS})
 
         salary_yes = row.find_all('td', class_='right')
         salary_no = row.find_all('td', class_='right iz')
@@ -36,7 +37,7 @@ def parser(soup: BeautifulSoup):
         for i in range(len(YEARS)):
             try:
                 amount = salaries[i]['csk']
-                data[team_name]['salary'][i] = amount
+                data[team_name][YEARS[i]] = amount
             except KeyError as e:
                 pass
     
