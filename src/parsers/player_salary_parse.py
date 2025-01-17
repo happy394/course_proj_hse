@@ -11,7 +11,7 @@ def request(url: str):
     try:
         response = requests.get(url=url)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+        soup = BeautifulSoup(response.content.decode('utf-8'), "html.parser")
     except requests.RequestException as e:
         print(f"Error while requesting {url}: {e}")
         return None
@@ -29,7 +29,9 @@ def parser(soup: BeautifulSoup):
         player = row.find('td', class_='left').find('a')
         player_name = player.text
         player_url = MAIN_URL+player['href']
-        data.update({player_name: {'url_payroll': player_url, 'salary': [None for i in YEARS], 'guaranteed': 0}})
+        data.update({player_name: {'url_payroll': player_url}})
+        data[player_name].update({i: None for i in YEARS})
+        data[player_name].update({'guaranteed': 0})
 
         salary_yes = row.find_all('td', class_='right')
         salary_no = row.find_all('td', class_='right iz')
@@ -37,7 +39,7 @@ def parser(soup: BeautifulSoup):
         for i in range(len(YEARS)):
             try:
                 amount = salaries[i]['csk']
-                data[player_name]['salary'][i] = amount
+                data[player_name][YEARS[i]] = amount
             except KeyError as e:
                 pass
 

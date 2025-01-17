@@ -11,7 +11,7 @@ def request(url: str):
     try:
         response = requests.get(url=url)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+        soup = BeautifulSoup(response.content.decode('utf-8'), "html.parser")
     except requests.RequestException as e:
         print(f"Error while requesting {url}: {e}")
         return None
@@ -31,12 +31,13 @@ def parser(soup: BeautifulSoup):
                 continue
             else:
                 if i > 3:
-                    buff[player_name]['stats'][HEADS[i//2]] = column.text
+                    buff[player_name][HEADS[i//2]] = column.text
                 elif i == 1:
                     rank = column.text
                 elif i == 3:
                     player_name = column.text
-                    buff = {player_name: {'url': None, 'rank': rank, 'stats': {i: None for i in HEADS[2:]}}}
+                    buff = {player_name: {'url': None, 'rank': rank}}
+                    buff[player_name].update({i: None for i in HEADS[2:]})
                     buff[player_name]['url'] = MAIN_URL+column.find('a')['href'] if column.find('a') else None
 
         data.update(buff)
