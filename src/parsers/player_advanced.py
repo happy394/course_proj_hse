@@ -2,7 +2,6 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-
 MAIN_URL = 'https://www.basketball-reference.com'
 OUTPUT_FILE = 'parsed/'+'player_advanced.json'
 HEADS = ['rank', '', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
@@ -18,12 +17,22 @@ def request(url: str):
 
     return soup
 
+def convert_to_int(value):
+    """
+    Attempt to convert a string value to an integer.
+    Return 0 if the value is None or conversion fails.
+    """
+    try:
+        return int(value.replace(',', '')) if value else 0  # Remove commas and convert to int
+    except (ValueError, AttributeError):
+        return 0
 
 def parser(soup: BeautifulSoup):
     data = dict()
     table = soup.find('table', class_=['stats_table', 'sortable', 'soc'])
     soup = table.find('tbody')
     rows = soup.find_all('tr')
+
     for row in rows:
         row.find_all('td')
         for i, column in enumerate(row):
@@ -44,16 +53,16 @@ def parser(soup: BeautifulSoup):
 
     return data
 
-
 def player_advanced():
     url: str = 'https://www.basketball-reference.com/leagues/NBA_2025_advanced.html'
     soup: BeautifulSoup = request(url)
 
     if soup:
         result = parser(soup)
+        result = convert_to_int(result)
+
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=4)
-
 
 if __name__ == '__main__':
     player_advanced()

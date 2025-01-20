@@ -2,7 +2,6 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-
 MAIN_URL = 'https://www.basketball-reference.com'
 YEARS = ['2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']
 OUTPUT_FILE = 'parsed/'+'player_salary_parsed.json'
@@ -18,6 +17,15 @@ def request(url: str):
 
     return soup
 
+def convert_to_int(value):
+    """
+    Attempt to convert a value to an integer.
+    Return 0 if conversion fails.
+    """
+    try:
+        return int(value.replace(',', ''))  # Remove commas for integer conversion
+    except (ValueError, AttributeError):
+        return 0
 
 def parser(soup: BeautifulSoup):
     data = dict()
@@ -28,9 +36,9 @@ def parser(soup: BeautifulSoup):
         if (row.attrs): continue
         player = row.find('td', class_='left').find('a')
         player_name = player.text
-        player_url = MAIN_URL+player['href']
+        player_url = MAIN_URL + player['href']
         data.update({player_name: {'url_payroll': player_url}})
-        data[player_name].update({i: None for i in YEARS})
+        data[player_name].update({i: 0 for i in YEARS})
         data[player_name].update({'guaranteed': 0})
 
         salary_yes = row.find_all('td', class_='right')
@@ -39,18 +47,17 @@ def parser(soup: BeautifulSoup):
         for i in range(len(YEARS)):
             try:
                 amount = salaries[i]['csk']
-                data[player_name][YEARS[i]] = amount
+                data[player_name][YEARS[i]] = convert_to_int(amount)
             except KeyError as e:
                 pass
 
         try:
-                amount = salaries[i+1]['csk']
-                data[player_name]['guaranteed'] = amount
-        except KeyError as e:
+            amount = salaries[len(YEARS)]['csk']
+            data[player_name]['guaranteed'] = convert_to_int(amount)
+        except (KeyError, IndexError):
             pass
 
     return data
-
 
 def player_salary_parse():
     url: str = 'https://www.basketball-reference.com/contracts/players.html'
@@ -60,8 +67,6 @@ def player_salary_parse():
         result = parser(soup)
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=4)
-
-
 
 if __name__ == '__main__':
     player_salary_parse()
