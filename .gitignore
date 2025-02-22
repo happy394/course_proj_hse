@@ -175,3 +175,4 @@ docker
 .DS_Store
 data
 config
+.env.dev
