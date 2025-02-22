@@ -6,3 +6,4 @@ COPY ./mywebsite /mywebsite
 WORKDIR /mywebsite
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# CMD ["gunicorn", "--bind"]
