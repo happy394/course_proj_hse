@@ -1,0 +1,11 @@
+---
+version: null
+meta:
+  environment: db
+  toolchain:
+    name: postgresql
+    version: 15
+build: {}
+run:
+  args: POSTGRES_DB=nba_teams POSTGRES_USER=postgres POSTGRES_PASSWORD=bokuwabakadesu
+    POSTGRES_HOST=db POSTGRES_PORT=5432
