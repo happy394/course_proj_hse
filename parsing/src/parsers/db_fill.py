@@ -1,8 +1,8 @@
-import configparser
 import psycopg2
+import os
 import glob
 import json
-import os
+from dotenv import load_dotenv
 
 HEADS = ['Name', 'url', 'rank', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
 
@@ -12,18 +12,16 @@ def find_file(filename, search_path='.'):
 
 
 def db_connect():
-    file_path = find_file('config.ini', os.getcwd())
-    config = configparser.ConfigParser()
-    config.read(file_path)
+    load_dotenv()
     try:
-        db = psycopg2.connect(dbname=config['postgres']['db'], user=config['postgres']['user'], password=config['postgres']['password'], host=config['postgres']['host'])
+        db = psycopg2.connect(dbname=os.getenv('POSTGRES_DB'), user=os.getenv('POSTGRES_USER'), password=os.getenv('POSTGRES_PASSWORD'), host='localhost')
         return db
     except:
         print('Can`t establish connection to database')
 
 def player_advanced(db, cursor):
-    # cursor.execute("""DROP TABLE player_advanced""")
-    # db.commit()
+    cursor.execute("""DROP TABLE player_advanced""")
+    db.commit()
     try:
         cursor.execute("""CREATE TABLE player_advanced ("Name" varchar, "Url" varchar, "Rank" integer, "Age" integer, "Team" varchar, "Pos" varchar, "G" integer, "GS" integer, "MP" integer, "PER" REAL, "TS%" REAL, "3PAr" REAL, "FTr" REAL, "ORB%" REAL, "DRB%" REAL, "TRB%" REAL, "AST%" REAL, "STL%" REAL, "BLK%" REAL, "TOV%" REAL, "USG%" REAL, "OWS" REAL, "DWS" REAL, "WS" REAL, "WS/48" REAL, "OBPM" REAL, "DBPM" REAL, "BPM" REAL, "VORP" REAL, "Awards" varchar)""")
         db.commit()
@@ -31,7 +29,7 @@ def player_advanced(db, cursor):
         print('I can`t create this table')
         print(e)
 
-    with open("parsed/player_advanced.json", "r", encoding="utf-8") as f:
+    with open("parsing/parsed/player_advanced.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     
     for player in data.items():
@@ -48,10 +46,10 @@ def player_advanced(db, cursor):
         db.commit()
 
 def teams(db, cursor):
-    # cursor.execute("""DROP TABLE eastern_conference""")
-    # db.commit()
-    # cursor.execute("""DROP TABLE western_conference""")
-    # db.commit()
+    cursor.execute("""DROP TABLE eastern_conference""")
+    db.commit()
+    cursor.execute("""DROP TABLE western_conference""")
+    db.commit()
 
     try:
         cursor.execute("""CREATE TABLE eastern_conference ("Name" VARCHAR, "Url" VARCHAR, "Wins" INTEGER, "Losses" INTEGER, "Win/loss" REAL, "gb" REAL, "ps/g" REAL, "pa/g" REAL, "srs" REAL, "division" VARCHAR)""")
@@ -60,7 +58,7 @@ def teams(db, cursor):
         print('I can`t create this table')
         print(e)
 
-    with open("parsed/eastern_standings.json", "r", encoding="utf-8") as f:
+    with open("parsing/parsed/eastern_standings.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     
     for team in data.items():
@@ -83,7 +81,7 @@ def teams(db, cursor):
         print('I can`t create this table')
         print(e)
 
-    with open("parsed/western_standings.json", "r", encoding="utf-8") as f:
+    with open("parsing/parsed/western_standings.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     
     for team in data.items():

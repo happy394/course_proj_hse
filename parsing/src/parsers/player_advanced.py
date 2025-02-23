@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 
 MAIN_URL = 'https://www.basketball-reference.com'
-OUTPUT_FILE = 'parsed/'+'player_advanced.json'
+OUTPUT_FILE = 'parsing/parsed/'+'player_advanced.json'
 HEADS = ['rank', '', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
 
 def request(url: str):

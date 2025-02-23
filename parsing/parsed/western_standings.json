@@ -1,0 +1,167 @@
+{
+    "Oklahoma City Thunder": {
+        "url": "https://www.basketball-reference.com/teams/OKC/2025.html",
+        "wins": "45",
+        "losses": "10",
+        "win/loss": ".818",
+        "gb": null,
+        "ps/g": "118.1",
+        "pa/g": "104.9",
+        "srs": "12.78",
+        "division": "Northwest Division"
+    },
+    "Denver Nuggets": {
+        "url": "https://www.basketball-reference.com/teams/DEN/2025.html",
+        "wins": "37",
+        "losses": "19",
+        "win/loss": ".661",
+        "gb": "8.5",
+        "ps/g": "121.7",
+        "pa/g": "115.8",
+        "srs": "5.28",
+        "division": "Northwest Division"
+    },
+    "Minnesota Timberwolves": {
+        "url": "https://www.basketball-reference.com/teams/MIN/2025.html",
+        "wins": "31",
+        "losses": "26",
+        "win/loss": ".544",
+        "gb": "15.0",
+        "ps/g": "111.6",
+        "pa/g": "108.3",
+        "srs": "3.95",
+        "division": "Northwest Division"
+    },
+    "Portland Trail Blazers": {
+        "url": "https://www.basketball-reference.com/teams/POR/2025.html",
+        "wins": "23",
+        "losses": "33",
+        "win/loss": ".411",
+        "gb": "22.5",
+        "ps/g": "109.1",
+        "pa/g": "114.7",
+        "srs": "-5.04",
+        "division": "Northwest Division"
+    },
+    "Utah Jazz": {
+        "url": "https://www.basketball-reference.com/teams/UTA/2025.html",
+        "wins": "13",
+        "losses": "42",
+        "win/loss": ".236",
+        "gb": "32.0",
+        "ps/g": "112.2",
+        "pa/g": "119.6",
+        "srs": "-6.61",
+        "division": "Northwest Division"
+    },
+    "Los Angeles Lakers": {
+        "url": "https://www.basketball-reference.com/teams/LAL/2025.html",
+        "wins": "33",
+        "losses": "21",
+        "win/loss": ".611",
+        "gb": null,
+        "ps/g": "112.9",
+        "pa/g": "112.1",
+        "srs": "0.35",
+        "division": "Pacific Division"
+    },
+    "Los Angeles Clippers": {
+        "url": "https://www.basketball-reference.com/teams/LAC/2025.html",
+        "wins": "31",
+        "losses": "24",
+        "win/loss": ".564",
+        "gb": "2.5",
+        "ps/g": "110.9",
+        "pa/g": "108.2",
+        "srs": "2.88",
+        "division": "Pacific Division"
+    },
+    "Golden State Warriors": {
+        "url": "https://www.basketball-reference.com/teams/GSW/2025.html",
+        "wins": "29",
+        "losses": "27",
+        "win/loss": ".518",
+        "gb": "5.0",
+        "ps/g": "112.3",
+        "pa/g": "111.6",
+        "srs": "1.54",
+        "division": "Pacific Division"
+    },
+    "Sacramento Kings": {
+        "url": "https://www.basketball-reference.com/teams/SAC/2025.html",
+        "wins": "28",
+        "losses": "28",
+        "win/loss": ".500",
+        "gb": "6.0",
+        "ps/g": "116.6",
+        "pa/g": "116.3",
+        "srs": "-0.11",
+        "division": "Pacific Division"
+    },
+    "Phoenix Suns": {
+        "url": "https://www.basketball-reference.com/teams/PHO/2025.html",
+        "wins": "26",
+        "losses": "29",
+        "win/loss": ".473",
+        "gb": "7.5",
+        "ps/g": "113.1",
+        "pa/g": "115.1",
+        "srs": "-2.28",
+        "division": "Pacific Division"
+    },
+    "Memphis Grizzlies": {
+        "url": "https://www.basketball-reference.com/teams/MEM/2025.html",
+        "wins": "37",
+        "losses": "19",
+        "win/loss": ".661",
+        "gb": null,
+        "ps/g": "122.8",
+        "pa/g": "115.8",
+        "srs": "6.29",
+        "division": "Southwest Division"
+    },
+    "Houston Rockets": {
+        "url": "https://www.basketball-reference.com/teams/HOU/2025.html",
+        "wins": "35",
+        "losses": "21",
+        "win/loss": ".625",
+        "gb": "2.0",
+        "ps/g": "112.9",
+        "pa/g": "108.8",
+        "srs": "5.01",
+        "division": "Southwest Division"
+    },
+    "Dallas Mavericks": {
+        "url": "https://www.basketball-reference.com/teams/DAL/2025.html",
+        "wins": "31",
+        "losses": "26",
+        "win/loss": ".544",
+        "gb": "6.5",
+        "ps/g": "115.6",
+        "pa/g": "113.3",
+        "srs": "2.91",
+        "division": "Southwest Division"
+    },
+    "San Antonio Spurs": {
+        "url": "https://www.basketball-reference.com/teams/SAS/2025.html",
+        "wins": "24",
+        "losses": "30",
+        "win/loss": ".444",
+        "gb": "12.0",
+        "ps/g": "113.0",
+        "pa/g": "114.5",
+        "srs": "-1.49",
+        "division": "Southwest Division"
+    },
+    "New Orleans Pelicans": {
+        "url": "https://www.basketball-reference.com/teams/NOP/2025.html",
+        "wins": "13",
+        "losses": "43",
+        "win/loss": ".232",
+        "gb": "24.0",
+        "ps/g": "110.4",
+        "pa/g": "119.3",
+        "srs": "-7.87",
+        "division": "Southwest Division"
+    }
+}

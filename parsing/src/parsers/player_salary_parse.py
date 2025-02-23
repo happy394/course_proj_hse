@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 MAIN_URL = 'https://www.basketball-reference.com'
 YEARS = ['2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']
-OUTPUT_FILE = 'parsed/'+'player_salary_parsed.json'
+OUTPUT_FILE = 'parsing/parsed/'+'player_salary_parsed.json'
 
 def request(url: str):
     try:

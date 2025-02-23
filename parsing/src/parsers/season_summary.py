@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 
 MAIN_URL = 'https://www.basketball-reference.com'
-OUTPUT_FILE = 'course_proj_hse/parsed/'+'season_summary_parsed.json'
+OUTPUT_FILE = 'parsing/parsed/'+'season_summary_parsed.json'
 HEADS_PER_GAME = [None, None, 'G', 'MP', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2P', '2PA', '2P%', 'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS']
 HEADS_ADVANCED_OVER = ['Offense Four Factors', 'Defense Four Factors']
 HEADS_ADVANCED = ['rank', None, 'Age', 'W', 'L', 'PW', 'PL', 'MOV', 'SOS', 'SRS', 'ORtg', 'DRtg', 'NRtg', 'Pace', 'FTr', '3PAr', 'TS%', '\xa0', 'eFG%', 'TOV%', 'ORB%', 'FT/FGA', '\xa0', 'eFG%', 'TOV%', 'DRB%', 'FT/FGA', '\xa0', 'Arena', 'Attend.', 'Attend./G']
@@ -94,9 +94,9 @@ def parser(soup: BeautifulSoup):
     rows = conference_west.find_all('tr')
     conference_table_parse(rows, 'western_standings')
 
-    with open('parsed/eastern_standings.json', 'w', encoding='utf-8') as f:
+    with open('parsing/parsed/eastern_standings.json', 'w', encoding='utf-8') as f:
         json.dump(data['all_standings']['eastern_standings'], f, ensure_ascii=False, indent=4)
-    with open('parsed/western_standings.json', 'w', encoding='utf-8') as f:
+    with open('parsing/parsed/western_standings.json', 'w', encoding='utf-8') as f:
         json.dump(data['all_standings']['western_standings'], f, ensure_ascii=False, indent=4)
 
 
@@ -106,7 +106,7 @@ def parser(soup: BeautifulSoup):
     rows = per_game_table.find_all('tr')
     per_game_table_parse(rows)
 
-    with open('parsed/per_game.json', 'w', encoding='utf-8') as f:
+    with open('parsing/parsed/per_game.json', 'w', encoding='utf-8') as f:
         json.dump(data['per_game'], f, ensure_ascii=False, indent=4)
 
     # advanced
@@ -115,7 +115,7 @@ def parser(soup: BeautifulSoup):
     rows = advanced_table.find_all('tr')
     advanced_table_parse(rows)
 
-    with open('parsed/advanced.json', 'w', encoding='utf-8') as f:
+    with open('parsing/parsed/advanced.json', 'w', encoding='utf-8') as f:
         json.dump(data['advanced'], f, ensure_ascii=False, indent=4)
 
     return

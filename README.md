@@ -50,15 +50,20 @@ Do everything in main project directory, where you clone this repo
 
 3. Add .env file to main proj directory
 
-4. Build and run Docker
+4. Build and run Docker db
 
     ```bash
-    docker-compose -f docker-compose.yaml up -d --build
+    docker-compose -f docker-compose.yaml up db -d --build
     ```
 
-    This should make a container in Docker desktop
+    This should make a container in Docker desktop and run db image
 
 5. Run /parsing/src/main.py
 6. Run /parsing/src/parsers/db_fill.py
+7. Finally build web image and run it
+
+    ```bash
+    docker-compose -f docker-compose.yaml up web -d --build
+    ```
 
 Now local webpage should be accessed at [this link](http://localhost:8000)

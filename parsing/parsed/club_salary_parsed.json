@@ -1,0 +1,272 @@
+{
+    "Phoenix Suns": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/PHO.html",
+        "2024-25": "214371340",
+        "2025-26": "218733471",
+        "2026-27": "152101890",
+        "2027-28": "102634883",
+        "2028-29": "3107143",
+        "2029-30": null
+    },
+    "Minnesota Timberwolves": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/MIN.html",
+        "2024-25": "202492182",
+        "2025-26": "190140062",
+        "2026-27": "136756790",
+        "2027-28": "132657491",
+        "2028-29": "86055603",
+        "2029-30": null
+    },
+    "Boston Celtics": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/BOS.html",
+        "2024-25": "193336448",
+        "2025-26": "225514138",
+        "2026-27": "207117555",
+        "2027-28": "218506223",
+        "2028-29": "179367810",
+        "2029-30": "71446914"
+    },
+    "New York Knicks": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/NYK.html",
+        "2024-25": "188375874",
+        "2025-26": "196310224",
+        "2026-27": "167478483",
+        "2027-28": "177217150",
+        "2028-29": "91692629",
+        "2029-30": null
+    },
+    "Los Angeles Lakers": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/LAL.html",
+        "2024-25": "188022153",
+        "2025-26": "189239092",
+        "2026-27": "86079494",
+        "2027-28": "22225569",
+        "2028-29": null,
+        "2029-30": null
+    },
+    "Milwaukee Bucks": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/MIL.html",
+        "2024-25": "182600201",
+        "2025-26": "164780121",
+        "2026-27": "144366965",
+        "2027-28": "65273677",
+        "2028-29": null,
+        "2029-30": null
+    },
+    "Denver Nuggets": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/DEN.html",
+        "2024-25": "182574315",
+        "2025-26": "199480856",
+        "2026-27": "202401057",
+        "2027-28": "164208943",
+        "2028-29": "94623207",
+        "2029-30": null
+    },
+    "Golden State Warriors": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/GSW.html",
+        "2024-25": "175759694",
+        "2025-26": "170506402",
+        "2026-27": "177342702",
+        "2027-28": "23523485",
+        "2028-29": null,
+        "2029-30": null
+    },
+    "Dallas Mavericks": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/DAL.html",
+        "2024-25": "175238530",
+        "2025-26": "190072200",
+        "2026-27": "124340031",
+        "2027-28": "89224032",
+        "2028-29": null,
+        "2029-30": null
+    },
+    "Miami Heat": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/MIA.html",
+        "2024-25": "173088172",
+        "2025-26": "178497509",
+        "2026-27": "134432212",
+        "2027-28": "59746788",
+        "2028-29": "56507892",
+        "2029-30": null
+    },
+    "New Orleans Pelicans": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/NOP.html",
+        "2024-25": "170627096",
+        "2025-26": "170557669",
+        "2026-27": "137289565",
+        "2027-28": "111102263",
+        "2028-29": "31000000",
+        "2029-30": null
+    },
+    "Los Angeles Clippers": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/LAC.html",
+        "2024-25": "169670454",
+        "2025-26": "175420245",
+        "2026-27": "109119480",
+        "2027-28": "23485315",
+        "2028-29": null,
+        "2029-30": null
+    },
+    "Toronto Raptors": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/TOR.html",
+        "2024-25": "169454647",
+        "2025-26": "177340721",
+        "2026-27": "181202885",
+        "2027-28": "125122564",
+        "2028-29": "80440570",
+        "2029-30": "51033510"
+    },
+    "Cleveland Cavaliers": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/CLE.html",
+        "2024-25": "169080163",
+        "2025-26": "207504248",
+        "2026-27": "221902629",
+        "2027-28": "179433216",
+        "2028-29": "80420570",
+        "2029-30": "51033510"
+    },
+    "Brooklyn Nets": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/BRK.html",
+        "2024-25": "169054676",
+        "2025-26": "59349882",
+        "2026-27": "58834878",
+        "2027-28": "20943184",
+        "2028-29": null,
+        "2029-30": null
+    },
+    "Philadelphia 76ers": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/PHI.html",
+        "2024-25": "169007888",
+        "2025-26": "174403855",
+        "2026-27": "162007728",
+        "2027-28": "172064825",
+        "2028-29": "113657512",
+        "2029-30": null
+    },
+    "Indiana Pacers": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/IND.html",
+        "2024-25": "168569767",
+        "2025-26": "165002214",
+        "2026-27": "170205890",
+        "2027-28": "155907787",
+        "2028-29": "67472848",
+        "2029-30": null
+    },
+    "Sacramento Kings": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/SAC.html",
+        "2024-25": "168263796",
+        "2025-26": "168430806",
+        "2026-27": "156827495",
+        "2027-28": "78861348",
+        "2028-29": null,
+        "2029-30": null
+    },
+    "Houston Rockets": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/HOU.html",
+        "2024-25": "167805430",
+        "2025-26": "191725805",
+        "2026-27": "132310728",
+        "2027-28": "87381075",
+        "2028-29": "39036697",
+        "2029-30": "39036697"
+    },
+    "Atlanta Hawks": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/ATL.html",
+        "2024-25": "167769541",
+        "2025-26": "144680064",
+        "2026-27": "136391772",
+        "2027-28": "83319722",
+        "2028-29": "30000000",
+        "2029-30": "30000000"
+    },
+    "Washington Wizards": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/WAS.html",
+        "2024-25": "167683313",
+        "2025-26": "154692779",
+        "2026-27": "89722897",
+        "2027-28": "46848814",
+        "2028-29": "13050000",
+        "2029-30": null
+    },
+    "Charlotte Hornets": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/CHO.html",
+        "2024-25": "167123334",
+        "2025-26": "151229689",
+        "2026-27": "126316322",
+        "2027-28": "54027913",
+        "2028-29": "46394040",
+        "2029-30": null
+    },
+    "Portland Trail Blazers": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/POR.html",
+        "2024-25": "167086613",
+        "2025-26": "170831585",
+        "2026-27": "76426582",
+        "2027-28": "58107120",
+        "2028-29": "268032",
+        "2029-30": null
+    },
+    "Chicago Bulls": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/CHI.html",
+        "2024-25": "165919354",
+        "2025-26": "134846334",
+        "2026-27": "45550136",
+        "2027-28": "25584283",
+        "2028-29": "18000000",
+        "2029-30": null
+    },
+    "Oklahoma City Thunder": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/OKC.html",
+        "2024-25": "164952350",
+        "2025-26": "177782645",
+        "2026-27": "149631320",
+        "2027-28": "52994837",
+        "2028-29": "30437135",
+        "2029-30": null
+    },
+    "Memphis Grizzlies": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/MEM.html",
+        "2024-25": "163241293",
+        "2025-26": "142604388",
+        "2026-27": "119396044",
+        "2027-28": "103402672",
+        "2028-29": "44886930",
+        "2029-30": null
+    },
+    "San Antonio Spurs": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/SAS.html",
+        "2024-25": "161539650",
+        "2025-26": "145818612",
+        "2026-27": "74384166",
+        "2027-28": "37322313",
+        "2028-29": "27000000",
+        "2029-30": null
+    },
+    "Utah Jazz": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/UTA.html",
+        "2024-25": "153559613",
+        "2025-26": "150334750",
+        "2026-27": "83682776",
+        "2027-28": "72297734",
+        "2028-29": "53536209",
+        "2029-30": null
+    },
+    "Orlando Magic": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/ORL.html",
+        "2024-25": "150359238",
+        "2025-26": "199367531",
+        "2026-27": "170522341",
+        "2027-28": "114636256",
+        "2028-29": "110738890",
+        "2029-30": "77733510"
+    },
+    "Detroit Pistons": {
+        "url_payroll": "https://www.basketball-reference.com/contracts/DET.html",
+        "2024-25": "141808220",
+        "2025-26": "127468272",
+        "2026-27": "84437469",
+        "2027-28": "73825808",
+        "2028-29": "47940570",
+        "2029-30": "51033510"
+    }
+}
