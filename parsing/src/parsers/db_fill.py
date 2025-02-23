@@ -20,7 +20,7 @@ def db_connect():
         print('Can`t establish connection to database')
 
 def player_advanced(db, cursor):
-    cursor.execute("""DROP TABLE player_advanced""")
+    cursor.execute("""DROP TABLE IF EXISTS player_advanced""")
     db.commit()
     try:
         cursor.execute("""CREATE TABLE player_advanced ("Name" varchar, "Url" varchar, "Rank" integer, "Age" integer, "Team" varchar, "Pos" varchar, "G" integer, "GS" integer, "MP" integer, "PER" REAL, "TS%" REAL, "3PAr" REAL, "FTr" REAL, "ORB%" REAL, "DRB%" REAL, "TRB%" REAL, "AST%" REAL, "STL%" REAL, "BLK%" REAL, "TOV%" REAL, "USG%" REAL, "OWS" REAL, "DWS" REAL, "WS" REAL, "WS/48" REAL, "OBPM" REAL, "DBPM" REAL, "BPM" REAL, "VORP" REAL, "Awards" varchar)""")
@@ -46,9 +46,9 @@ def player_advanced(db, cursor):
         db.commit()
 
 def teams(db, cursor):
-    cursor.execute("""DROP TABLE eastern_conference""")
+    cursor.execute("""DROP TABLE IF EXISTS eastern_conference""")
     db.commit()
-    cursor.execute("""DROP TABLE western_conference""")
+    cursor.execute("""DROP TABLE IF EXISTS western_conference""")
     db.commit()
 
     try:
