@@ -29,11 +29,12 @@ class Command(BaseCommand):
                 ) for row in rows
             ]
 
-            check = input('Type y or n to empty the table\n')
-            if check == 'y':
-                Player.objects.all().delete()
-            else:
-                pass
+            # check = input('Type y or n to empty the table\n')
+            # if check == 'y':
+            #     Player.objects.all().delete()
+            # else:
+            #     pass
+            Player.objects.all().delete()
 
             Player.objects.bulk_create(players, ignore_conflicts=True)
 

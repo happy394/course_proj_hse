@@ -35,12 +35,14 @@ class Command(BaseCommand):
                 ) for row in rows_west
             ]
 
-            check = input('Type y or n to empty the table\n')
-            if check == 'y':
-                Team_east.objects.all().delete()
-                Team_west.objects.all().delete()
-            else:
-                pass
+            # check = input('Type y or n to empty the table\n')
+            # if check == 'y':
+            #     Team_east.objects.all().delete()
+            #     Team_west.objects.all().delete()
+            # else:
+            #     pass
+            Team_east.objects.all().delete()
+            Team_west.objects.all().delete()
 
             Team_east.objects.bulk_create(teams_east, ignore_conflicts=True)
             Team_west.objects.bulk_create(teams_west, ignore_conflicts=True)

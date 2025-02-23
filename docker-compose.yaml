@@ -6,7 +6,8 @@ services:
     volumes:
       - ./app/:/app
     command: >
-      sh -c "python manage.py migrate &&
+      sh -c "python manage.py fetch_players
+             python manage.py fetch_teams
              python manage.py runserver 0.0.0.0:8000"
     depends_on:
       - db
