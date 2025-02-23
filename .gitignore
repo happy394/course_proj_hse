@@ -175,5 +175,8 @@ docker
 .DS_Store
 data
 config
+conf
+/parsed
+!parsed/empty.txt
 .env.dev
 amvera.yml

@@ -35,6 +35,7 @@ def conference_table_parse(rows: list, direction: str):
             for column in columns:
                 buff.append(column.text)
 
+            buff[3] = None if buff[3] == '—' else buff[3]
             data['all_standings'][direction].update({name: {'url': url, 'wins': buff[0], 'losses': buff[1], 
                                                         'win/loss': buff[2], 'gb': buff[3], 'ps/g': buff[4], 
                                                         'pa/g': buff[5], 'srs': buff[6], 'division': division}})
