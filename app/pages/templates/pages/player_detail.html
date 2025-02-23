@@ -14,7 +14,6 @@
             flex-direction: column;
             align-items: center;
         }
-
         /* Navigation Bar */
         .navbar {
             width: 100%;
@@ -26,13 +25,11 @@
             display: flex;
             align-items: center;
         }
-
         /* Navigation Buttons */
         .nav-buttons {
             display: flex;
             gap: 10px;
         }
-
         .btn-custom {
             background-color: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.5);
@@ -43,13 +40,10 @@
             transition: all 0.3s ease-in-out;
             text-decoration: none;
         }
-
         .btn-custom:hover {
             background-color: rgba(255, 255, 255, 0.4);
             color: black;
         }
-
-
         /* Player Details Container */
         .player-container {
             background: rgba(255, 255, 255, 0.1);
@@ -57,29 +51,67 @@
             border-radius: 10px;
             color: white;
             width: 50%;
-            text-align: center;
             margin-top: 100px;
             opacity: 0;
             transform: translateY(-30px);
             animation: fadeIn 1.5s ease-out forwards;
         }
-
-        .player-container h1 {
-            margin-bottom: 15px;
+        /* Player Header: Photo and Info */
+        .player-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .photo-box {
+            width: 150px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .player-info h1 {
+            margin-bottom: 10px;
             text-transform: uppercase;
             border-bottom: 2px solid white;
             padding-bottom: 5px;
         }
-
-        .player-container p {
+        .player-info p {
+            margin: 5px 0;
             font-size: 18px;
         }
-
+        /* Future Stats Section */
+        .future-stats p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        /* Additional Characteristics Box */
+        .characteristics-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 100%;
+            font-size: 14px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+        }
+        .characteristic {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
         /* Back Button */
         .back-btn {
             margin-top: 20px;
         }
-
         /* Fade-in Animation */
         @keyframes fadeIn {
             0% {
@@ -91,7 +123,6 @@
                 transform: translateY(0);
             }
         }
-
     </style>
 </head>
 <body>
@@ -107,14 +138,47 @@
 
     <!-- Player Details -->
     <div class="player-container">
-        <h1>{{ player.name }}</h1>
-        <p><strong>Position:</strong> {{ player.position }}</p>
-        <p><strong>Team:</strong> {{ player.team }}</p>
-        
-        <!-- Future Stats Section -->
-        <p><strong>Points per Game:</strong> Coming Soon...</p>
-        <p><strong>Assists per Game:</strong> Coming Soon...</p>
-        <p><strong>Rebounds per Game:</strong> Coming Soon...</p>
+        <div class="player-header">
+            <!-- Photo Box -->
+            <div class="photo-box">
+                <img src="{{ player.photo_url }}" alt="{{ player.name }} Photo">
+            </div>
+            <!-- Player Info -->
+            <div class="player-info">
+                <h1>{{ player.name }}</h1>
+                <p><strong>Team:</strong> {{ player.team }}</p>
+                <p><strong>Position:</strong> {{ player.position }}</p>
+                <p><strong>Age:</strong> {{ player.age }} | <strong>Rank:</strong> {{ player.rank }}</p>
+            </div>
+        </div>
+
+        <!-- Additional Characteristics Box -->
+        <div class="characteristics-box">
+            <div class="characteristic">g: {{ player.g }}</div>
+            <div class="characteristic">gs: {{ player.gs }}</div>
+            <div class="characteristic">mp: {{ player.mp }}</div>
+            <div class="characteristic">per: {{ player.per }}</div>
+            <div class="characteristic">ts: {{ player.ts }}</div>
+            <div class="characteristic">par: {{ player.par }}</div>
+            <div class="characteristic">ftr: {{ player.ftr }}</div>
+            <div class="characteristic">orb: {{ player.orb }}</div>
+            <div class="characteristic">drb: {{ player.drb }}</div>
+            <div class="characteristic">trb: {{ player.trb }}</div>
+            <div class="characteristic">ast: {{ player.ast }}</div>
+            <div class="characteristic">stl: {{ player.stl }}</div>
+            <div class="characteristic">blk: {{ player.blk }}</div>
+            <div class="characteristic">tov: {{ player.tov }}</div>
+            <div class="characteristic">usg: {{ player.usg }}</div>
+            <div class="characteristic">ows: {{ player.ows }}</div>
+            <div class="characteristic">dws: {{ player.dws }}</div>
+            <div class="characteristic">ws: {{ player.ws }}</div>
+            <div class="characteristic">ws48: {{ player.ws48 }}</div>
+            <div class="characteristic">obpm: {{ player.obpm }}</div>
+            <div class="characteristic">dbpm: {{ player.dbpm }}</div>
+            <div class="characteristic">bpm: {{ player.bpm }}</div>
+            <div class="characteristic">vorp: {{ player.vorp }}</div>
+            <div class="characteristic">awards: {{ player.awards }}</div>
+        </div>
 
         <!-- Back Button -->
         <a href="{% url 'players' %}" class="btn btn-custom back-btn">← Back to Players</a>

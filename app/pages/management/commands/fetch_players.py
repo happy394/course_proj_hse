@@ -17,15 +17,40 @@ class Command(BaseCommand):
             )
             cur = conn.cursor()
 
-            cur.execute("""SELECT "Rank", "Name", "Team", "Pos" FROM player_advanced WHERE "Name" <> 'League Average' """)
+            cur.execute("""SELECT * FROM player_advanced WHERE "Name" <> 'League Average' """)
             rows = cur.fetchall()
 
             players = [
                 Player(
-                    rank=row[0],
-                    name=row[1],
-                    team=row[2],
-                    position=row[3]
+                    name=row[0],
+                    rank=row[2],
+                    age=row[3],
+                    team=row[4],
+                    position=row[5],
+                    g = row[6],
+                    gs = row[7],
+                    mp = row[8],
+                    per = row[9],
+                    ts = row[10],
+                    par = row[11],
+                    ftr = row[12],
+                    orb = row[13],
+                    drb = row[14],
+                    trb = row[15],
+                    ast = row[16],
+                    stl = row[17],
+                    blk = row[18],
+                    tov = row[19],
+                    usg = row[20],
+                    ows = row[21],
+                    dws = row[22],
+                    ws = row[23],
+                    ws48 = row[24],
+                    obpm = row[25],
+                    dbpm = row[26],
+                    bpm = row[27],
+                    vorp = row[28],
+                    awards = row[29],
                 ) for row in rows
             ]
 

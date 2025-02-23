@@ -1,18 +1,11 @@
-import psycopg2
-import os
-import glob
-import json
 from dotenv import load_dotenv
+import psycopg2
+import json
+import os
 
 HEADS = ['Name', 'url', 'rank', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
 
-def find_file(filename, search_path='.'):
-    files = glob.glob(f'{search_path}/**/{filename}', recursive=True)
-    return files[0] if files else None
-
-
 def db_connect():
-    load_dotenv()
     try:
         db = psycopg2.connect(dbname=os.getenv('POSTGRES_DB'), user=os.getenv('POSTGRES_USER'), password=os.getenv('POSTGRES_PASSWORD'), host='localhost')
         return db
@@ -97,15 +90,14 @@ def teams(db, cursor):
         cursor.execute(query, values)
         db.commit()
     
-
 def db_fill():
+    load_dotenv()
     db: psycopg2.extensions.connection = db_connect()
-    cursor  = db.cursor()
+    cursor = db.cursor()
 
     player_advanced(db, cursor)
     teams(db, cursor)
     
 
-        
 if __name__ == '__main__':
     db_fill()

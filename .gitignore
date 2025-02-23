@@ -176,7 +176,7 @@ docker
 data
 config
 conf
-/parsed
+parsed/*
 !parsed/empty.txt
 .env.dev
 amvera.yml
