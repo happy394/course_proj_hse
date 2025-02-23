@@ -171,3 +171,6 @@ cython_debug/
 .pypirc
 
 test.py
+conf
+/parsed
+!parsed/empty.txt
