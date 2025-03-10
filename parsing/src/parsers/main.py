@@ -3,7 +3,6 @@ from player_salary_parse import player_salary_parse
 from season_summary import season_summary
 from player_advanced import player_advanced
 
-
 # comment which is NOT needed to be parsed
 def main():
     club_salary_parse()

@@ -2,7 +2,6 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-
 MAIN_URL = 'https://www.basketball-reference.com'
 YEARS = ['2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']
 OUTPUT_FILE = 'parsing/parsed/'+'club_salary_parsed.json'
@@ -17,7 +16,6 @@ def request(url: str):
         return None
 
     return soup
-
 
 def parser(soup: BeautifulSoup):
     data = dict()
@@ -40,11 +38,8 @@ def parser(soup: BeautifulSoup):
                 data[team_name][YEARS[i]] = amount
             except KeyError as e:
                 pass
-    
-
 
     return data
-
 
 def club_salary_parse():
     url: str = 'https://www.basketball-reference.com/contracts/'
@@ -54,7 +49,6 @@ def club_salary_parse():
         result = parser(soup)
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=4)
-
 
 
 if __name__ == '__main__':

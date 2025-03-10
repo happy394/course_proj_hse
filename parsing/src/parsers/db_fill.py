@@ -11,6 +11,7 @@ def db_connect():
         return db
     except:
         print('Can`t establish connection to database')
+        exit()
 
 def player_advanced(db, cursor):
     cursor.execute("""DROP TABLE IF EXISTS player_advanced""")
