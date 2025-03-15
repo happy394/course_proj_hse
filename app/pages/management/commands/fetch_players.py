@@ -22,6 +22,7 @@ class Command(BaseCommand):
 
             players = [
                 Player(
+                    image_url='/static/images/player1.png',
                     name=row[0],
                     rank=row[2],
                     age=row[3],

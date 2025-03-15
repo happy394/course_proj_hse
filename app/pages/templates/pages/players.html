@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,6 +146,7 @@
             <tbody>
                 {% for player in players %}
                     <tr>
+                        <td><img src="{{ player.image_url }}" alt="{{ player.name }}" width="50"></td>
                         <td>{{ player.rank }}</td>
                         <td>
                             <a href="{% url 'player_detail' player.pk %}" class="text-white">
