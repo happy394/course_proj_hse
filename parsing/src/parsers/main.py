@@ -6,9 +6,9 @@ from player_advanced import player_advanced
 
 # comment which is NOT needed to be parsed
 def main():
-    club_salary_parse()
-    player_salary_parse()
-    season_summary()
+    # club_salary_parse()
+    # player_salary_parse()
+    # season_summary()
     player_advanced()
 
 if __name__ == '__main__':

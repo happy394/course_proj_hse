@@ -3,7 +3,7 @@ import psycopg2
 import json
 import os
 
-HEADS = ['Name', 'url', 'rank', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
+HEADS = ['Name', 'url', 'Filename', 'rank', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
 
 def db_connect():
     try:
@@ -16,7 +16,7 @@ def player_advanced(db, cursor):
     cursor.execute("""DROP TABLE IF EXISTS player_advanced""")
     db.commit()
     try:
-        cursor.execute("""CREATE TABLE player_advanced ("Name" varchar, "Url" varchar, "Rank" integer, "Age" integer, "Team" varchar, "Pos" varchar, "G" integer, "GS" integer, "MP" integer, "PER" REAL, "TS%" REAL, "3PAr" REAL, "FTr" REAL, "ORB%" REAL, "DRB%" REAL, "TRB%" REAL, "AST%" REAL, "STL%" REAL, "BLK%" REAL, "TOV%" REAL, "USG%" REAL, "OWS" REAL, "DWS" REAL, "WS" REAL, "WS/48" REAL, "OBPM" REAL, "DBPM" REAL, "BPM" REAL, "VORP" REAL, "Awards" varchar)""")
+        cursor.execute("""CREATE TABLE player_advanced ("Name" varchar, "Url" varchar, "Rank" integer, "Filename" varchar, "Age" integer, "Team" varchar, "Pos" varchar, "G" integer, "GS" integer, "MP" integer, "PER" REAL, "TS%" REAL, "3PAr" REAL, "FTr" REAL, "ORB%" REAL, "DRB%" REAL, "TRB%" REAL, "AST%" REAL, "STL%" REAL, "BLK%" REAL, "TOV%" REAL, "USG%" REAL, "OWS" REAL, "DWS" REAL, "WS" REAL, "WS/48" REAL, "OBPM" REAL, "DBPM" REAL, "BPM" REAL, "VORP" REAL, "Awards" varchar)""")
         db.commit()
     except KeyError as e:
         print('I can`t create this table')
@@ -31,7 +31,7 @@ def player_advanced(db, cursor):
         db.commit()
 
         query = """UPDATE player_advanced 
-                SET "Url" = %s, "Rank" = %s, "Age" = %s, "Team" = %s, "Pos" = %s, "G" = %s, "GS" = %s, "MP" = %s, "PER" = %s, "TS%%" = %s, "3PAr" = %s, "FTr" = %s, "ORB%%" = %s, "DRB%%" = %s, "TRB%%" = %s, "AST%%" = %s, "STL%%" = %s, "BLK%%" = %s, "TOV%%" = %s, "USG%%" = %s, "OWS" = %s, "DWS" = %s, "WS" = %s, "WS/48" = %s, "OBPM" = %s, "DBPM" = %s, "BPM" = %s, "VORP" = %s, "Awards" = %s 
+                SET "Url" = %s, "Rank" = %s, "Filename" = %s, "Age" = %s, "Team" = %s, "Pos" = %s, "G" = %s, "GS" = %s, "MP" = %s, "PER" = %s, "TS%%" = %s, "3PAr" = %s, "FTr" = %s, "ORB%%" = %s, "DRB%%" = %s, "TRB%%" = %s, "AST%%" = %s, "STL%%" = %s, "BLK%%" = %s, "TOV%%" = %s, "USG%%" = %s, "OWS" = %s, "DWS" = %s, "WS" = %s, "WS/48" = %s, "OBPM" = %s, "DBPM" = %s, "BPM" = %s, "VORP" = %s, "Awards" = %s 
                 WHERE "Name" = %s"""
         values = [None if v == '' else v for v in [*list(player[1].values()), player_name]]
 
@@ -96,7 +96,7 @@ def db_fill():
     cursor = db.cursor()
 
     player_advanced(db, cursor)
-    teams(db, cursor)
+    # teams(db, cursor)
     
 
 if __name__ == '__main__':

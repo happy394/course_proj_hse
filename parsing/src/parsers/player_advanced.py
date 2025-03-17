@@ -36,7 +36,10 @@ def parser(soup: BeautifulSoup):
                     rank = column.text
                 elif i == 3:
                     player_name = column.text
-                    buff = {player_name: {'url': None, 'rank': rank}}
+                    player_name_lower = player_name.lower()
+                    player_name_lower = player_name_lower.replace(' ', '_')
+                    player_name_lower = player_name_lower.replace("'", '`')
+                    buff = {player_name: {'url': None, 'rank': rank, 'name_lower': player_name_lower, }}
                     buff[player_name].update({i: None for i in HEADS[2:]})
                     buff[player_name]['url'] = MAIN_URL+column.find('a')['href'] if column.find('a') else None
 
