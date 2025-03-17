@@ -80,7 +80,7 @@
             <div class="col-lg-8 col-md-12">
                 <div class="player-container">
                     <div class="d-flex align-items-center">
-                        <img src="{{ player.image_url }}" alt="{{ player.name }} Photo" class="img-fluid" style="width: 150px; height: 200px; margin-right: 20px;">
+                        <img src="{% static 'images/'%}{{ player.image_url }}.jpg" alt="{{ player.name }} Photo" class="img-fluid" style="width: 150px; height: 200px; margin-right: 20px;">
                         <div>
                             <h1>{{ player.name }}</h1>
                             <p><strong>Team:</strong> {{ player.team }}</p>
@@ -121,9 +121,16 @@
 
             <!-- Chart Section Placeholder -->
             <div class="col-lg-4 col-md-12">
-                <div class="chart-box d-flex justify-content-center align-items-center">
-                    <p class="text-white">Chart will be added here.</p>
-                </div>
+                <!-- <div class="chart-box d-flex justify-content-center align-items-center">
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var graphDataElement = document.getElementById("chart_json");
+                            var graphData = JSON.parse(graphDataElement.textContent);
+                    
+                            Plotly.newPlot('playerStatsChart', graphData);
+                        });
+                    </script>
+                </div> -->
             </div>
         </div>
     </div>

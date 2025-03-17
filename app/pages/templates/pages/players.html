@@ -137,6 +137,7 @@
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <th>Rank</th>
                     <th>Name</th>
                     <th>Position</th>
@@ -146,10 +147,10 @@
             <tbody>
                 {% for player in players %}
                     <tr>
-                        <td><img src="{{ player.image_url }}" alt="{{ player.name }}" width="50"></td>
+                        <td><img src="{% static 'images/'%}{{ player.image_url }}.jpg" alt="{{ player.name }}" width="50"></td>
                         <td>{{ player.rank }}</td>
                         <td>
-                            <a href="{% url 'player_detail' player.pk %}" class="text-white">
+                            <a href="{% url 'player_detail' player.image_url %}" class="text-white">
                                 {{ player.name }}
                             </a>
                         </td>
