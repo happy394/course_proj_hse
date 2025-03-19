@@ -16,10 +16,9 @@ class Command(BaseCommand):
                 port=settings.DATABASES['default']['PORT'],
             )
             cur = conn.cursor()
-
             cur.execute("""SELECT * FROM player_advanced WHERE "Name" <> 'League Average' """)
             rows = cur.fetchall()
-            
+
             players = [
                 Player(
                     name=row[0],

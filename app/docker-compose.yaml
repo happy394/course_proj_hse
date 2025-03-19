@@ -1,24 +1,4 @@
 services:
-  web:
-    build: .
-    ports:
-      - 8000:8000
-    volumes:
-      - static_volume:/static
-    command: >
-      sh -c "python manage.py fetch_players
-             python manage.py fetch_teams
-             python manage.py collectstatic --noinput
-             python manage.py migrate
-             gunicorn mywebsite.wsgi:application --bind 0.0.0.0:8000"
-    depends_on:
-      - db
-    environment:
-      DB_HOST: ${POSTGRES_HOST}
-      DB_NAME: ${POSTGRES_DB}
-      DB_USER: ${POSTGRES_USER}
-      DB_PASS: ${POSTGRES_PASSWORD}
-
   db:
     image: postgres:15
     volumes:
@@ -29,13 +9,34 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      
+  web:
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+      - ./static:/static
+    command: >
+      sh -c "python manage.py fetch_players
+             python manage.py fetch_teams
+             python manage.py collectstatic --noinput
+             python manage.py migrate
+             gunicorn mywebsite.wsgi:application --bind 0.0.0.0:8000"
+    depends_on:
+      - db
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
 
   nginx:
     image: nginx:latest
     ports:
       - "80:80"
     volumes:
-      - static_volume:/static
+      - ./static:/static
       - ./nginx:/etc/nginx/conf.d
     depends_on:
       - web
@@ -43,4 +44,3 @@ services:
 
 volumes:
   postgres_data:
-  static_volume:

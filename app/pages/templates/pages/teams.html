@@ -1,119 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBA Teams - Teams</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+{% extends "pages/base.html" %}
+{% load static %}
 
-        .navbar {
-            width: 100%;
-            padding: 10px 15px;
-            background: rgba(0, 0, 0, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .nav-buttons {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .btn-custom {
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 10px;
-            font-size: 14px;
-            transition: all 0.3s ease-in-out;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .btn-custom:hover {
-            background-color: rgba(255, 255, 255, 0.4);
-            color: black;
-        }
-
-        .teams-container {
-            width: 100%;
-            max-width: 90%;
-            margin-top: 80px;
-        }
-
-        .team-list {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-            width: 100%;
-            text-align: center;
-        }
-
-        .team-list h2 {
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            border-bottom: 2px solid white;
-            padding-bottom: 5px;
-        }
-
-        .team-list table {
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .teams-container {
-                overflow-x: auto;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <div class="nav-buttons">
-            <a href="{% url 'main_menu' %}" class="btn btn-custom">Home</a>
-            <a href="{% url 'teams' %}" class="btn btn-custom">Teams</a>
-            <a href="{% url 'players' %}" class="btn btn-custom">Players</a>
-        </div>
+{% block content %}
+<div class="teams-container">
+    <div class="team-list">
+        <h2>Eastern Conference</h2>
+        <table>
+            {% for team in teams_east %}
+            <tr>
+                <td>{{ team.name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 
-    <div class="teams-container">
-        <div class="team-list">
-            <h2>Eastern Conference</h2>
-            <table>
-                {% for team in teams_east %}
-                <tr>
-                    <td>{{ team.name }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-        </div>
-
-        <div class="team-list">
-            <h2>Western Conference</h2>
-            <table>
-                {% for team in teams_west %}
-                <tr>
-                    <td>{{ team.name }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-        </div>
+    <div class="team-list">
+        <h2>Western Conference</h2>
+        <table>
+            {% for team in teams_west %}
+            <tr>
+                <td>{{ team.name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
-</body>
-</html>
+</div>
+{% endblock content %}
