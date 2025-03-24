@@ -1,0 +1,167 @@
+{
+    "Boston Celtics": {
+        "url": "https://www.basketball-reference.com/teams/BOS/2025.html",
+        "wins": "36",
+        "losses": "15",
+        "win/loss": ".706",
+        "gb": "—",
+        "ps/g": "117.2",
+        "pa/g": "108.4",
+        "srs": "8.02",
+        "division": "Atlantic Division"
+    },
+    "New York Knicks": {
+        "url": "https://www.basketball-reference.com/teams/NYK/2025.html",
+        "wins": "34",
+        "losses": "17",
+        "win/loss": ".667",
+        "gb": "2.0",
+        "ps/g": "117.9",
+        "pa/g": "111.4",
+        "srs": "5.18",
+        "division": "Atlantic Division"
+    },
+    "Philadelphia 76ers": {
+        "url": "https://www.basketball-reference.com/teams/PHI/2025.html",
+        "wins": "20",
+        "losses": "29",
+        "win/loss": ".408",
+        "gb": "15.0",
+        "ps/g": "109.2",
+        "pa/g": "112.7",
+        "srs": "-3.19",
+        "division": "Atlantic Division"
+    },
+    "Brooklyn Nets": {
+        "url": "https://www.basketball-reference.com/teams/BRK/2025.html",
+        "wins": "17",
+        "losses": "33",
+        "win/loss": ".340",
+        "gb": "18.5",
+        "ps/g": "105.4",
+        "pa/g": "112.1",
+        "srs": "-5.99",
+        "division": "Atlantic Division"
+    },
+    "Toronto Raptors": {
+        "url": "https://www.basketball-reference.com/teams/TOR/2025.html",
+        "wins": "16",
+        "losses": "34",
+        "win/loss": ".320",
+        "gb": "19.5",
+        "ps/g": "111.3",
+        "pa/g": "116.4",
+        "srs": "-4.10",
+        "division": "Atlantic Division"
+    },
+    "Cleveland Cavaliers": {
+        "url": "https://www.basketball-reference.com/teams/CLE/2025.html",
+        "wins": "40",
+        "losses": "10",
+        "win/loss": ".800",
+        "gb": "—",
+        "ps/g": "122.3",
+        "pa/g": "111.8",
+        "srs": "9.51",
+        "division": "Central Division"
+    },
+    "Indiana Pacers": {
+        "url": "https://www.basketball-reference.com/teams/IND/2025.html",
+        "wins": "28",
+        "losses": "21",
+        "win/loss": ".571",
+        "gb": "11.5",
+        "ps/g": "115.6",
+        "pa/g": "115.0",
+        "srs": "-0.12",
+        "division": "Central Division"
+    },
+    "Milwaukee Bucks": {
+        "url": "https://www.basketball-reference.com/teams/MIL/2025.html",
+        "wins": "26",
+        "losses": "22",
+        "win/loss": ".542",
+        "gb": "13.0",
+        "ps/g": "114.3",
+        "pa/g": "112.8",
+        "srs": "0.78",
+        "division": "Central Division"
+    },
+    "Detroit Pistons": {
+        "url": "https://www.basketball-reference.com/teams/DET/2025.html",
+        "wins": "25",
+        "losses": "25",
+        "win/loss": ".500",
+        "gb": "15.0",
+        "ps/g": "112.7",
+        "pa/g": "113.7",
+        "srs": "-1.22",
+        "division": "Central Division"
+    },
+    "Chicago Bulls": {
+        "url": "https://www.basketball-reference.com/teams/CHI/2025.html",
+        "wins": "22",
+        "losses": "29",
+        "win/loss": ".431",
+        "gb": "18.5",
+        "ps/g": "116.8",
+        "pa/g": "120.0",
+        "srs": "-3.51",
+        "division": "Central Division"
+    },
+    "Miami Heat": {
+        "url": "https://www.basketball-reference.com/teams/MIA/2025.html",
+        "wins": "24",
+        "losses": "24",
+        "win/loss": ".500",
+        "gb": "—",
+        "ps/g": "111.0",
+        "pa/g": "111.0",
+        "srs": "-0.71",
+        "division": "Southeast Division"
+    },
+    "Orlando Magic": {
+        "url": "https://www.basketball-reference.com/teams/ORL/2025.html",
+        "wins": "24",
+        "losses": "27",
+        "win/loss": ".471",
+        "gb": "1.5",
+        "ps/g": "103.6",
+        "pa/g": "105.4",
+        "srs": "-2.18",
+        "division": "Southeast Division"
+    },
+    "Atlanta Hawks": {
+        "url": "https://www.basketball-reference.com/teams/ATL/2025.html",
+        "wins": "23",
+        "losses": "27",
+        "win/loss": ".460",
+        "gb": "2.0",
+        "ps/g": "115.9",
+        "pa/g": "119.0",
+        "srs": "-3.09",
+        "division": "Southeast Division"
+    },
+    "Charlotte Hornets": {
+        "url": "https://www.basketball-reference.com/teams/CHO/2025.html",
+        "wins": "12",
+        "losses": "35",
+        "win/loss": ".255",
+        "gb": "11.5",
+        "ps/g": "107.0",
+        "pa/g": "112.2",
+        "srs": "-5.53",
+        "division": "Southeast Division"
+    },
+    "Washington Wizards": {
+        "url": "https://www.basketball-reference.com/teams/WAS/2025.html",
+        "wins": "8",
+        "losses": "41",
+        "win/loss": ".163",
+        "gb": "16.5",
+        "ps/g": "107.3",
+        "pa/g": "121.7",
+        "srs": "-12.80",
+        "division": "Southeast Division"
+    }
+}

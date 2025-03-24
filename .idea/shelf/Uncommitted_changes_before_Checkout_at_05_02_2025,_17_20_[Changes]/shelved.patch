@@ -1,0 +1,118 @@
+Index: src/parsers/season_summary.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import requests\nimport json\nfrom bs4 import BeautifulSoup\n\n\nMAIN_URL = 'https://www.basketball-reference.com'\nOUTPUT_FILE = 'course_proj_hse/parsed/'+'season_summary_parsed.json'\nHEADS_PER_GAME = [None, None, 'G', 'MP', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2P', '2PA', '2P%', 'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS']\nHEADS_ADVANCED_OVER = ['Offense Four Factors', 'Defense Four Factors']\nHEADS_ADVANCED = ['rank', None, 'Age', 'W', 'L', 'PW', 'PL', 'MOV', 'SOS', 'SRS', 'ORtg', 'DRtg', 'NRtg', 'Pace', 'FTr', '3PAr', 'TS%', '\\xa0', 'eFG%', 'TOV%', 'ORB%', 'FT/FGA', '\\xa0', 'eFG%', 'TOV%', 'DRB%', 'FT/FGA', '\\xa0', 'Arena', 'Attend.', 'Attend./G']\n\ndef request(url: str):\n    try:\n        response = requests.get(url=url)\n        response.raise_for_status()\n        soup = BeautifulSoup(response.content.decode('utf-8'), \"html.parser\")\n    except requests.RequestException as e:\n        print(f\"Error while requesting {url}: {e}\")\n        return None\n\n    return soup\n\n\ndef conference_table_parse(rows: list, direction: str):\n    for row in rows:\n        if 'thead' in row['class']:\n            division: str = row.text\n        else:\n            header = row.find('th').find('a')\n            name = header.text\n            url = MAIN_URL+header['href']\n            \n            columns = row.find_all('td')\n            buff = list()\n            for column in columns:\n                buff.append(column.text)\n\n            data['all_standings'][direction].update({name: {'url': url, 'wins': buff[0], 'losses': buff[1], \n                                                        'win/loss': buff[2], 'gb': buff[3], 'ps/g': buff[4], \n                                                        'pa/g': buff[5], 'srs': buff[6], 'division': division}})\n\n\ndef per_game_table_parse(rows: list):\n    for row in rows:\n        for i, column in enumerate(row):\n            if i < 2:\n                if i == 0:\n                    buff_rank = column.text\n                elif i == 1:\n                    team_name = column.text\n                    buff = {team_name: {'url': None, 'rank': buff_rank}}\n                    buff[team_name].update({i: None for i in HEADS_PER_GAME[2:]})\n                    buff[team_name]['url'] = MAIN_URL+column.find('a')['href'] if column.find('a') else None\n            else:\n                buff[team_name][HEADS_PER_GAME[i]] = column.text\n\n        data['per_game'].update(buff)\n\n\ndef advanced_table_parse(rows: list):\n    for row in rows:\n        for i, column in enumerate(row):\n            if i < 2:\n                if i == 0:\n                    rank = column.text\n                elif i == 1:\n                    team_name = column.text\n                    url = MAIN_URL+column.find('a')['href'] if column.find('a')['href'] else None\n                    buff = {team_name: {'url': url, 'rank': rank, 'Age': None, 'W': None, 'L': None, 'PW': None, 'PL': None, 'MOV': None, 'SOS': None, 'SRS': None, 'ORtg': None, 'DRtg': None, 'NRtg': None, 'Pace': None, 'FTr': None, '3PAr': None, 'TS%': None, 'eFG%': None, 'TOV%': None, 'ORB%': None, 'FT/FGA': None, 'eFG%': None, 'TOV%': None, 'DRB%': None, 'FT/FGA': None, 'Arena': None, 'Attend.': None, 'Attend./G': None}}\n            else:\n                if column.attrs['data-stat'] == 'DUMMY':\n                    continue\n                else:\n                    buff[team_name][HEADS_ADVANCED[i]] = column.text\n\n        data['advanced'].update(buff)\n\n\ndef parser(soup: BeautifulSoup):\n    global data\n    data = dict()\n    data.update({\n                'all_standings': {'eastern_standings': dict(), 'western_standings': dict()},\n                'per_game': dict(),\n                'advanced': dict(),\n                })\n\n    # all_standings\n    conference_standings = soup.find_all('div', class_='section_wrapper')[2] # division standings\n    conference_east, conference_west = conference_standings.find_all('tbody')\n    rows = conference_east.find_all('tr')\n    conference_table_parse(rows, 'eastern_standings')\n    rows = conference_west.find_all('tr')\n    conference_table_parse(rows, 'western_standings')\n\n    with open('/data/parsed/eastern_standings.json', 'w', encoding='utf-8') as f:\n        json.dump(data['all_standings']['eastern_standings'], f, ensure_ascii=False, indent=4)\n    with open('/data/parsed/western_standings.json', 'w', encoding='utf-8') as f:\n        json.dump(data['all_standings']['western_standings'], f, ensure_ascii=False, indent=4)\n\n\n    # per_game\n    per_game = soup.find('div', attrs={'id': 'all_per_game_team-opponent'})\n    per_game_table = per_game.find('tbody')\n    rows = per_game_table.find_all('tr')\n    per_game_table_parse(rows)\n\n    with open('/data/parsed/per_game.json', 'w', encoding='utf-8') as f:\n        json.dump(data['per_game'], f, ensure_ascii=False, indent=4)\n\n    # advanced\n    advanced = soup.find('div', attrs={'id': 'all_advanced_team'})\n    advanced_table = advanced.find('tbody')\n    rows = advanced_table.find_all('tr')\n    advanced_table_parse(rows)\n\n    with open('/data/parsed/advanced.json', 'w', encoding='utf-8') as f:\n        json.dump(data['advanced'], f, ensure_ascii=False, indent=4)\n\n    return\n\n\ndef season_summary():\n    year: str = '2025' # ability to change seasons by only changing this variable\n    url: str = f'https://www.basketball-reference.com/leagues/NBA_{year}.html'\n    soup: BeautifulSoup = request(url)\n\n    if soup:\n        parser(soup)\n\n\nif __name__ == '__main__':\n    season_summary()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/parsers/season_summary.py b/src/parsers/season_summary.py
+--- a/src/parsers/season_summary.py	
++++ b/src/parsers/season_summary.py	
+@@ -4,7 +4,7 @@
+ 
+ 
+ MAIN_URL = 'https://www.basketball-reference.com'
+-OUTPUT_FILE = 'course_proj_hse/parsed/'+'season_summary_parsed.json'
++OUTPUT_FILE = '/Users/artem2284708/course_proj_hse/parsed/'+'season_summary_parsed.json'
+ HEADS_PER_GAME = [None, None, 'G', 'MP', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', '2P', '2PA', '2P%', 'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS']
+ HEADS_ADVANCED_OVER = ['Offense Four Factors', 'Defense Four Factors']
+ HEADS_ADVANCED = ['rank', None, 'Age', 'W', 'L', 'PW', 'PL', 'MOV', 'SOS', 'SRS', 'ORtg', 'DRtg', 'NRtg', 'Pace', 'FTr', '3PAr', 'TS%', '\xa0', 'eFG%', 'TOV%', 'ORB%', 'FT/FGA', '\xa0', 'eFG%', 'TOV%', 'DRB%', 'FT/FGA', '\xa0', 'Arena', 'Attend.', 'Attend./G']
+@@ -93,9 +93,9 @@
+     rows = conference_west.find_all('tr')
+     conference_table_parse(rows, 'western_standings')
+ 
+-    with open('/data/parsed/eastern_standings.json', 'w', encoding='utf-8') as f:
++    with open('/Users/artem2284708/course_proj_hse/data/parsed/eastern_standings.json', 'w', encoding='utf-8') as f:
+         json.dump(data['all_standings']['eastern_standings'], f, ensure_ascii=False, indent=4)
+-    with open('/data/parsed/western_standings.json', 'w', encoding='utf-8') as f:
++    with open('/Users/artem2284708/course_proj_hse/data/parsed/western_standings.json', 'w', encoding='utf-8') as f:
+         json.dump(data['all_standings']['western_standings'], f, ensure_ascii=False, indent=4)
+ 
+ 
+@@ -105,7 +105,7 @@
+     rows = per_game_table.find_all('tr')
+     per_game_table_parse(rows)
+ 
+-    with open('/data/parsed/per_game.json', 'w', encoding='utf-8') as f:
++    with open('/Users/artem2284708/course_proj_hse/data/parsed/per_game.json', 'w', encoding='utf-8') as f:
+         json.dump(data['per_game'], f, ensure_ascii=False, indent=4)
+ 
+     # advanced
+@@ -114,7 +114,7 @@
+     rows = advanced_table.find_all('tr')
+     advanced_table_parse(rows)
+ 
+-    with open('/data/parsed/advanced.json', 'w', encoding='utf-8') as f:
++    with open('/Users/artem2284708/course_proj_hse/data/parsed/advanced.json', 'w', encoding='utf-8') as f:
+         json.dump(data['advanced'], f, ensure_ascii=False, indent=4)
+ 
+     return
+Index: src/recomandations/rec.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pandas as pd\n\nadvanced = pd.read_json('~/course_proj_hse/data/parsed/player_advanced.json').T.reset_index().rename(columns={'index': 'Player'})\n# Open the file containing salary information\nsalary = pd.read_json('~/course_proj_hse/data/parsed/player_salary_parsed.json').T.reset_index().rename(columns={'index': 'Player'})\n\n\n# Merge the filtered advanced statistics and salary DataFrames based on Player names\n# Drop the 'birth_year' column after merging\ntotal = pd.merge(advanced, salary, on='Player', how='inner')\ntotal = total[total['PER'] > 0]\n\n\n# Filter the merged DataFrame based on the team name entered by the user\n\n\ndef real_sum(col: list, DataFrame):\n    \"\"\"\n    Function to calculate a weighted sum based on column values.\n\n    Args:\n        col (list): List of column names to consider for calculation.\n        DataFrame (DataFrame): Pandas DataFrame containing the data.\n\n    Returns:\n        int: Weighted sum of the specified columns.\n    \"\"\"\n    k = 0\n    # Determine the number of columns with non-zero values\n    for name in col:\n        if DataFrame[name] != 0:\n            k += 1\n        else:\n            break\n\n    # Define weights for each column\n    summ = [0.3, 0.25, 0.2, 0.15, 0.1, 0.05]\n    # Calculate the divisor for normalization\n    div = sum(summ[:k])\n    right_sum = 0\n    num = 0\n    # Calculate the weighted sum\n    for name in col[:k]:\n        right_sum += DataFrame[name] * summ[num] / div\n        num += 1\n    return int(right_sum)\n\ndef convert_int_to_dollar(n):\n    \"\"\"\n    Function to convert integer values to dollar strings.\n\n    Args:\n        n (int): Integer value to be converted.\n\n    Returns:\n        str: Dollar string representation of the integer amount.\n    \"\"\"\n    if isinstance(n, int):\n        # Format the integer with commas and add a dollar sign\n        return \"${:,}\".format(n)\n    else:\n        return \"$0\"  # Return $0 if input is not an integer\n\ndef getTeamResult(team):\n    curTeam = total.loc[total['Team'].str.lower() == f'{team}'.lower()]\n\n    # \"Here begins the output of Table 1\"\n\n    # Sort the DataFrame by minutes played in descending order and select relevant columns\n    mp_team = curTeam.sort_values(by='MP', ascending=False)[['Pos', 'Player', 'guaranteed']]\n\n    # Avoid errors with the starting lineup (each Player must be from their respective position)\n    squad = pd.DataFrame(columns=['Pos', 'Player', 'guaranteed'])\n    pos = ['PG', 'SG', 'SF', 'PF', 'C']\n\n    for i in pos:\n        # Filter players by position\n        curPos = (mp_team.loc[mp_team['Pos'] == f'{i}'])\n        # Select the Player with the maximum time played for each position\n        try:\n            Player = curPos.loc[curPos['Pos'] == f'{i}'].iloc[0]\n        except IndexError:\n            continue  # If no Player found for a position, continue to the next position\n        squad = squad._append(Player)  # Append the Player to the squad DataFrame\n\n    # Get the indices of players in the starting lineup\n    selected_players_index = squad.index.tolist()\n\n    # Remove players from the starting lineup and display all remaining players sorted by time played\n    curTeam_updated = mp_team.drop(index=selected_players_index)\n    squad = squad._append(curTeam_updated)\n    squad['guaranteed'] = squad['guaranteed'].apply(convert_int_to_dollar)\n    print(squad)\n    squad.to_csv(\"~/course_proj_hse/data/recs/Squad.csv\")\n\n\n\n    squa = pd.DataFrame(columns=['Pos', 'Player', 'guaranteed'])\n    per_team = curTeam.sort_values(by='PER', ascending=False)[['Pos', 'Player', 'guaranteed']]\n    for i in pos:\n        # Filter players by position\n        curPos = (per_team.loc[per_team['Pos'] == f'{i}'])\n        # Select the Player with the maximum time played for each position\n        try:\n            Player = curPos.loc[curPos['Pos'] == f'{i}'].iloc[0]\n        except IndexError:\n            continue\n        squa = squa._append(Player)  # Append the Player to the squad DataFrame\n        per_team_players_index = squa.index.tolist()\n\n    further = set(per_team_players_index + selected_players_index)\n\n\n    for i in further:\n        if i in curTeam.index:\n            curTeam = curTeam.drop(index=i)\n\n    columns = ['2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']\n\n\n    # Calculate total salary using real_sum function for each row\n    curTeam['Total Salary'] = curTeam.apply(lambda row: real_sum(columns, row), axis=1)\n\n    # Select necessary columns for final DataFrame\n    final_df = curTeam[['Player', 'Pos', 'MP', 'Age', 'PER', 'Total Salary']]\n\n    # Calculate a metric combining salary and performance (wrong formula)\n    final_df['price/quality'] = final_df.apply(lambda row: int(row['Total Salary']/row['PER']), axis=1)\n    # The formula should be updated, as noted.\n\n    # Sort the DataFrame by the calculated metric\n    final = final_df.sort_values(by='price/quality', ascending=False).head()\n\n\n    to_replace = final[['Pos', 'Total Salary']]\n    final['Total Salary'] = final['Total Salary'].apply(convert_int_to_dollar)\n\n    final = final[['Player', 'Pos']]\n    final.to_csv(\"~/course_proj_hse/data/recs/Kick.csv\")\n\n    qwerty = total[['Player', 'Team', 'Pos', 'PER', '2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']]\n\n    columns = ['2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']\n\n\n    qwerty = qwerty[qwerty['PER'] != 0]\n    qwerty = qwerty[qwerty['Team'] != team]\n\n    # Calculate total salary using real_sum function for each row\n    qwerty['Total Salary'] = qwerty.apply(lambda row: real_sum(columns, row), axis=1)\n    qwerty = qwerty[qwerty['Total Salary'] != 0]\n    # Calculate a metric combining salary and performance (wrong formula)\n    qwerty['price/quality'] = qwerty.apply(lambda row: int(row['Total Salary'] / row['PER']), axis=1)\n\n    qwerty = qwerty.sort_values(by='price/quality', ascending=True)\n\n    # Create a DataFrame to store the selected players\n    Output = pd.DataFrame(columns=qwerty.columns)\n\n    # Iterate over to_replace DataFrame and find matching players in qwerty\n    for index, row in to_replace.iterrows():\n        Pos = row['Pos']\n        salary = row['Total Salary']\n        i = 0\n        while i < len(qwerty):\n            best_player = qwerty[qwerty['Pos'] == Pos].iloc[i]\n            if 100 - (best_player['Total Salary'] / salary * 100) <= abs(5):\n                Output = Output._append(best_player)\n                break\n            i += 1\n\n    Output = Output[['Player', 'Team', 'Pos']]\n\n    Output.to_csv(\"~/course_proj_hse/data/recs/Newcomers.csv\")
+===================================================================
+diff --git a/src/recomandations/rec.py b/src/recomandations/rec.py
+--- a/src/recomandations/rec.py	
++++ b/src/recomandations/rec.py	
+@@ -1,8 +1,15 @@
+ import pandas as pd
+ 
+-advanced = pd.read_json('~/course_proj_hse/data/parsed/player_advanced.json').T.reset_index().rename(columns={'index': 'Player'})
+-# Open the file containing salary information
+-salary = pd.read_json('~/course_proj_hse/data/parsed/player_salary_parsed.json').T.reset_index().rename(columns={'index': 'Player'})
++import json
++
++import pandas as pd
++
++advanced = pd.read_json('/Users/artem2284708/course_proj_hse/data/parsed/player_advanced.json', orient='index')
++advanced = advanced.T.reset_index().rename(columns={'index': 'Player'})
++
++
++with open('/Users/artem2284708/course_proj_hse/data/parsed/player_salary_parsed.json', 'r') as file:
++    salary = json.load(file).T.reset_index().rename(columns={'index': 'Player'})
+ 
+ 
+ # Merge the filtered advanced statistics and salary DataFrames based on Player names
+Index: src/recomandations/team_info.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pandas as pd\nfrom rec import convert_int_to_dollar\n\ndef salary_cap(team):\n    import pandas as pd\n\n    abb = pd.read_csv('~/course_proj_hse/data/Team Abbrev.csv')\n    salary = pd.read_json('~/course_proj_hse/data/parsed/club_salary_parsed.json').T.reset_index().rename(\n        columns={'index': 'Team'})\n    salary['2024-25'] = salary['2024-25'].apply(convert_int_to_dollar)\n\n    cap = pd.merge(salary, abb, on='Team')\n\n    salary_cap = cap.reset_index().rename(columns={'index': 'Rk'})\n    salary_cap['Rk'] += 1\n\n    team_cap = salary_cap[salary_cap['abbreviation'].str.lower() == team.lower()]\n    rk = team_cap['Rk'].values[0]\n\n    if rk in [1, 2]:\n        final = salary_cap.head(5)\n    elif rk in [29, 30]:\n        final = salary_cap.tail(5)\n    else:\n        final = salary_cap.iloc[rk - 3:rk + 2]\n\n    final = final[['Rk', 'Team', '2024-25']]\n\n    final.to_csv(\"~/course_proj_hse/data/recs/Salary_Cap.csv\", index=False)\n\n\n\n
+===================================================================
+diff --git a/src/recomandations/team_info.py b/src/recomandations/team_info.py
+--- a/src/recomandations/team_info.py	
++++ b/src/recomandations/team_info.py	
+@@ -4,8 +4,8 @@
+ def salary_cap(team):
+     import pandas as pd
+ 
+-    abb = pd.read_csv('~/course_proj_hse/data/Team Abbrev.csv')
+-    salary = pd.read_json('~/course_proj_hse/data/parsed/club_salary_parsed.json').T.reset_index().rename(
++    abb = pd.read_csv('/Users/artem2284708/course_proj_hse/data/Team Abbrev.csv')
++    salary = pd.read_json('/Users/artem2284708/course_proj_hse/data/parsed/club_salary_parsed.json').T.reset_index().rename(
+         columns={'index': 'Team'})
+     salary['2024-25'] = salary['2024-25'].apply(convert_int_to_dollar)
+ 
+@@ -29,4 +29,22 @@
+     final.to_csv("~/course_proj_hse/data/recs/Salary_Cap.csv", index=False)
+ 
+ 
++def trade_restrictions(team):
++    abb = pd.read_csv('/Users/artem2284708/course_proj_hse/data/Team Abbrev.csv')
++    salary = pd.read_json('/Users/artem2284708/course_proj_hse/data/parsed/club_salary_parsed.json').T.reset_index().rename(
++        columns={'index': 'Team'})
++    salary['2024-25'] = salary['2024-25'].apply(convert_int_to_dollar)
++
++    cap = pd.merge(salary, abb, on='Team')
++
++    salary_cap = cap.reset_index().rename(columns={'index': 'Rk'})
++    salary_cap['Rk'] += 1
++
++    team_cap = salary_cap[salary_cap['abbreviation'].str.lower() == team.lower()]
++
++    total_salary = team_cap['2024-25'].values[0]
++
++    print(total_salary)
++
++
+ 
