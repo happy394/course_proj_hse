@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Team_east, Team_west, Player
+from .models import Team_east, Team_west, Player, PlayerNews
 import plotly.graph_objects as go
 
 def main_menu(request):
@@ -21,6 +21,7 @@ def players(request):
 
 def player_detail(request, image_url):
     player = get_object_or_404(Player, image_url=image_url)
+    player_news = PlayerNews.objects.filter(player=player)[:5]
 
     stats = {
         "TS%": player.ts,
@@ -34,7 +35,7 @@ def player_detail(request, image_url):
     # fig.show()
     res = fig.to_html(full_html=False)
 
-    return render(request, 'pages/player_detail.html', {'player': player, 'fig': res})
+    return render(request, 'pages/player_detail.html', {'player': player, 'fig': res, 'news': player_news})
 
 def window_three(request):
     return render(request, "pages/window_three.html")
