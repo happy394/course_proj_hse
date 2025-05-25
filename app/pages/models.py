@@ -19,6 +19,7 @@ class Team_west(BaseTeam):
 class Player(models.Model):
     rank = models.IntegerField(default=0)
     name = models.CharField(max_length=100)
+    image_url = models.CharField(max_length=100, default='')
     age = models.IntegerField(default=0)
     position = models.CharField(max_length=2, default='')
     team = models.CharField(max_length=100, default='')

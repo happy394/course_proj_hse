@@ -2,8 +2,8 @@ FROM python:3.10
 
 WORKDIR /app
 
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 RUN apt-get update && apt-get install -y netcat-traditional
 
@@ -18,3 +18,4 @@ RUN chmod +x /app/entrypoint.sh
 COPY . .
 
 ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "website.wsgi:application"]

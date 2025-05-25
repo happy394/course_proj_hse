@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Team_east, Team_west, Player
+import plotly.graph_objects as go
 
 def main_menu(request):
     return render(request, "pages/main_menu.html")
@@ -18,8 +19,9 @@ def players(request):
 
     return render(request, 'pages/players.html', {'players': player_list, 'query': query})
 
-def player_detail(request, pk):
-    player = get_object_or_404(Player, pk=pk)
+def player_detail(request, image_url):
+    player = get_object_or_404(Player, image_url=image_url)
+
     return render(request, 'pages/player_detail.html', {'player': player})
 
 def window_three(request):

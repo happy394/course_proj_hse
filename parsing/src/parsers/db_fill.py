@@ -3,8 +3,8 @@ import psycopg2
 import json
 import os
 
-HEADS = ['Name', 'url', 'rank', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
-
+HEADS = ['Name', 'url', 'Filename', 'rank', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 def db_connect():
     try:
         db = psycopg2.connect(dbname=os.getenv('POSTGRES_DB'), user=os.getenv('POSTGRES_USER'), password=os.getenv('POSTGRES_PASSWORD'), host='localhost')
@@ -17,13 +17,13 @@ def player_advanced(db, cursor):
     cursor.execute("""DROP TABLE IF EXISTS player_advanced""")
     db.commit()
     try:
-        cursor.execute("""CREATE TABLE player_advanced ("Name" varchar, "Url" varchar, "Rank" integer, "Age" integer, "Team" varchar, "Pos" varchar, "G" integer, "GS" integer, "MP" integer, "PER" REAL, "TS%" REAL, "3PAr" REAL, "FTr" REAL, "ORB%" REAL, "DRB%" REAL, "TRB%" REAL, "AST%" REAL, "STL%" REAL, "BLK%" REAL, "TOV%" REAL, "USG%" REAL, "OWS" REAL, "DWS" REAL, "WS" REAL, "WS/48" REAL, "OBPM" REAL, "DBPM" REAL, "BPM" REAL, "VORP" REAL, "Awards" varchar)""")
+        cursor.execute("""CREATE TABLE player_advanced ("Name" varchar, "Url" varchar, "Rank" integer, "Filename" varchar, "Age" integer, "Team" varchar, "Pos" varchar, "G" integer, "GS" integer, "MP" integer, "PER" REAL, "TS%" REAL, "3PAr" REAL, "FTr" REAL, "ORB%" REAL, "DRB%" REAL, "TRB%" REAL, "AST%" REAL, "STL%" REAL, "BLK%" REAL, "TOV%" REAL, "USG%" REAL, "OWS" REAL, "DWS" REAL, "WS" REAL, "WS/48" REAL, "OBPM" REAL, "DBPM" REAL, "BPM" REAL, "VORP" REAL, "Awards" varchar)""")
         db.commit()
     except KeyError as e:
         print('I can`t create this table')
         print(e)
 
-    with open("parsing/parsed/player_advanced.json", "r", encoding="utf-8") as f:
+    with open(BASE_DIR+"/parsed/player_advanced.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     
     for player in data.items():
@@ -32,7 +32,7 @@ def player_advanced(db, cursor):
         db.commit()
 
         query = """UPDATE player_advanced 
-                SET "Url" = %s, "Rank" = %s, "Age" = %s, "Team" = %s, "Pos" = %s, "G" = %s, "GS" = %s, "MP" = %s, "PER" = %s, "TS%%" = %s, "3PAr" = %s, "FTr" = %s, "ORB%%" = %s, "DRB%%" = %s, "TRB%%" = %s, "AST%%" = %s, "STL%%" = %s, "BLK%%" = %s, "TOV%%" = %s, "USG%%" = %s, "OWS" = %s, "DWS" = %s, "WS" = %s, "WS/48" = %s, "OBPM" = %s, "DBPM" = %s, "BPM" = %s, "VORP" = %s, "Awards" = %s 
+                SET "Url" = %s, "Rank" = %s, "Filename" = %s, "Age" = %s, "Team" = %s, "Pos" = %s, "G" = %s, "GS" = %s, "MP" = %s, "PER" = %s, "TS%%" = %s, "3PAr" = %s, "FTr" = %s, "ORB%%" = %s, "DRB%%" = %s, "TRB%%" = %s, "AST%%" = %s, "STL%%" = %s, "BLK%%" = %s, "TOV%%" = %s, "USG%%" = %s, "OWS" = %s, "DWS" = %s, "WS" = %s, "WS/48" = %s, "OBPM" = %s, "DBPM" = %s, "BPM" = %s, "VORP" = %s, "Awards" = %s 
                 WHERE "Name" = %s"""
         values = [None if v == '' else v for v in [*list(player[1].values()), player_name]]
 
@@ -52,7 +52,7 @@ def teams(db, cursor):
         print('I can`t create this table')
         print(e)
 
-    with open("parsing/parsed/eastern_standings.json", "r", encoding="utf-8") as f:
+    with open(BASE_DIR+"/parsed/eastern_standings.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     
     for team in data.items():
@@ -75,7 +75,7 @@ def teams(db, cursor):
         print('I can`t create this table')
         print(e)
 
-    with open("parsing/parsed/western_standings.json", "r", encoding="utf-8") as f:
+    with open(BASE_DIR+"/parsed/western_standings.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     
     for team in data.items():

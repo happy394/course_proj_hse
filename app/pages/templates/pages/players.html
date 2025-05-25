@@ -1,141 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NBA Players</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        /* Gradient Background */
-        body {
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+{% extends "pages/base.html" %}
+{% load static %}
 
-        /* Navigation Bar */
-        .navbar {
-            width: 100%;
-            padding: 10px 20px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-        }
-
-        /* Navigation Buttons */
-        .nav-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-custom {
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s ease-in-out;
-            text-decoration: none;
-        }
-
-        .btn-custom:hover {
-            background-color: rgba(255, 255, 255, 0.4);
-            color: black;
-        }
-
-        /* Search Bar */
-        .search-container {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .search-bar {
-            padding: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            outline: none;
-            width: 250px;
-            text-align: center;
-        }
-
-        .search-bar::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Players Table */
-        .players-container {
-            width: 80%;
-            margin-top: 80px;
-            opacity: 0;
-            transform: translateY(-30px);
-            animation: fadeIn 1.5s ease-out forwards;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            text-align: left;
-        }
-
-        th {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Fade-in Animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="nav-buttons">
-            <a href="{% url 'main_menu' %}" class="btn btn-custom">Home</a>
-            <a href="{% url 'teams' %}" class="btn btn-custom">Teams</a>
-            <a href="{% url 'players' %}" class="btn btn-custom">Players</a>
-        </div>
-
-        <!-- Search Form -->
-        <div class="search-container">
-            <form method="GET" action="{% url 'players' %}">
-                <input type="text" name="q" class="search-bar" placeholder="Search players..." value="{{ query }}">
-            </form>
-        </div>
+{% block navbar %}
+    <!-- Search Form -->
+    <div class="search-container">
+        <form method="GET" action="{% url 'players' %}">
+            <input type="text" name="q" class="search-bar" placeholder="Search players..." value="{{ query }}">
+        </form>
     </div>
+{% endblock navbar %}
 
+{% block content %}
     <!-- Players Table -->
     <div class="players-container">
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <th>Rank</th>
                     <th>Name</th>
                     <th>Position</th>
@@ -145,9 +26,10 @@
             <tbody>
                 {% for player in players %}
                     <tr>
+                        <td><img src="{% static 'images/' %}{{ player.image_url }}.jpg" alt="{{ player.name }}"></td>
                         <td>{{ player.rank }}</td>
                         <td>
-                            <a href="{% url 'player_detail' player.pk %}" class="text-white">
+                            <a href="{% url 'player_detail' player.image_url %}" class="text-white">
                                 {{ player.name }}
                             </a>
                         </td>
@@ -156,12 +38,10 @@
                     </tr>
                 {% empty %}
                     <tr>
-                        <td colspan="3">No players found.</td>
+                        <td colspan="5">No players found.</td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
-
-</body>
-</html>
+{% endblock content %}
