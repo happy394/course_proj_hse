@@ -7,9 +7,9 @@ HEADS = ['Name', 'url', 'Filename', 'rank', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 def db_connect():
     try:
-        db = psycopg2.connect(dbname=os.getenv('POSTGRES_DB'), user=os.getenv('POSTGRES_USER'), password=os.getenv('POSTGRES_PASSWORD'), host='localhost')
+        db = psycopg2.connect(dbname=os.getenv('POSTGRES_DB'), user=os.getenv('POSTGRES_USER'), password=os.getenv('POSTGRES_PASSWORD'), host='localhost', port=5432)
         return db
-    except:
+    except NameError as e:
         print('Can`t establish connection to database')
         exit()
 
@@ -90,6 +90,48 @@ def teams(db, cursor):
 
         cursor.execute(query, values)
         db.commit()
+
+
+def mentions_data(db, cursor):
+    MENTIONS_PATH = "/Users/artem2284708/course_proj_hse/parsing/parsed/grouped_news.json"
+    cursor.execute("""DROP TABLE IF EXISTS mentions""")
+    db.commit()
+
+    try:
+        cursor.execute("""CREATE TABLE mentions (
+            "Player" VARCHAR, 
+            "Timestamp" BIGINT, 
+            "Source" VARCHAR, 
+            "Text" TEXT
+        )""")
+        db.commit()
+    except Exception as e:
+        print("I can`t create this table")
+        print(e)
+
+    if not os.path.exists(MENTIONS_PATH):
+        print(f"Error: JSON file not found at {MENTIONS_PATH}")
+        return
+
+    with open(MENTIONS_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    for player, mentions in data.items():
+        for mention in mentions:
+
+            values = [None if v == '' else v for v in [
+                player,
+                mention.get("timestamp"),
+                mention.get("source"),
+                mention.get("text")
+            ]]
+
+            query = """INSERT INTO mentions ("Player", "Timestamp", "Source", "Text") 
+                                   VALUES (%s, %s, %s, %s)"""
+
+            cursor.execute(query, values)
+            db.commit()
+
     
 def db_fill():
     load_dotenv()
@@ -98,6 +140,7 @@ def db_fill():
 
     player_advanced(db, cursor)
     teams(db, cursor)
+    mentions_data(db, cursor)
     
 
 if __name__ == '__main__':

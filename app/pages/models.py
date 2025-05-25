@@ -51,3 +51,16 @@ class Player(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+
+class PlayerNews(models.Model):
+    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="news")
+    timestamp = models.DateTimeField()
+    source = models.URLField()
+    text = models.TextField()
+
+    class Meta:
+        ordering = ['-timestamp']  # Show latest news first
+
+    def __str__(self):
+        return f"News for {self.player.name} - {self.timestamp.strftime('%Y-%m-%d')}"

@@ -46,6 +46,32 @@
                     </div>
                 </div>
             </div>
+
+            <!-- News Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2>Latest News</h2>
+                </div>
+                {% if news %}
+                    {% for item in news %}
+                        <div class="col-md-6">
+                            <div class="news-item">
+                                <h3><a href="{{ item.source }}" target="_blank">News</a></h3>
+                                <p>{{ item.text }}</p>
+                                <small>Published on: {{ item.timestamp|date:"F d, Y H:i" }}</small>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                <div class="col-12">
+                    <p>No news available for this player.</p>
+                </div>
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock content %}
+
+touch app/management/__init__.py
+touch app/management/commands/__init__.py
+touch your_app/management/commands/import_news.py
