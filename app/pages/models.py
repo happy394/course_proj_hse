@@ -56,7 +56,7 @@ class Player(models.Model):
 class PlayerNews(models.Model):
     player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="news")
     timestamp = models.DateTimeField()
-    source = models.URLField()
+    source = models.TextField(default='')
     text = models.TextField()
 
     class Meta:

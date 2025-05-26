@@ -93,7 +93,7 @@ def teams(db, cursor):
 
 
 def mentions_data(db, cursor):
-    MENTIONS_PATH = "/Users/artem2284708/course_proj_hse/parsing/parsed/grouped_news.json"
+    MENTIONS_PATH = BASE_DIR+"/parsed/grouped_news.json"
     cursor.execute("""DROP TABLE IF EXISTS mentions""")
     db.commit()
 
@@ -140,7 +140,7 @@ def db_fill():
 
     player_advanced(db, cursor)
     teams(db, cursor)
-    mentions_data(db, cursor)
+    # mentions_data(db, cursor)
     
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from pages.models import Player, PlayerNews
 import psycopg2
+from django.utils import timezone
 from django.conf import settings
 from datetime import datetime
 
@@ -18,7 +19,7 @@ class Command(BaseCommand):
                 port=settings.DATABASES['default']['PORT'],
             )
             cur = conn.cursor()
-            cur.execute("""SELECT Player, Timestamp, Source, Text FROM mentions""")
+            cur.execute("""SELECT "Player", "Timestamp", "Source", "Text" FROM mentions""")
             rows = cur.fetchall()
 
             news_entries = []
@@ -30,7 +31,7 @@ class Command(BaseCommand):
                     news_entries.append(
                         PlayerNews(
                             player=player,
-                            timestamp=datetime.fromtimestamp(int(timestamp)),
+                            timestamp = timezone.make_aware(datetime.fromtimestamp(int(timestamp))),
                             source=source,
                             text=text
                         )
