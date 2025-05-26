@@ -54,10 +54,10 @@ class Player(models.Model):
 
 
 class PlayerNews(models.Model):
-    player = models.ForeignKey(Player, on_delete=models.CASCADE, related_name="news")
-    timestamp = models.DateTimeField()
-    source = models.TextField(default='')
+    player = models.ForeignKey(Player, on_delete=models.CASCADE)
     text = models.TextField()
+    source = models.CharField(max_length=500)
+    timestamp = models.DateTimeField()
 
     class Meta:
         ordering = ['-timestamp']  # Show latest news first

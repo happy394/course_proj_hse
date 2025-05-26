@@ -85,8 +85,7 @@ DATABASES = {
         'NAME': config("POSTGRES_DB"),
         'USER': config("POSTGRES_USER"),
         'PASSWORD': config("POSTGRES_PASSWORD"),
-        'HOST': config("POSTGRES_HOST"),
-        # 'HOST': 'localhost',
+        'HOST': config("POSTGRES_HOST", 'localhost'),
         'PORT': config("POSTGRES_PORT"),
     }
 }
@@ -126,8 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ['/staticfiles']
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

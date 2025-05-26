@@ -15,7 +15,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - /home/hse/staticfiles:/staticfiles
+      - ../../staticfiles:/staticfiles
     command: >
       sh -c "python manage.py fetch_players &&
             python manage.py fetch_teams &&
@@ -37,7 +37,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - /home/hse/staticfiles:/staticfiles
+      - ../../staticfiles:/staticfiles
       - ./nginx:/etc/nginx/conf.d
     depends_on:
       - web

@@ -1,10 +1,13 @@
 import requests
 import json
+import os
 from bs4 import BeautifulSoup
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # where the SCRIPT is located
+PARENT_DIR = os.path.abspath(os.path.join(BASE_DIR, '..', '..'))
+OUTPUT_FILE = os.path.join(PARENT_DIR, 'parsed', 'player_advanced.json')
 
 MAIN_URL = 'https://www.basketball-reference.com'
-OUTPUT_FILE = 'parsing/parsed/'+'player_advanced.json'
 HEADS = ['rank', '', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
 
 def request(url: str):

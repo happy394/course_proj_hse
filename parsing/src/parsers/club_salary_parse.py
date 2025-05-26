@@ -1,10 +1,14 @@
 import requests
 import json
+import os
 from bs4 import BeautifulSoup
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # where the SCRIPT is located
+PARENT_DIR = os.path.abspath(os.path.join(BASE_DIR, '..', '..'))
+OUTPUT_FILE = os.path.join(PARENT_DIR, 'parsed', 'club_salary_parsed.json')
 
 MAIN_URL = 'https://www.basketball-reference.com'
 YEARS = ['2024-25', '2025-26', '2026-27', '2027-28', '2028-29', '2029-30']
-OUTPUT_FILE = 'parsing/parsed/'+'club_salary_parsed.json'
 
 def request(url: str):
     try:

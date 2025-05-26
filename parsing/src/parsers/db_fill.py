@@ -5,9 +5,12 @@ import os
 
 HEADS = ['Name', 'url', 'Filename', 'rank', 'Age', 'Team', 'Pos', 'G', 'GS', 'MP', 'PER', 'TS%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'OWS', 'DWS', 'WS', 'WS/48', 'OBPM', 'DBPM', 'BPM', 'VORP', 'Awards']
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
+MENTIONS_PATH = BASE_DIR+"/parsed/grouped_news.json"
+
+
 def db_connect():
     try:
-        db = psycopg2.connect(dbname=os.getenv('POSTGRES_DB'), user=os.getenv('POSTGRES_USER'), password=os.getenv('POSTGRES_PASSWORD'), host='localhost', port=5432)
+        db = psycopg2.connect(dbname=os.getenv('POSTGRES_DB'), user=os.getenv('POSTGRES_USER'), password=os.getenv('POSTGRES_PASSWORD'), host=os.getenv('POSTGRES_HOST'), port=os.getenv('POSTGRES_PORT'))
         return db
     except NameError as e:
         print('Can`t establish connection to database')
@@ -93,7 +96,6 @@ def teams(db, cursor):
 
 
 def mentions_data(db, cursor):
-    MENTIONS_PATH = BASE_DIR+"/parsed/grouped_news.json"
     cursor.execute("""DROP TABLE IF EXISTS mentions""")
     db.commit()
 
@@ -140,7 +142,7 @@ def db_fill():
 
     player_advanced(db, cursor)
     teams(db, cursor)
-    # mentions_data(db, cursor)
+    mentions_data(db, cursor)
     
 
 if __name__ == '__main__':

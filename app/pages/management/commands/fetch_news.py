@@ -1,9 +1,9 @@
 from django.core.management.base import BaseCommand
 from pages.models import Player, PlayerNews
 import psycopg2
-from django.utils import timezone
 from django.conf import settings
 from datetime import datetime
+from datetime import timezone as dt_timezone
 
 
 class Command(BaseCommand):
@@ -22,26 +22,23 @@ class Command(BaseCommand):
             cur.execute("""SELECT "Player", "Timestamp", "Source", "Text" FROM mentions""")
             rows = cur.fetchall()
 
-            news_entries = []
-            for row in rows:
-                player_name, timestamp, source, text = row
+            # Delete existing news and insert new ones
+            PlayerNews.objects.all().delete()
+
+            count = 0
+            for player_name, timestamp, source, text in rows:
                 player = Player.objects.filter(name=player_name).first()
 
                 if player:
-                    news_entries.append(
-                        PlayerNews(
-                            player=player,
-                            timestamp = timezone.make_aware(datetime.fromtimestamp(int(timestamp))),
-                            source=source,
-                            text=text
-                        )
+                    PlayerNews.objects.create(
+                        player=player,
+                        timestamp=datetime.fromtimestamp(timestamp, tz=dt_timezone.utc),
+                        source=source,
+                        text=text
                     )
+                    count += 1
 
-            # Delete existing news and insert new ones
-            PlayerNews.objects.all().delete()
-            PlayerNews.objects.bulk_create(news_entries, ignore_conflicts=True)
-
-            self.stdout.write(self.style.SUCCESS(f"Successfully imported {len(news_entries)} news articles!"))
+            self.stdout.write(self.style.SUCCESS(f"Successfully imported {count} news articles!"))
 
             cur.close()
             conn.close()
