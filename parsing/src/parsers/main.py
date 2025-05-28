@@ -2,7 +2,8 @@ from club_salary_parse import club_salary_parse
 from player_salary_parse import player_salary_parse
 from season_summary import season_summary
 from player_advanced import player_advanced
-# from news_parse import news_parse
+from news_parse import news_parse
+from news_classifier import news_classifier
 
 # comment which is NOT needed to be parsed
 def main():
@@ -10,7 +11,8 @@ def main():
     player_salary_parse()
     season_summary()
     player_advanced()
-    # news_parse()
+    news_parse()
+    news_classifier()
 
 if __name__ == '__main__':
     main()

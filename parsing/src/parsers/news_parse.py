@@ -4,6 +4,13 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 import time
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # where the SCRIPT is located
+PARENT_DIR = os.path.abspath(os.path.join(BASE_DIR, '..', '..'))
+OUTPUT_FILE = os.path.join(PARENT_DIR, 'parsed', 'news.json')
+GROUPED_FILE = os.path.join(PARENT_DIR, 'parsed', 'grouped_news.json')
+GECKODRIVER_PATH = os.path.join(os.path.expanduser('~'), 'Downloads', 'geckodriver')
 
 
 def load_existing_news(filename):
@@ -76,7 +83,7 @@ def get_page_source(url, latest_timestamp):
     try:
         options = Options()
         options.binary_location = "/Applications/Firefox.app/Contents/MacOS/firefox"
-        driver = webdriver.Firefox(service=Service('/Users/artem2284708/Downloads/geckodriver'), options=options)
+        driver = webdriver.Firefox(service=Service(GECKODRIVER_PATH), options=options)
 
         driver.get(url)
         time.sleep(3)
@@ -136,17 +143,14 @@ def update_news_file(existing_news, new_news, news_filename, mentions_filename):
 
 def news_parse():
     url = 'https://hoopshype.com/rumors/'
-    news_filename = '/Users/artem2284708/course_proj_hse/parsing/parsed/news.json'
-    mentions_filename = '/Users/artem2284708/course_proj_hse/parsing/parsed/grouped_news.json'
-
-    existing_news, latest_timestamp = load_existing_news(news_filename)
+    existing_news, latest_timestamp = load_existing_news(OUTPUT_FILE)
     html_content = get_page_source(url, latest_timestamp)
 
     if html_content:
         news_data, news_count = extract_news_from_html(html_content, latest_timestamp)  # Unpack correctly
 
         if news_data:  # Ensure we have new news before updating
-            update_news_file(existing_news, news_data, news_filename, mentions_filename)
+            update_news_file(existing_news, news_data, OUTPUT_FILE, GROUPED_FILE)
             print(f"Всего добавлено новостей: {news_count}")  # Print count of new articles
         else:
             print("Нет новых новостей для обновления.")
