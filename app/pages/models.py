@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class BaseTeam(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -64,3 +65,13 @@ class PlayerNews(models.Model):
 
     def __str__(self):
         return f"News for {self.player.name} - {self.timestamp.strftime('%Y-%m-%d')}"
+
+class Team(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class TeamPlayer(models.Model):
+    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    player = models.ForeignKey('Player', on_delete=models.CASCADE)
+    position = models.CharField(max_length=50, blank=True, null=True)

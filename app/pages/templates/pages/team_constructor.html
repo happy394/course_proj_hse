@@ -1,0 +1,48 @@
+{% extends 'pages/base.html' %}
+{% block content %}
+<h1>Create Your Team</h1>
+
+<form method="POST" action="{% url 'save_team' %}">
+    {% csrf_token %}
+    <input type="text" name="team_name" placeholder="Team Name" required>
+    
+    <div id="player-pool">
+        {% for player in players %}
+            <div class="player-card" data-player-id="{{ player.id }}">
+                <p>{{ player.name }} ({{ player.position }})</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div id="team-area">
+        <h3>Your Team</h3>
+        <!-- Dragged players will appear here -->
+    </div>
+
+    <input type="hidden" name="player_ids[]" id="player-ids-input">
+    <button type="submit">Save Team</button>
+</form>
+
+<script>
+    // Basic JS to collect player IDs
+    let playerCards = document.querySelectorAll('.player-card');
+    let teamArea = document.getElementById('team-area');
+    let playerIdsInput = document.getElementById('player-ids-input');
+
+    playerCards.forEach(card => {
+        card.addEventListener('click', () => {
+            teamArea.appendChild(card);
+            updatePlayerIds();
+        });
+    });
+
+    function updatePlayerIds() {
+        let ids = [];
+        teamArea.querySelectorAll('.player-card').forEach(card => {
+            ids.push(card.dataset.playerId);
+        });
+        playerIdsInput.value = ids;
+    }
+</script>
+
+{% endblock %}
