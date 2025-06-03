@@ -2,8 +2,12 @@ from django.shortcuts import render, get_object_or_404
 from .models import Team_east, Team_west, Player, PlayerNews, Player, Team, TeamPlayer
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+import json
+from django.http import JsonResponse
 
 def main_menu(request):
     return render(request, "pages/main_menu.html")
@@ -26,28 +30,58 @@ def player_detail(request, image_url):
     player = get_object_or_404(Player, image_url=image_url)
     player_news = PlayerNews.objects.filter(player=player)[:5]
 
-    return render(request, 'pages/player_detail.html', {'player': player, 'news': player_news})
+    total = player.pos + player.neg + player.neu
+    if total == 0:
+        mood_score = 0.5
+    else:
+        mood_score = (player.pos + player.neu) / total
 
-def window_three(request):
-    return render(request, "pages/window_three.html")
+    if mood_score > 0.6:
+        mood_class = "mood-positive"
+    elif mood_score < 0.4:
+        mood_class = "mood-negative"
+    else:
+        mood_class = "mood-neutral"
 
-def window_four(request):
-    return render(request, "pages/window_four.html")
+    context = {
+        'player': player,
+        'mood_class': mood_class,
+        'mood_score': round(mood_score * 100, 1),
+    }
+
+    return render(request, 'pages/player_detail.html', {'player': player, 'news': player_news, 'context': context})
 
 @login_required
 def team_constructor(request):
-    players = Player.objects.all()
-    return render(request, 'pages/team_constructor.html', {'players': players})
+    players = Player.objects.all().values(
+        'id', 'name', 'position', 'team', 'age', 'rank', 'image_url'
+    )
+    players_json = json.dumps(list(players))
+    
+    return render(request, 'pages/team_constructor.html', {
+        'players_json': players_json
+    })
 
+@csrf_exempt
 @login_required
 def save_team(request):
     if request.method == 'POST':
-        team_name = request.POST.get('team_name')
-        player_ids = request.POST.getlist('player_ids[]')
-        team = Team.objects.create(user=request.user, name=team_name)
-        for pid in player_ids:
-            TeamPlayer.objects.create(team=team, player_id=pid)
-        return redirect('my_teams')
+        try:
+            data = json.loads(request.body)
+            team_name = data.get('name')
+            players = data.get('players')
+            
+            team = Team.objects.create(
+                user=request.user,
+                name=team_name,
+                lineup=players,
+            )
+            
+            return JsonResponse({'success': True, 'team_id': team.id})
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)})
+    
+    return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
 @login_required
 def my_teams(request):

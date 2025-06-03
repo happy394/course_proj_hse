@@ -1,9 +1,131 @@
 {% extends 'pages/base.html' %}
+{% load static %}
+
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+<div class="login-page">
+    <div class="page-header">
+        <h1 class="page-title">Login</h1>
+        <p class="page-subtitle">Access your account</p>
+    </div>
+
+    <div class="login-card">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        <p class="signup-text">Don't have an account?</p>
+        <a href="{% url 'signup' %}" class="btn-custom">Sign Up</a>
+    </div>
+</div>
+
+<style>
+    .login-page {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        color: white;
+        text-align: center;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .page-header {
+        margin-bottom: 30px;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, #fff, #e0e0e0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+        opacity: 0.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+    }
+
+    .login-card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .login-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    form p {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+        width: 100%;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 5px;
+        background: rgba(255,255,255,0.1);
+        color: white;
+        outline: none;
+    }
+
+    .btn-login {
+        background: #3498db;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+    }
+
+    .btn-login:hover {
+        background: #2980b9;
+    }
+
+    .btn-custom {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .signup-text {
+        margin-top: 20px;
+        font-size: 0.95rem;
+        opacity: 0.8;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
 {% endblock %}

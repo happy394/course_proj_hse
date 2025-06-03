@@ -48,7 +48,9 @@ class Player(models.Model):
     bpm = models.FloatField(default=0.0, null=True)
     vorp = models.FloatField(default=0.0, null=True)
     awards = models.CharField(max_length=100, default='-', null=True)
-
+    pos = models.IntegerField(default=0, null=True)
+    neu = models.IntegerField(default=0, null=True)
+    neg = models.IntegerField(default=0, null=True)
 
     def __str__(self):
         return f"{self.name}"
@@ -69,7 +71,11 @@ class PlayerNews(models.Model):
 class Team(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
+    lineup = models.JSONField(default=dict)
     created_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.name} - {self.user.username}"
 
 class TeamPlayer(models.Model):
     team = models.ForeignKey(Team, on_delete=models.CASCADE)

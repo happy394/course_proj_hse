@@ -1,48 +1,621 @@
 {% extends 'pages/base.html' %}
+{% load static %}
+
+{% block navbar %}
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search players..." id="searchBox">
+    </div>
+{% endblock %}
+
 {% block content %}
-<h1>Create Your Team</h1>
-
-<form method="POST" action="{% url 'save_team' %}">
-    {% csrf_token %}
-    <input type="text" name="team_name" placeholder="Team Name" required>
-    
-    <div id="player-pool">
-        {% for player in players %}
-            <div class="player-card" data-player-id="{{ player.id }}">
-                <p>{{ player.name }} ({{ player.position }})</p>
+<div class="content">
+    <div class="team-constructor-wrapper">
+        <!-- Players Panel -->
+        <div class="players-list">
+            <h2>Available Players</h2>
+            
+            <div class="position-filters">
+                <button class="filter-btn active" data-position="all">All</button>
+                <button class="filter-btn" data-position="PG">PG</button>
+                <button class="filter-btn" data-position="SG">SG</button>
+                <button class="filter-btn" data-position="SF">SF</button>
+                <button class="filter-btn" data-position="PF">PF</button>
+                <button class="filter-btn" data-position="C">C</button>
             </div>
-        {% endfor %}
-    </div>
+            
+            <div class="players-container" id="playersList">
+                <!-- Players will be loaded here -->
+            </div>
+        </div>
 
-    <div id="team-area">
-        <h3>Your Team</h3>
-        <!-- Dragged players will appear here -->
-    </div>
+        <!-- Court Panel -->
+        <div class="basketball-court-panel">
+            <h2>Your Team</h2>
+            <div class="basketball-court">
+                <div class="court-lines"></div>
+                
+                <!-- Position slots -->
+                <div class="position-slot pg" data-position="PG">
+                    <div class="position-label">PG<br>Point Guard</div>
+                </div>
+                <div class="position-slot sg" data-position="SG">
+                    <div class="position-label">SG<br>Shooting Guard</div>
+                </div>
+                <div class="position-slot sf" data-position="SF">
+                    <div class="position-label">SF<br>Small Forward</div>
+                </div>
+                <div class="position-slot pf" data-position="PF">
+                    <div class="position-label">PF<br>Power Forward</div>
+                </div>
+                <div class="position-slot c" data-position="C">
+                    <div class="position-label">C<br>Center</div>
+                </div>
+            </div>
+        </div>
 
-    <input type="hidden" name="player_ids[]" id="player-ids-input">
-    <button type="submit">Save Team</button>
-</form>
+        <!-- Team Controls -->
+        <div class="my-team">
+            <h2>Team Setup</h2>
+            <input type="text" class="team-name-input" placeholder="Enter team name..." id="teamNameInput">
+            
+            <div class="team-status" id="teamStatus">
+                <span class="status-incomplete">Select 5 players to complete your team</span>
+            </div>
+            
+            <button class="save-team-btn" id="saveTeamBtn" disabled>Save Team</button>
+            <button class="clear-team-btn" id="clearTeamBtn">Clear Team</button>
+            
+            <div class="team-summary" id="teamSummary">
+                <h3>Current Lineup:</h3>
+                <ul id="lineupList">
+                    <li>PG: <span id="pg-player">Not selected</span></li>
+                    <li>SG: <span id="sg-player">Not selected</span></li>
+                    <li>SF: <span id="sf-player">Not selected</span></li>
+                    <li>PF: <span id="pf-player">Not selected</span></li>
+                    <li>C: <span id="c-player">Not selected</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Additional styles specific to team builder */
+.team-constructor-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.basketball-court-panel {
+    flex: 1.5;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.basketball-court {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(45deg, #8B4513 0%, #A0522D 100%);
+    border-radius: 15px;
+    position: relative;
+    border: 4px solid #fff;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.court-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 50% 50%, transparent 60px, white 60px, white 62px, transparent 64px),
+        radial-gradient(circle at 50% 15%, transparent 45px, white 45px, white 47px, transparent 49px),
+        radial-gradient(circle at 50% 85%, transparent 45px, white 45px, white 47px, transparent 49px),
+        linear-gradient(to bottom, transparent 49%, white 49%, white 51%, transparent 51%),
+        radial-gradient(ellipse 140px 90px at 50% 15%, transparent 138px, white 138px, white 140px, transparent 142px),
+        radial-gradient(ellipse 140px 90px at 50% 85%, transparent 138px, white 138px, white 140px, transparent 142px);
+}
+
+.position-slot {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 3px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.position-slot.drag-over {
+    border-color: #4ecdc4;
+    background: rgba(78, 205, 196, 0.2);
+    transform: scale(1.1);
+}
+
+.position-slot.occupied {
+    border: none;
+    background: none;
+}
+
+.position-label {
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0.7;
+    text-align: center;
+    color: white;
+}
+
+.pg { top: 75%; left: 50%; transform: translateX(-50%); }
+.sg { top: 60%; left: 25%; }
+.sf { top: 60%; right: 25%; }
+.pf { top: 35%; left: 20%; }
+.c { top: 20%; left: 50%; transform: translateX(-50%); }
+
+.court-player {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    position: relative;
+    font-size: 14px;
+}
+
+.court-player:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.player-name-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9px;
+    background: rgba(0,0,0,0.7);
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.player-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
+    cursor: grab;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.player-card:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.player-card.dragging {
+    opacity: 0.5;
+    transform: rotate(3deg);
+}
+
+.player-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.player-info {
+    flex: 1;
+}
+
+.player-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.player-details {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.team-name-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.team-name-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.save-team-btn, .clear-team-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.save-team-btn {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.save-team-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #44a08d, #4ecdc4);
+    transform: translateY(-2px);
+}
+
+.save-team-btn:disabled {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: not-allowed;
+}
+
+.clear-team-btn {
+    background: rgba(255, 107, 107, 0.8);
+}
+
+.clear-team-btn:hover {
+    background: rgba(255, 107, 107, 1);
+}
+
+.team-status {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.status-complete {
+    color: #4ecdc4;
+}
+
+.status-incomplete {
+    color: #ff6b6b;
+}
+
+.position-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: rgba(78, 205, 196, 0.8);
+}
+
+.team-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.team-summary h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.team-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-summary li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+}
+
+.team-summary li:last-child {
+    border-bottom: none;
+}
+</style>
 
 <script>
-    // Basic JS to collect player IDs
-    let playerCards = document.querySelectorAll('.player-card');
-    let teamArea = document.getElementById('team-area');
-    let playerIdsInput = document.getElementById('player-ids-input');
+// Get player data from Django template
+const playersData = {{ players_json|safe }};
+let currentTeam = {};
+let filteredPlayers = [...playersData];
+let currentFilter = 'all';
 
-    playerCards.forEach(card => {
-        card.addEventListener('click', () => {
-            teamArea.appendChild(card);
-            updatePlayerIds();
-        });
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    renderPlayers(filteredPlayers);
+    setupEventListeners();
+});
+
+function renderPlayers(players) {
+    const playersList = document.getElementById('playersList');
+    playersList.innerHTML = '';
+
+    players.forEach(player => {
+        const playerCard = document.createElement('div');
+        playerCard.className = 'player-card';
+        playerCard.draggable = true;
+        playerCard.dataset.playerId = player.id;
+        
+        const initials = player.name.split(' ').map(n => n[0]).join('');
+        
+        playerCard.innerHTML = `
+            <div class="player-avatar">${initials}</div>
+            <div class="player-info">
+                <div class="player-name">${player.name}</div>
+                <div class="player-details">${player.position} • ${player.team} • Age ${player.age}</div>
+            </div>
+        `;
+
+        playerCard.addEventListener('dragstart', handleDragStart);
+        playerCard.addEventListener('dragend', handleDragEnd);
+        
+        playersList.appendChild(playerCard);
+    });
+}
+
+function setupEventListeners() {
+    // Search functionality
+    document.getElementById('searchBox').addEventListener('input', handleSearch);
+    
+    // Position filters
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', handlePositionFilter);
     });
 
-    function updatePlayerIds() {
-        let ids = [];
-        teamArea.querySelectorAll('.player-card').forEach(card => {
-            ids.push(card.dataset.playerId);
-        });
-        playerIdsInput.value = ids;
+    // Drag and drop for position slots
+    document.querySelectorAll('.position-slot').forEach(slot => {
+        slot.addEventListener('dragover', handleDragOver);
+        slot.addEventListener('drop', handleDrop);
+        slot.addEventListener('dragleave', handleDragLeave);
+    });
+
+    // Team controls
+    document.getElementById('saveTeamBtn').addEventListener('click', saveTeam);
+    document.getElementById('clearTeamBtn').addEventListener('click', clearTeam);
+    document.getElementById('teamNameInput').addEventListener('input', updateSaveButton);
+}
+
+function handleSearch(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const filtered = playersData.filter(player => 
+        player.name.toLowerCase().includes(searchTerm) &&
+        (currentFilter === 'all' || player.position === currentFilter)
+    );
+    renderPlayers(filtered);
+}
+
+function handlePositionFilter(e) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    e.target.classList.add('active');
+    
+    currentFilter = e.target.dataset.position;
+    const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+    
+    let filtered = playersData.filter(player => 
+        player.name.toLowerCase().includes(searchTerm)
+    );
+    
+    if (currentFilter !== 'all') {
+        filtered = filtered.filter(player => player.position === currentFilter);
     }
+    
+    renderPlayers(filtered);
+}
+
+function handleDragStart(e) {
+    e.target.classList.add('dragging');
+    e.dataTransfer.setData('text/plain', e.target.dataset.playerId);
+}
+
+function handleDragEnd(e) {
+    e.target.classList.remove('dragging');
+}
+
+function handleDragOver(e) {
+    e.preventDefault();
+    e.currentTarget.classList.add('drag-over');
+}
+
+function handleDragLeave(e) {
+    e.currentTarget.classList.remove('drag-over');
+}
+
+function handleDrop(e) {
+    e.preventDefault();
+    e.currentTarget.classList.remove('drag-over');
+    
+    const playerId = e.dataTransfer.getData('text/plain');
+    const position = e.currentTarget.dataset.position;
+    const player = playersData.find(p => p.id == playerId);
+    
+    if (player && !currentTeam[position]) {
+        addPlayerToTeam(player, position, e.currentTarget);
+    }
+}
+
+function addPlayerToTeam(player, position, slotElement) {
+    currentTeam[position] = player;
+    
+    const initials = player.name.split(' ').map(n => n[0]).join('');
+    
+    slotElement.innerHTML = `
+        <div class="court-player" onclick="removePlayerFromTeam('${position}')">
+            ${initials}
+            <div class="player-name-label">${player.name}</div>
+        </div>
+    `;
+    slotElement.classList.add('occupied');
+    
+    updateTeamStatus();
+    updateLineupDisplay();
+}
+
+function removePlayerFromTeam(position) {
+    delete currentTeam[position];
+    const slot = document.querySelector(`[data-position="${position}"]`);
+    const positionNames = {
+        'PG': 'Point Guard',
+        'SG': 'Shooting Guard', 
+        'SF': 'Small Forward',
+        'PF': 'Power Forward',
+        'C': 'Center'
+    };
+    
+    slot.innerHTML = `<div class="position-label">${position}<br>${positionNames[position]}</div>`;
+    slot.classList.remove('occupied');
+    
+    updateTeamStatus();
+    updateLineupDisplay();
+}
+
+function updateTeamStatus() {
+    const teamSize = Object.keys(currentTeam).length;
+    const statusElement = document.getElementById('teamStatus');
+    
+    if (teamSize === 5) {
+        statusElement.innerHTML = '<span class="status-complete">Team complete! Ready to save.</span>';
+    } else {
+        statusElement.innerHTML = `<span class="status-incomplete">Select ${5 - teamSize} more players</span>`;
+    }
+    
+    updateSaveButton();
+}
+
+function updateLineupDisplay() {
+    const positions = ['PG', 'SG', 'SF', 'PF', 'C'];
+    positions.forEach(pos => {
+        const element = document.getElementById(`${pos.toLowerCase()}-player`);
+        if (currentTeam[pos]) {
+            element.textContent = currentTeam[pos].name;
+            element.style.color = '#4ecdc4';
+        } else {
+            element.textContent = 'Not selected';
+            element.style.color = 'rgba(255, 255, 255, 0.7)';
+        }
+    });
+}
+
+function updateSaveButton() {
+    const teamName = document.getElementById('teamNameInput').value.trim();
+    const teamComplete = Object.keys(currentTeam).length === 5;
+    const saveBtn = document.getElementById('saveTeamBtn');
+    
+    saveBtn.disabled = !(teamName && teamComplete);
+}
+
+function saveTeam() {
+    const teamName = document.getElementById('teamNameInput').value.trim();
+    
+    if (!teamName || Object.keys(currentTeam).length !== 5) {
+        alert('Please complete your team and enter a team name');
+        return;
+    }
+
+    // Prepare team data for Django
+    const teamData = {
+        name: teamName,
+        players: currentTeam
+    };
+    
+    // Get CSRF token
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]')?.value || '{{ csrf_token }}';
+    
+    // Send to Django backend
+    fetch('{% url "save_team" %}', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+        },
+        body: JSON.stringify(teamData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(`Team "${teamName}" saved successfully!`);
+            clearTeam();
+        } else {
+            alert('Error saving team: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error saving team. Please try again.');
+    });
+}
+
+function clearTeam() {
+    currentTeam = {};
+    document.getElementById('teamNameInput').value = '';
+    
+    document.querySelectorAll('.position-slot').forEach(slot => {
+        const position = slot.dataset.position;
+        const positionNames = {
+            'PG': 'Point Guard',
+            'SG': 'Shooting Guard', 
+            'SF': 'Small Forward',
+            'PF': 'Power Forward',
+            'C': 'Center'
+        };
+        
+        slot.innerHTML = `<div class="position-label">${position}<br>${positionNames[position]}</div>`;
+        slot.classList.remove('occupied');
+    });
+    
+    updateTeamStatus();
+    updateLineupDisplay();
+}
 </script>
 
 {% endblock %}

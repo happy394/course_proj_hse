@@ -2,66 +2,126 @@
 {% load static %}
 
 {% block content %}
-    <div class="container mt-5">
-        <div class="row">
-            <!-- Player Info Section -->
-            <div class="col-lg-8 col-md-12">
-                <div class="player-container">
-                    <div class="d-flex align-items-center">
-                        <img src="{% static 'images/'%}{{ player.image_url }}.jpg" alt="{{ player.name }} Photo" class="img-fluid" style="width: 150px; height: 200px; margin-right: 20px;">
-                        <div>
-                            <h1>{{ player.name }}</h1>
-                            <p><strong>Team:</strong> {{ player.team }}</p>
-                            <p><strong>Position:</strong> {{ player.position }}</p>
-                            <p><strong>Age:</strong> {{ player.age }} | <strong>Rank:</strong> {{ player.rank }}</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ player.name }} - Player Details</title>
+</head>
+<body>
+    <div class="teams-page">
+        <div class="page-header">
+            <h1 class="page-title">{{ player.name }}</h1>
+            <p class="page-subtitle">{{ player.team }} | {{ player.position }}</p>
+        </div>
+
+        <div class="teams-container">
+            <div class="conference-section">
+                <div class="conference-header">
+                    <div class="conference-icon">🏀</div>
+                    <h2 class="conference-title">Player Overview</h2>
+                    <div class="team-count">Age: {{ player.age }}</div>
+                    <div class="mood-box {{ context.mood_class }}">
+                        <span>{{ context.mood_score }}%</span>
+                    </div>
+                </div>
+
+                <div class="teams-grid">
+                    <div class="team-card">
+                        <img src="{% static 'images/' %}{{ player.image_url }}.jpg" alt="{{ player.name }} Photo" class="player-photo>
+
+                        <div class="characteristics-box mt-3">
+                            <div class="characteristic">Rank: {{ player.rank }}</div>
+                            <div class="characteristic">Awards: {{ player.awards }}</div>
+                            <div class="characteristic">Stats: G:{{ player.g }}, MP:{{ player.mp }}, PER:{{ player.per }}</div>
+                            <div class="characteristic">TS: {{ player.ts }}</div>
+                            <div class="characteristic">TRB: {{ player.trb }}</div>
+                            <div class="characteristic">AST: {{ player.ast }}</div>
+                            <div class="characteristic">STL: {{ player.stl }}</div>
+                            <div class="characteristic">BLK: {{ player.blk }}</div>
+                            <div class="characteristic">USG: {{ player.usg }}</div>
+                            <div class="characteristic">VORP: {{ player.vorp }}</div>
+                        </div>
+
+                        <div class="news-box mt-4">
+                            <h2>Latest News</h2>
+                            {% if news %}
+                                {% for item in news %}
+                                    <details>
+                                        <summary>
+                                            <a href="{{ item.source }}" target="_blank">News</a> - 
+                                            {{ item.timestamp|date:"F d, Y H:i" }} | 
+                                            <span class="news-preview">{{ item.text|truncatechars:50 }}</span>
+                                        </summary>
+                                        <p>{{ item.text }}</p>
+                                    </details>
+                                {% endfor %}
+                            {% else %}
+                                <p>No news available for this player.</p>
+                            {% endif %}
                         </div>
                     </div>
-                    
-                    <!-- Additional Characteristics Box -->
-                    <div class="characteristics-box">
-                        <div class="characteristic">g: {{ player.g }}</div>
-                        <div class="characteristic">gs: {{ player.gs }}</div>
-                        <div class="characteristic">mp: {{ player.mp }}</div>
-                        <div class="characteristic">per: {{ player.per }}</div>
-                        <div class="characteristic">ts: {{ player.ts }}</div>
-                        <div class="characteristic">par: {{ player.par }}</div>
-                        <div class="characteristic">ftr: {{ player.ftr }}</div>
-                        <div class="characteristic">orb: {{ player.orb }}</div>
-                        <div class="characteristic">drb: {{ player.drb }}</div>
-                        <div class="characteristic">trb: {{ player.trb }}</div>
-                        <div class="characteristic">ast: {{ player.ast }}</div>
-                        <div class="characteristic">stl: {{ player.stl }}</div>
-                        <div class="characteristic">blk: {{ player.blk }}</div>
-                        <div class="characteristic">tov: {{ player.tov }}</div>
-                        <div class="characteristic">usg: {{ player.usg }}</div>
-                        <div class="characteristic">ows: {{ player.ows }}</div>
-                        <div class="characteristic">dws: {{ player.dws }}</div>
-                        <div class="characteristic">ws: {{ player.ws }}</div>
-                        <div class="characteristic">ws48: {{ player.ws48 }}</div>
-                        <div class="characteristic">obpm: {{ player.obpm }}</div>
-                        <div class="characteristic">dbpm: {{ player.dbpm }}</div>
-                        <div class="characteristic">bpm: {{ player.bpm }}</div>
-                        <div class="characteristic">vorp: {{ player.vorp }}</div>
-                        <div class="characteristic">awards: {{ player.awards }}</div>
-                    </div>
-                    <!-- News Section -->
-                    <div class="news-box">
-                        <h2>Latest News</h2>
-                        {% if news %}
-                            {% for item in news %}
-                                <details>
-                                    <summary>
-                                        <a href="{{ item.source }}" target="_blank">News</a> - 
-                                        {{ item.timestamp|date:"F d, Y H:i" }} | 
-                                        <span class="news-preview">{{ item.text|truncatechars:50 }}</span>
-                                    </summary>
-                                    <p>{{ item.text }}</p>
-                                </details>
-                            {% endfor %}
-                        {% else %}
-                            <p>No news available for this player.</p>
-                        {% endif %}
-                    </div>
+                </div>
+            </div>
         </div>
     </div>
-{% endblock content %}
+
+    <style>
+        .teams-page { width: 100%; max-width: 1400px; margin: 0 auto; padding: 20px; color: white; }
+        .page-header { text-align: center; margin-bottom: 40px; }
+        .page-title { font-size: 2.8rem; font-weight: 700; margin-bottom: 10px; background: linear-gradient(45deg, #fff, #e0e0e0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+        .page-subtitle { font-size: 1.2rem; opacity: 0.8; margin: 0; color: rgba(255, 255, 255, 0.9); }
+        .conference-section { background: rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 30px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .conference-section:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); }
+        .conference-header { text-align: center; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
+        .conference-icon { font-size: 2.5rem; margin-bottom: 10px; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); }
+        .conference-title { font-size: 1.8rem; font-weight: 600; margin: 10px 0; text-transform: uppercase; letter-spacing: 1px; }
+        .team-count { background: rgba(255, 255, 255, 0.2); color: white; padding: 4px 12px; border-radius: 15px; font-size: 12px; font-weight: 500; display: inline-block; margin-top: 5px; }
+        .teams-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+        .team-card { background: rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; overflow: hidden; }
+        .team-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.18); border-color: rgba(255, 255, 255, 0.3); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); }
+        .characteristics-box { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .characteristic { background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 6px 12px; font-size: 0.85rem; }
+        .news-box h2 { font-size: 1.2rem; margin-top: 20px; text-align: center; }
+        .news-box details { margin-top: 10px; background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px; }
+        .news-box details summary { cursor: pointer; font-weight: bold; }
+        .news-box details p { margin: 0; margin-top: 5px; font-size: 0.9rem; }
+        .player-photo {
+    width: 150px; /* Shrink photo size */
+    height: 150px; /* Optional: make it square */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Ensure image fits */
+    margin: 0 auto 10px; /* Center and space */
+    display: block; /* Ensures block-level element for margin auto */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Soft shadow */
+}
+.mood-box {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    min-width: 60px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.mood-positive {
+    background: rgba(40, 167, 69, 0.85); /* Green */
+}
+
+.mood-neutral {
+    background: rgba(108, 117, 125, 0.85); /* Gray */
+}
+
+.mood-negative {
+    background: rgba(220, 53, 69, 0.85); /* Red */
+}
+    </style>
+</body>
+</html>
+{% endblock %}

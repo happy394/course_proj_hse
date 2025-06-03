@@ -3,6 +3,9 @@ import os
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline
 from huggingface_hub import login
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def _load_paths():
@@ -22,7 +25,7 @@ def _load_data(news_file, player_file):
 
 
 def _initialize_model():
-    login(token="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")
+    login(token=os.getenv('MODEL_TOKEN'))
     tokenizer = AutoTokenizer.from_pretrained("artem2284708/basketball2_checkpoints")
     model = AutoModelForSequenceClassification.from_pretrained("artem2284708/basketball2_checkpoints")
     return pipeline("text-classification", model=model, tokenizer=tokenizer, truncation=True)

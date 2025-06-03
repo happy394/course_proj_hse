@@ -17,7 +17,7 @@ import environ
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent # app/
 
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'), overwrite=True)
 # Quick-start development settings - unsuitable for production
@@ -29,7 +29,7 @@ SECRET_KEY = config("DJANGO_SECRET_KEY", "fallback_secret_key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG")
 
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", "*").split(",")
+ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(",")
 
 
 # Application definition
@@ -136,3 +136,7 @@ CSRF_TRUSTED_ORIGINS = ['https://hsecourseproj.ru', 'https://www.hsecourseproj.r
 SECURE_SSL_REDIRECT = False
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'main_menu'
+LOGOUT_REDIRECT_URL = 'main_menu'

@@ -51,6 +51,9 @@ class Command(BaseCommand):
                     bpm = row[28],
                     vorp = row[29],
                     awards = row[30],
+                    pos = row[31],
+                    neu = row[32],
+                    neg = row[33],
                 ) for row in rows
             ]
 
