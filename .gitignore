@@ -171,3 +171,13 @@ cython_debug/
 .pypirc
 
 test.py
+docker
+.DS_Store
+data
+config
+conf
+parsed/
+.env.dev
+amvera.yml
+static/
+images/

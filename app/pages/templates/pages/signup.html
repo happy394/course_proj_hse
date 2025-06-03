@@ -1,0 +1,131 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="signup-page">
+    <div class="page-header">
+        <h1 class="page-title">Sign Up</h1>
+        <p class="page-subtitle">Create your account</p>
+    </div>
+
+    <div class="signup-card">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn-signup">Create Account</button>
+        </form>
+
+        <p class="login-text">Already have an account?</p>
+        <a href="{% url 'login' %}" class="btn-custom">Login</a>
+    </div>
+</div>
+
+<style>
+    .signup-page {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        color: white;
+        text-align: center;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .page-header {
+        margin-bottom: 30px;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, #fff, #e0e0e0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+        opacity: 0.8;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+    }
+
+    .signup-card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .signup-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    form p {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+        width: 100%;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 5px;
+        background: rgba(255,255,255,0.1);
+        color: white;
+        outline: none;
+    }
+
+    .btn-signup {
+        background: #e74c3c;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+    }
+
+    .btn-signup:hover {
+        background: #c0392b;
+    }
+
+    .btn-custom {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .login-text {
+        margin-top: 20px;
+        font-size: 0.95rem;
+        opacity: 0.8;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+{% endblock %}
